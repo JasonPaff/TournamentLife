@@ -1,0 +1,782 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.LiveTrackerWindowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewmodel="clr-namespace:LiveTracker.ViewModels"
+    xmlns:menuviewmodels="clr-namespace:LiveTracker.ViewModels.Menu_ViewModels"
+    xmlns:datagridViewModels="clr-namespace:LiveTracker.ViewModels.Datagrid_ViewModels"
+    xmlns:menuviews="clr-namespace:LiveTracker.Views.Menu_Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:commands="clr-namespace:LiveTracker.Commands"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:collections="clr-namespace:System.Collections;assembly=System.Runtime"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+	mc:Ignorable="d"
+    UseNativeChrome="True"
+    WindowStartupLocation="CenterScreen"
+    x:Name="window"
+    SizeToContent="WidthAndHeight"
+    TitleTextAlignment="Left"
+    ShowMinimizeButton="True"
+    Height="100"
+    Width="300"
+    ShowMaximizeButton="False"
+    ResizeMode="CanMinimize"
+    Title="{Binding Title}"
+    Topmost="{Binding KeepWindowOnTop}">
+
+    <!-- View Data Context -->
+    <syncfusion:ChromelessWindow.DataContext>
+        <viewmodel:LiveTrackerViewModel/>
+    </syncfusion:ChromelessWindow.DataContext>
+
+    <!-- Resources -->
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:ThemeConverter x:Key="ThemeConverter"/>
+        <datagridViewModels:DataGridViewModel x:Key="DataGridViewModel"/>
+        <menuviewmodels:MenuViewModel x:Key="MenuViewModel"/>
+        <converters:ColumnVisibleMenuConverter x:Key="ColumnVisibleMenuConverter"/>
+        <converters:BoolToVisibleConverter x:Key="WindowVisibleConverter" TrueValue="Visible" FalseValue="Collapsed"/>
+        <converters:DateToTimeConverter x:Key="DateToTimeConverter"/>
+
+    <!-- Tournament Counter Column -->
+    <Style TargetType="syncfusion:GridRowHeaderCell">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="syncfusion:GridRowHeaderCell">
+                    <Border x:Name="PART_RowHeaderCellBorder"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <!-- RowIndex is displayed here -->
+                            <TextBlock HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Text="{Binding RowIndex, RelativeSource={RelativeSource TemplatedParent}}"
+                                       TextAlignment="Center" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--<Style x:Key="DataGridContextMenu" TargetType="syncfusion:MenuItemAdv">
+        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="FontSize" Value="{Binding FontSize}"/>
+    </Style>
+
+    <Style x:Key="DataGridContextMenu2" TargetType="MenuItem">
+        <Setter Property="Foreground" Value="Green"/>
+        <Setter Property="FontSize" Value="{Binding FontSize}"/>
+    </Style>-->
+
+    <DataTemplate x:Key="TemplateDesriptionToolTip">
+            <TextBlock Text="{Binding Description}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TotalCostDescriptionToolTip">
+        <TextBlock Text="{Binding TotalCostDescription, UpdateSourceTrigger=PropertyChanged}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="RebuyCountDescriptionToolTip">
+        <TextBlock Text="{Binding RebuyCountDescription, UpdateSourceTrigger=PropertyChanged}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AddonCountDescriptionToolTip">
+        <TextBlock Text="{Binding AddonCountDescription, UpdateSourceTrigger=PropertyChanged}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntrantsDescriptionToolTip">
+        <TextBlock Text=" Number of entrants in the tournament "/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntrantsPaidDescriptionToolTip">
+        <TextBlock Text=" Number of entrants that will cash in the tournament "/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FinishPositionDescriptionToolTip">
+        <TextBlock Text=" Position that you finished in the tournament "/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="PrizeWonDescriptionToolTip">
+        <TextBlock Text=" Prize amount that you won in the tournament (if any :P) "/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ColumnHeaderTemplate">
+        <TextBlock Text="Right click to show/hide columns" FontSize="{Binding FontSize}" Foreground="{Binding FontColor}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TimeDescriptionToolTip">
+        <TextBlock Text="{Binding TimeDescription}"/>
+    </DataTemplate>
+
+     <!-- Bindings -->
+    <!--<syncfusion:ChromelessWindow.InputBindings>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="SelectTemplates" Gesture="CTRL+S"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="ShowAll" Gesture="CTRL+1"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="ShowStarted" Gesture="CTRL+2"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="StartFive" Gesture="CTRL+3"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="StartFifteen" Gesture="CTRL+4"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="StartThirty" Gesture="CTRL+5"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="StartSixty" Gesture="CTRL+6"/>
+        <KeyBinding Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}" CommandParameter="KeepWindowOnTopMenuItem" Gesture="CTRL+L"/>
+    </syncfusion:ChromelessWindow.InputBindings>-->
+    </syncfusion:ChromelessWindow.Resources>
+
+    <!-- Light/Dark toggle -->
+    <syncfusion:ChromelessWindow.RightHeaderItemsSource>
+        <collections:ArrayList>
+            <syncfusion:ComboBoxAdv
+                Margin="0,0,25,0"
+                ToolTip="Adjust how tournaments are displayed in the tracker window"
+                SelectedItem="{Binding SelectedVisibility}">
+                <syncfusion:ComboBoxAdv.Resources>
+                    <Style BasedOn="{x:Null}" TargetType="Label" />
+                </syncfusion:ComboBoxAdv.Resources>
+                <syncfusion:ComboBoxAdv.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock
+                            Height="20"
+                            Padding="4"
+                            Text="{Binding}" />
+                    </DataTemplate>
+                </syncfusion:ComboBoxAdv.ItemTemplate>
+                <syncfusion:ComboBoxAdv.ItemsSource>
+                    <collections:ArrayList>
+                        <System:String>Show All Tournaments</System:String>
+                        <System:String>Show Started Tournaments</System:String>
+                        <System:String>Show Started and Starting in 5 Minutes</System:String>
+                        <System:String>Show Started and Starting in 15 Minutes</System:String>
+                        <System:String>Show Started and Starting in 30 Minutes</System:String>
+                        <System:String>Show Started and Starting in 60 Minutes</System:String>
+                    </collections:ArrayList>
+                </syncfusion:ComboBoxAdv.ItemsSource>
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectionChanged">
+                        <b:InvokeCommandAction
+                            Command="{Binding Source={x:Static Member=commands:MenuCommands.VisibilityChangedCommand}}"
+                            CommandParameter="{Binding SelectedVisibility}"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+                </syncfusion:ComboBoxAdv>
+            <!--<CheckBox
+                Margin="0,0,10,0"
+                IsChecked ="{Binding IsDarkMode}"
+                Content="Dark Mode"
+                ToolTip="Switch between light and dark mode"
+                Command="{Binding Source={x:Static Member=commands:LiveTrackerWindowCommands.MenuItem}}" CommandParameter="IsDarkMode"/>-->
+        </collections:ArrayList>
+    </syncfusion:ChromelessWindow.RightHeaderItemsSource>
+
+    <!-- Window Loaded Command -->
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}" CommandParameter="WindowLoaded"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+
+    <Grid>
+
+    <StackPanel
+        x:Name="LiveTrackerMenu"
+        DataContext="{StaticResource MenuViewModel}">
+        <menuviews:LiveTrackerMenuView/>
+
+        <syncfusion:SfDataGrid
+            AutoGenerateColumns="False"
+            AllowResizingColumns="True"
+            ColumnSizer="Star"
+            DataContext="{StaticResource DataGridViewModel}"
+            x:Name="TournamentsDataGrid"
+            EditTrigger="OnDoubleTap"
+            VerticalAlignment="Top"
+            SelectionMode="Single"
+            AllowSelectionOnPointerPressed="True"
+            ScrollViewer.VerticalScrollBarVisibility="Hidden"
+            ItemsSource="{Binding VisibleTournaments}"
+            SelectedItem="{Binding SelectedTournament}"
+            ShowRowHeader="{Binding ShowRowHeader}"
+            ShowToolTip ="True">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="SizeChanged">
+                    <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}" CommandParameter="UpdateColumnWidth"/>
+                </b:EventTrigger>
+                <b:EventTrigger EventName="QueryColumnDragging">
+                    <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}" CommandParameter="UpdateColumnOrder"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+
+            <!-- header context menu -->
+             <syncfusion:SfDataGrid.HeaderContextMenu>
+                <ContextMenu>
+                    <MenuItem
+                        Header="Show/Hide Columns">
+                        <MenuItem
+                            Header="Addon Count"
+                            ToolTip="Track if you take any add-ons in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="AddonCount"/>
+                        <!--<MenuItem
+                            Header="Addon Total Cost"
+                            ToolTip="shows the cost of the addon in the tournament (base cost + rake) in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="Addon"/>-->
+                        <MenuItem
+                            Header="Bounty Count"
+                            ToolTip="Used to track the number of bounties received for Bovada Bounty tournaments that don't put bounty info in the lobby prize for you (this only gets pulled into the tournament data if Bovada Bounty is checked for the tournament"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="Bounty"/>
+                        <!--<MenuItem
+                            Header="Buyin Total Cost"
+                            ToolTip="Shows the cost of the buy-in (base cost + rake) in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="Buyin"/>-->
+                        <MenuItem
+                            Header="Entrants"
+                            ToolTip="Tracks the number of entrants in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="Entrants"/>
+                        <MenuItem
+                            Header="Entrants Paid"
+                            ToolTip="Tracks the number of players who will cash in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="EntrantsPaid"/>
+                        <MenuItem
+                            Header="Finish Position"
+                            ToolTip="Tracks the position that you finished in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="FinishPosition"/>
+                        <MenuItem
+                            Header="Jackpot Spin Multiplier"
+                            ToolTip="Track the multiplier in a jackpot sit and go"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="JackpotSpinMultiplier"/>
+                        <MenuItem
+                            Header="Prize Won"
+                            ToolTip="Tracks the prizes you win in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="PrizeWon"/>
+                        <MenuItem
+                            Header="Rebuy Count"
+                            ToolTip="Tracks the number of times your re-bought in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="RebuyCount"/>
+                        <!--<MenuItem
+                            Header="Rebuy Total Cost"
+                            ToolTip="Shows the total cost of the rebuys (base cost + rake) in your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="Rebuy"/>-->
+                        <MenuItem
+                            Header="Start Time"
+                            ToolTip="Shows the starting time of your tournaments"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="StartTime"/>
+                        <MenuItem
+                            Header="Total Cost"
+                            ToolTip="Shows the total cost of your tournaments (total buy-in + (total add-on * addons) + (total rebuy + addons))"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="TotalCost"/>
+                        <MenuItem
+                            ToolTip="Shows the venues for your tournaments"
+                            Header="Venue"
+                            StaysOpenOnClick="True"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeColumnVisibility}}"
+                            CommandParameter="Venue"/>
+                    </MenuItem>
+                </ContextMenu>
+            </syncfusion:SfDataGrid.HeaderContextMenu>
+
+            <!-- Context Menu -->
+            <syncfusion:SfDataGrid.ContextMenu>
+                <ContextMenu StaysOpen="True" IsOpen="{Binding IsContextMenuOpen, Mode=OneWayToSource}">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="GotMouseCapture">
+                            <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}" CommandParameter="UpdateTimeStrings"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                    <MenuItem
+                        Header="{Binding SelectedTournament.TournamentName}"
+                        ToolTip="{Binding SelectedTournament.TournamentName}"
+                        FontSize="{Binding FontSize}"
+                        HorizontalAlignment="Center"
+                        FontWeight="DemiBold"
+                        Foreground="CornflowerBlue"
+                        StaysOpenOnClick="True">
+                    </MenuItem>
+                    <Separator Margin="0,0,5,0"/>
+
+                     <MenuItem
+                        Header="Finish Tournament"
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.FinishTournamentMenuItem}}"
+                        CommandParameter="{Binding SelectedTournament}"
+                        ToolTip="Finishes the tournament and adds it to the database (updates the tournaments ending time to the current time if you haven't manually updated the tournaments ending time)"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                    <Separator Margin="0,0,5,0"/>
+
+                    <MenuItem
+                        Header="Starting Time"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}">
+                    <MenuItem
+                        Header="Update Starting Time..."
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="UpdateStartTimeSelected"
+                        ToolTip="Select a starting time"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                    <MenuItem
+                        Header="{Binding UpdateStartTimeNow}"
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="UpdateStartTime"
+                        ToolTip="{Binding SelectedTournament.StartTimeString, UpdateSourceTrigger=PropertyChanged}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                    </MenuItem>
+                    <MenuItem
+                        Header="Ending Time"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}">
+                    <MenuItem
+                        Header="Update Ending Time..."
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="UpdateEndTimeSelected"
+                        ToolTip="Select an ending time"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                     <MenuItem
+                        Header="{Binding UpdateEndTimeNow}"
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="UpdateEndTime"
+                        ToolTip="{Binding SelectedTournament.EndTimeString, UpdateSourceTrigger=PropertyChanged}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                     </MenuItem>
+                    <Separator Margin="0,0,5,0"/>
+                    <MenuItem
+                        Header="Tournament Data">
+                     <MenuItem
+                         Header="Update Tournament Data..."
+                         Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeTemplateDataMenuItem}}"
+                         CommandParameter="{Binding SelectedTournament}"
+                         ToolTip="Modify/update the data used to create this tournament"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                         StaysOpenOnClick="False"/>
+                    <MenuItem
+                        Header="Create Duplicate Tournament..."
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="StartDuplicate"
+                        ToolTip="{Binding SelectedTournament.StartDuplicateMenuString}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                    </MenuItem>
+
+                    <!--<MenuItem
+                        Header="{Binding SelectedTournament.FavoriteMenuString}"
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="PinToFavorites"
+                        ToolTip="Toggles this tournaments status on the favorite tournaments menu"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                     <MenuItem
+                         Header="Update Tournament..."
+                         Command="{Binding Source={x:Static Member=commands:DataGridCommands.ChangeTemplateDataMenuItem}}"
+                         CommandParameter="{Binding SelectedTournament}"
+                         ToolTip="Modify/update the data used to create this tournament"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                         StaysOpenOnClick="False"/>
+                    <MenuItem
+                        Header="Create Duplicate..."
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="StartDuplicate"
+                        ToolTip="{Binding SelectedTournament.StartDuplicateMenuString}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>-->
+                    <MenuItem
+                        Header="Cancel"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}">
+                        <MenuItem
+                            Header="Cancel Tournament"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="CancelTournament"
+                            ToolTip="{Binding SelectedTournament.CancelMenuString}"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"
+                            StaysOpenOnClick="False"/>
+                        <MenuItem
+                            Header="Cancel Tournaments..."
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="CancelSelectTournaments"
+                            ToolTip="Selectively cancel from any tournaments currently running"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"
+                            StaysOpenOnClick="False"/>
+                        <MenuItem
+                            Header="Cancel All Tournaments"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="CancelAllTournaments"
+                            ToolTip="Cancel all tournaments currently running"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"
+                            StaysOpenOnClick="False"/>
+                     </MenuItem>
+                    <MenuItem
+                        Header="Session"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}">
+                         <MenuItem
+                            Header="Add to Session(s)..."
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="AddToSession"
+                            ToolTip="Selectively add this tournament to any session you have previously created"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"
+                            StaysOpenOnClick="False"/>
+                         <MenuItem
+                            Header="Remove from Session(s)..."
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="RemoveFromSession"
+                            ToolTip="Selectively remove this tournament from any session that it is included in"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"
+                            StaysOpenOnClick="False"/>
+                     </MenuItem>
+                    <Separator Margin="0,0,5,0"/>
+                     <MenuItem
+                        Header="{Binding SelectedTournament.FavoriteMenuString}"
+                        Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                        CommandParameter="PinToFavorites"
+                        ToolTip="Toggles this tournaments status on the favorite tournaments menu"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        StaysOpenOnClick="False"/>
+                    <Separator Margin="0,0,5,0"/>
+                    <MenuItem
+                        Header="Screenshot"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}">
+                        <MenuItem
+                            Header="Attach Screenshot..."
+                            ToolTip="Attach an image file to this tournament that is saved in the database with the rest of the tournament data after it finishes (great for saving those final table podium screen captures)"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="AttachScreenshot"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"/>
+                        <MenuItem
+                            Header="Remove Screenshot"
+                            ToolTip="Remove an image file that was previously attached to this tournament"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="RemoveScreenshot"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"/>
+
+                        <MenuItem
+                            Header="View Screenshot"
+                            ToolTip="View the image file (if any) that is attached to this tournament"
+                            Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                            CommandParameter="ViewScreenshot"
+                            FontSize="{Binding FontSize}"
+                            Foreground="{Binding FontColor}"/>
+                    </MenuItem>
+                    <MenuItem
+                         Header="Notes..."
+                         ToolTip="Attach text notes to this tournament that are saved in the database with the rest of the tournament data after it is finished"
+                         Command="{Binding Source={x:Static Member=commands:DataGridCommands.ContextMenuItem}}"
+                         CommandParameter="AttachNote"
+                         FontSize="{Binding FontSize}"
+                         Foreground="{Binding FontColor}"/>
+                </ContextMenu>
+            </syncfusion:SfDataGrid.ContextMenu>
+
+            <!-- Columns -->
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn
+                    MappingName="Venue"
+                    HeaderText="{Binding VenueHeader}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    ToolTipTemplate="{StaticResource TemplateDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="TournamentName"
+                    HeaderText="{Binding TournamentNameHeader}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    ToolTipTemplate="{StaticResource TemplateDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center">
+                </syncfusion:GridTextColumn>
+
+                <syncfusion:GridDateTimeColumn
+                    DisplayBinding="{Binding StartTime, Converter={StaticResource DateToTimeConverter}}"
+                    MappingName="StartTime"
+                    HeaderText="{Binding StartTimeHeader}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    ToolTipTemplate="{StaticResource TimeDescriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinTotalCost"
+                    HeaderText="{Binding BuyinHeader}"
+                    ToolTipTemplate="{StaticResource TotalCostDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    CurrencySymbol="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}"
+                    ShowHeaderToolTip="True"
+                    TextAlignment="Center"
+                    AllowDragging="True"
+                    AllowEditing="False"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyTotalCost"
+                    HeaderText="{Binding RebuyHeader}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    CurrencySymbol="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}"
+                    ToolTipTemplate="{StaticResource TotalCostDescriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"
+                    AllowEditing="False"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonTotalCost"
+                    HeaderText="{Binding AddonHeader}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    CurrencySymbol="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}"
+                    ToolTipTemplate="{StaticResource TotalCostDescriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"
+                    AllowEditing="False"/>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding BountyHeader}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    ToolTipTemplate="{StaticResource TotalCostDescriptionToolTip}"
+                    MappingName="BountyCount"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=BountyCount, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                TextAlignment="Right"
+                                BorderThickness="0"
+                                PositiveForeground="CornflowerBlue"
+                                Height="25"
+                                Margin="-1,-8,-1,-8"
+                                ShowSpinButton="True"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding JackpotSpinMultiplierHeader}"
+                    ToolTipTemplate="{StaticResource TotalCostDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="JackpotSpinMultiplier"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=JackpotSpinMultiplier, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                TextAlignment="Right"
+                                PositiveForeground="CornflowerBlue"
+                                BorderThickness="0"
+                                Height="25"
+                                Margin="-1,-8,-1,-8"
+                                ShowSpinButton="True"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding RebuyCountHeader}"
+                    ToolTipTemplate="{StaticResource RebuyCountDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="RebuyCount"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=RebuyCount, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                TextAlignment="Right"
+                                BorderThickness="0"
+                                PositiveForeground="CornflowerBlue"
+                                Height="25"
+                                Margin="-1,-8,-1,-8"
+                                ShowSpinButton="True"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding AddonCountHeader}"
+                    ToolTipTemplate="{StaticResource AddonCountDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="AddonCount"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=AddonCount, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                TextAlignment="Right"
+                                BorderThickness="0"
+                                PositiveForeground="CornflowerBlue"
+                                Height="25"
+                                Margin="-1,-8,-1,-8"
+                                ShowSpinButton="True"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="TotalCost"
+                    HeaderText="{Binding TotalCostHeader, UpdateSourceTrigger=PropertyChanged}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    CurrencySymbol="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}"
+                    ToolTipTemplate="{StaticResource TotalCostDescriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"
+                    AllowEditing="False"/>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding EntrantsHeader}"
+                    ToolTipTemplate="{StaticResource EntrantsDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="Entrants"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=Entrants, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                Height="25"
+                                PositiveForeground="CornflowerBlue"
+                                Margin="-1,-8,-1,-8"
+                                BorderThickness="0"
+                                TextAlignment="Right"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding EntrantsPaidHeader}"
+                    ToolTipTemplate="{StaticResource EntrantsPaidDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="EntrantsPaid"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=EntrantsPaid, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                Height="25"
+                                PositiveForeground="CornflowerBlue"
+                                Margin="-1,-8,-1,-8"
+                                BorderThickness="0"
+                                TextAlignment="Right"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding FinishPositionHeader}"
+                    ToolTipTemplate="{StaticResource FinishPositionDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="FinishPosition"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:IntegerTextBox
+                                Value="{Binding Path=FinishPosition, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                Height="25"
+                                PositiveForeground="CornflowerBlue"
+                                Margin="-1,-8,-1,-8"
+                                BorderThickness="0"
+                                TextAlignment="Right"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+                <syncfusion:GridTemplateColumn
+                    HeaderText="{Binding PrizeWonHeader}"
+                    ToolTipTemplate="{StaticResource PrizeWonDescriptionToolTip}"
+                    HeaderToolTipTemplate="{StaticResource ColumnHeaderTemplate}"
+                    ShowHeaderToolTip="True"
+                    MappingName="PrizeWon"
+                    syncfusion:FocusManagerHelper.WantsKeyInput="True"
+                    AllowDragging="True">
+                    <syncfusion:GridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <syncfusion:CurrencyTextBox
+                                Value="{Binding Path=PrizeWon, UpdateSourceTrigger=PropertyChanged}"
+                                MinValue="0"
+                                Height="25"
+                                Margin="-1,-8,-1,-8"
+                                CurrencySymbol="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}"
+                                BorderThickness="0"
+                                TextAlignment="Right"
+                                ScrollInterval="1.0"
+                                Culture="en-US"/>
+                        </DataTemplate>
+                    </syncfusion:GridTemplateColumn.CellTemplate>
+                </syncfusion:GridTemplateColumn>
+
+            </syncfusion:SfDataGrid.Columns>
+
+        </syncfusion:SfDataGrid>
+    </StackPanel>
+</Grid>
+</syncfusion:ChromelessWindow>

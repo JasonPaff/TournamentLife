@@ -1,0 +1,123 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Menu_Views.DatabaseView"
+    mc:Ignorable="d"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    Title="Database Manager"
+    IsEnabled="{Binding Enabled}"
+    x:Name="Window">
+
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:SngToVisibilityConverter x:Key="SngToVisibleConverter"/>
+    </syncfusion:ChromelessWindow.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Delete/Load/Cancel -->
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5,5"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="120"
+                Margin="5,5"
+                ToolTip="Create a copy of the current profiles tournament results database"
+                FontSize="{Binding FontSize}"
+                Command="{Binding BackupCommand}"
+                Content="Copy Database"/>
+            <Button
+                MinHeight="25"
+                MinWidth="120"
+                Margin="5,5"
+                ToolTip="Delete the current profiles tournament results database (can't be undone!)"
+                FontSize="{Binding FontSize}"
+                Command="{Binding DeleteCommand}"
+                Content="Delete Database"/>
+            <Button
+                MinHeight="25"
+                MinWidth="120"
+                Margin="5,5"
+                ToolTip="Import tournament results from a different database into the current profiles tournament results database"
+                FontSize="{Binding FontSize}"
+                Command="{Binding ImportCommand}"
+                Content="Import Database"/>
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close the window"
+                FontSize="{Binding FontSize}"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+
+        <!-- Import CheckBox/Button -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Content="Import Selected Records"
+                MinHeight="25"
+                MinWidth="200"
+                FontSize="{Binding FontSize}"
+                Command="{Binding ImportRecordsCommand}"
+                Visibility="{Binding ImportRecordsButton, Converter={StaticResource SngToVisibleConverter}}"/>
+        </StackPanel>
+
+        <!-- List Box -->
+        <syncfusion:CheckListBox
+            Grid.Row="2"
+            Grid.Column="0"
+            x:Name="ImportListBox"
+            ItemsSource="{Binding ImportList}"
+            FontSize="{Binding FontSize}"
+            DisplayMemberPath="DisplayString"
+            HorizontalContentAlignment="Center"
+            MinWidth="100"
+            MinHeight="100"
+            MaxHeight="700"
+            Margin="0,10,0,5"
+            ToolTip="List of tournaments to import">
+            <syncfusion:CheckListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type syncfusion:CheckListBoxItem}">
+                    <Setter
+                        Property="IsChecked"
+                        Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    <Setter
+                        Property="ToolTip"
+                        Value="{Binding Description}"/>
+                </Style>
+            </syncfusion:CheckListBox.ItemContainerStyle>
+            <syncfusion:CheckListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </syncfusion:CheckListBox.ItemsPanel>
+        </syncfusion:CheckListBox>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

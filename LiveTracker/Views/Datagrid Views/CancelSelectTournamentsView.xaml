@@ -1,0 +1,91 @@
+﻿<syncfusion:ChromelessWindow x:Class="LiveTracker.Views.Datagrid_Views.CancelSelectTournamentsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+        mc:Ignorable="d"
+        Title="Cancel Tournament(s)"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        Height="450"
+        Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu Bar -->
+        <syncfusion:MenuAdv
+            x:Name="LiveTrackerMenu"
+            Grid.Row="0"
+            ExpandMode="ExpandOnClick">
+
+            <!-- Options Menu -->
+            <syncfusion:MenuItemAdv
+                FontSize="{Binding FontSize}"
+                Header="Options">
+                <syncfusion:MenuItemAdv
+                    Header="Sort Tournaments by Starting Time"
+                    ToolTip="Sort the tournaments by the starting times instead of alphabetically"
+                    IsCheckable="True"
+                    IsChecked="{Binding SortByStartTime}"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding SortCommand}"/>
+            </syncfusion:MenuItemAdv>
+        </syncfusion:MenuAdv>
+
+        <ListBox
+            Grid.Row="1"
+            FontSize="{Binding FontSize}"
+            Margin="5,5"
+            MaxHeight="500"
+            BorderThickness="1"
+            SelectionMode="Multiple"
+            ItemsSource="{Binding Tournaments}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    <Setter Property="ToolTip" Value="{Binding Description}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+        <StackPanel
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="30"
+                MinWidth="100"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsDefault="True"
+                ToolTip="Cancel the selected tournaments"
+                Command="{Binding SaveCommand}"
+                Content="Select"/>
+            <Button
+                MinHeight="30"
+                MinWidth="100"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close window without canceling any tournaments"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+    </Grid>
+</syncfusion:ChromelessWindow>

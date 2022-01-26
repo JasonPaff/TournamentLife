@@ -1,0 +1,20 @@
+﻿Tournament Life
+1.3.0.9
+
+winexe
+C#
+.cs
+C:\Users\jason\RiderProjects\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\
+Tournament_Life
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+C:\Users\jason\RiderProjects\Tournament-Life\LiveTracker\App.xaml
+56-911309716
+
+1691032562621
+213-1679623147
+Views\Bankroll Views\AddBankrollView.xaml;Views\Bankroll Views\AddVenueView.xaml;Views\Bankroll Views\BankrollTransactionView.xaml;Views\Bankroll Views\RemoveBankrollView.xaml;Views\Bankroll Views\RemoveVenueView.xaml;Views\Bankroll Views\ViewTransactionsView.xaml;Views\Datagrid Views\AddToSessionView.xaml;Views\Datagrid Views\AttachNoteView.xaml;Views\Datagrid Views\CancelSelectTournamentsView.xaml;Views\Datagrid Views\ChangeTemplateDataView.xaml;Views\Datagrid Views\CreateDuplicateView.xaml;Views\Datagrid Views\FinishTournamentView.xaml;Views\Datagrid Views\RemoveFromSessionView.xaml;Views\Datagrid Views\UpdateEndTimeSelectedView.xaml;Views\Datagrid Views\UpdateStartTimeSelectedView.xaml;Views\Graph Views\FinishPositionGraphView.xaml;Views\Graph Views\SessionProfitGraphNoLabelView.xaml;Views\Graph Views\SessionProfitGraphView.xaml;Views\Graph Views\TournamentBuyinRoiHistogramView.xaml;Views\Graph Views\TournamentFormatRoiChartView.xaml;Views\Graph Views\TournamentGameTypeRoiChartView.xaml;Views\Graph Views\TournamentProfitGraphNoLabelView.xaml;Views\Graph Views\TournamentProfitGraphView.xaml;Views\Graph Views\TournamentVenueRoiChartView.xaml;Views\LiveTrackerWindowView.xaml;Views\Menu Views\AddProfileView.xaml;Views\Menu Views\DatabaseView.xaml;Views\Menu Views\LiveTrackerMenuView.xaml;Views\Menu Views\ProfilesView.xaml;Views\Menu Views\QuickStartView.xaml;Views\Menu Views\RegisterView.xaml;Views\Menu Views\SelectTemplatesView.xaml;Views\Misc Views\NewProfileView.xaml;Views\OkView.xaml;Views\Options\OptionsView.xaml;Views\Results\CreateTournamentFilterView.xaml;Views\Results\DeleteTournamentFilterView.xaml;Views\Results\EditRecordView.xaml;Views\Results\LoadTournamentFilterView.xaml;Views\Results\QuickResultsView.xaml;Views\Results\RenameFilterView.xaml;Views\Results\SessionResultsView.xaml;Views\Results\TournamentsResultsView.xaml;Views\Results\TournamentsView.xaml;Views\Session Manager Views\SessionListView.xaml;Views\Session Manager Views\SessionManagerView.xaml;Views\Session Manager Views\SessionStartView.xaml;Views\Template Manager Views\EditDefaultsView.xaml;Views\Template Manager Views\EditFormatsView.xaml;Views\Template Manager Views\EditGameTypesView.xaml;Views\Template Manager Views\EditVenuesView.xaml;Views\Template Manager Views\TemplateDeleteView.xaml;Views\Template Manager Views\TemplateExportView.xaml;Views\Template Manager Views\TemplateImportView.xaml;Views\Template Manager Views\TemplateManagerView.xaml;Views\YesNoView.xaml;
+
+True
+

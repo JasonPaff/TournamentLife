@@ -1,0 +1,264 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Session_Manager_Views.SessionManagerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:commands="clr-namespace:LiveTracker.Commands"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+	mc:Ignorable="d"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    FocusManager.FocusedElement="{Binding ElementName=SessionName}"
+    UseNativeChrome="True"
+    SizeToContent="WidthAndHeight"
+    ShowMaximizeButton="False"
+    ResizeMode="CanMinimize"
+    Height="550"
+    Width="150"
+    Title="{Binding Title}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- button panel -->
+        <StackPanel
+            Grid.Row="1"
+            Margin="0,45,0,0"
+            Grid.Column="1">
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Save"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Save Session"
+                ToolTip="Save the session"/>
+            <Separator BorderThickness="1"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Add"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Add Tournament(s)"
+                ToolTip="Add the selected tournaments(s) to the session"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Remove"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Remove Tournament(s)"
+                ToolTip="Remove the selected tournaments(s) from the session"/>
+            <!--<Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Clear"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Clear Selected"
+                ToolTip="Deselect all the selected tournaments"/>-->
+            <Separator BorderThickness="1"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="New"
+                FocusManager.FocusedElement="{Binding ElementName=SessionName}"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="New Session"
+                ToolTip="Start a new session"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Edit"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Edit Session"
+                ToolTip="Edit an existing session"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Copy"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Copy Session"
+                ToolTip="Make a copy of an existing session"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Delete"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Delete Session"
+                ToolTip="Delete an existing session"/>
+            <Separator BorderThickness="1"/>
+            <Button
+                FontSize="{Binding FontSize}"
+                Command="{Binding Source={x:Static Member=commands:SessionManagerCommands.MenuItemCommand}}"
+                CommandParameter="Close"
+                Height="26"
+                Margin="5,5"
+                Padding="5,5"
+                Content="Close Window"
+                ToolTip="Closes the window"/>
+
+        </StackPanel>
+
+        <!-- template list box -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="0">
+              <!-- Search/Venue -->
+
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+            <Label
+                Content="Search"
+                Margin="0,5,0,0"
+                FontSize="{Binding FontSize}"/>
+            <TextBox
+                x:Name="Text"
+                Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                MinWidth="230"
+                Margin="0,6,0,0"
+                VerticalContentAlignment="Center"
+                ToolTip="Filters the tournaments based on a text search term"
+                FontSize="{Binding FontSize}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction Command="{Binding TextChangedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,10,0,0"
+                Content="Venue"
+                FontSize="{Binding FontSize}"/>
+            <ComboBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,0,0,0"
+                Padding="3,10,0,0"
+                x:Name="Combo"
+                ToolTip="Filters the tournaments based on the venue they were played at"
+                ItemsSource="{Binding Venues}"
+                MinHeight="35"
+                MinWidth="230"
+                SelectedItem="{Binding SelectedVenue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                FontSize="{Binding FontSize}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding TextChangedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            </StackPanel>
+        <ListBox
+            ItemsSource="{Binding TemplateList, NotifyOnSourceUpdated=True, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            MinWidth="300"
+            MinHeight="500"
+            MaxHeight="500"
+            Margin="5,5"
+            Padding="5,5"
+            BorderThickness="1"
+            SelectionMode="Multiple" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding DisplayString}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    <Setter Property="ToolTip" Value="{Binding Description}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+        </StackPanel>
+
+        <!-- session list box -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="2"
+            Margin="0,-11,0,0">
+            <StackPanel
+                Orientation="Horizontal"
+                Margin="0,55,0,0"
+                HorizontalAlignment="Center">
+            <Label
+                Content="Session Name"
+                FontSize="{Binding FontSize}"
+                Margin="0,-3,0,0"/>
+            <TextBox
+                x:Name="SessionName"
+                Text="{Binding SessionName, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="{Binding FontSize}"
+                MinWidth="200"
+                Margin="0,-1,0,0"
+                MaxLength="46"
+                VerticalContentAlignment="Center"
+                ToolTip="The name of the session (max length is 46 characters)"/>
+            </StackPanel>
+        <ListBox
+            MinWidth="300"
+            MinHeight="500"
+            MaxHeight="500"
+            ToolTip="List of tournaments included in the session"
+            Margin="5,5"
+            Padding="5,5"
+            BorderThickness="1"
+            ItemsSource="{Binding SessionList, NotifyOnSourceUpdated=True, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            SelectionMode="Multiple">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding DisplayString}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    <Setter Property="ToolTip" Value="{Binding Description}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

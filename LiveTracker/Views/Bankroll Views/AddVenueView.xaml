@@ -1,0 +1,76 @@
+﻿<syncfusion:ChromelessWindow x:Class="LiveTracker.Views.Bankroll_Views.AddVenueView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiveTracker.Views.Bankroll_Views"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+        Title="Add Venue"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        Height="450"
+        Width="800"
+        FocusManager.FocusedElement="{Binding ElementName=Text}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5,5"
+            FontSize="{Binding FontSize}"
+            ToolTip="Venue name to add"
+            Content="Venue"/>
+
+        <TextBox
+            x:Name="Text"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="5,5"
+            MinWidth="100"
+            ToolTip="Venue to add"
+            FontSize="{Binding FontSize}"
+            syncfusion:FocusManagerHelper.FocusedElement="True"
+            Text="{Binding Venue}"/>
+
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="30"
+                MinWidth="90"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                ToolTip="Add the new venue to the venues list"
+                Command="{Binding SaveCommand}"
+                Content="Add Venue"/>
+            <Button
+                MinHeight="30"
+                MinWidth="90"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                ToolTip="Cancel and close the window"
+                IsCancel="True"
+                Command="{Binding CancelCommand}"
+                Content="Close Window"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

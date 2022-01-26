@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "fP3UKBi42IJklD7/24t+y4DFMx80lQoxvKJ+ogA9R4GyJhTRZGepV2b1R9se/9Fo84I6Y6IvHxDKZDo94/qw7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jason\\source\\repos\\TournamentLife\\LiveTracker\\Tournament Life.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\fody\\6.4.0\\fody.6.4.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\propertychanged.fody\\3.3.3\\propertychanged.fody.3.3.3.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\swiftexcel\\1.0.8\\swiftexcel.1.0.8.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.compression.base\\19.1.0.55\\syncfusion.compression.base.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.data.wpf\\19.1.0.55\\syncfusion.data.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.docio.wpf\\19.1.0.55\\syncfusion.docio.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.licensing\\19.1.0.56\\syncfusion.licensing.19.1.0.56.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.officechart.base\\19.1.0.55\\syncfusion.officechart.base.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.sfchart.wpf\\19.1.0.55\\syncfusion.sfchart.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.sfgrid.wpf\\19.1.0.55\\syncfusion.sfgrid.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.sfinput.wpf\\19.1.0.55\\syncfusion.sfinput.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.sfrichtextboxadv.wpf\\19.1.0.55\\syncfusion.sfrichtextboxadv.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.sfskinmanager.wpf\\19.1.0.56\\syncfusion.sfskinmanager.wpf.19.1.0.56.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.shared.wpf\\19.1.0.55\\syncfusion.shared.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.themes.materialdark.wpf\\19.1.0.55\\syncfusion.themes.materialdark.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.themes.materiallight.wpf\\19.1.0.56\\syncfusion.themes.materiallight.wpf.19.1.0.56.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\syncfusion.tools.wpf\\19.1.0.55\\syncfusion.tools.wpf.19.1.0.55.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.4\\microsoft.netcore.app.runtime.win-x64.5.0.4.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.4\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.4.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.4\\microsoft.aspnetcore.app.runtime.win-x64.5.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

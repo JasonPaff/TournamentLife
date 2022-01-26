@@ -1,0 +1,436 @@
+<Tournaments>
+  <Tournament>
+    <ID>404</ID>
+    <DatabaseId>3679</DatabaseId>
+    <AddonCost>5</AddonCost>
+    <AddonCount>1</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>10</BlindLevels>
+    <BuyinCost>5</BuyinCost>
+    <BuyinRake>0.5</BuyinRake>
+    <EndTime>9/29/2021 11:50:22 PM</EndTime>
+    <Entrants>167</Entrants>
+    <EntrantsPaid>27</EntrantsPaid>
+    <Favorite>False</Favorite>
+    <FinishPosition>32</FinishPosition>
+    <Formats>
+      <GameFormat>Rebuy</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>1750.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>30</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>0</PrizeWon>
+    <RebuyCost>5</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>6000</StackSizeAddon>
+    <StackSizeStarting>2000</StackSizeStarting>
+    <StackSizeRebuy>2000</StackSizeRebuy>
+    <StartTime>9/29/2021 9:15:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Night Brawl SC 1,750</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>415</ID>
+    <DatabaseId>3680</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>3</BlindLevels>
+    <BuyinCost>30.00</BuyinCost>
+    <BuyinRake>2.10</BuyinRake>
+    <EndTime>9/29/2021 11:55:22 PM</EndTime>
+    <Entrants>6</Entrants>
+    <EntrantsPaid>2</EntrantsPaid>
+    <Favorite>False</Favorite>
+    <FinishPosition>4</FinishPosition>
+    <Formats>
+      <GameFormat>Sng</GameFormat>
+      <GameFormat>Hyper-Turbo</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>0</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>0</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>0</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>500</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>9/29/2021 11:48:00 PM</StartTime>
+    <TableSize>6</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Brooke [Hyper-Turbo]</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>395</ID>
+    <DatabaseId>3682</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>3</BlindLevels>
+    <BuyinCost>6.00</BuyinCost>
+    <BuyinRake>0.42</BuyinRake>
+    <EndTime>9/30/2021 6:34:11 PM</EndTime>
+    <Entrants>9</Entrants>
+    <EntrantsPaid>5</EntrantsPaid>
+    <Favorite>False</Favorite>
+    <FinishPosition>4</FinishPosition>
+    <Formats>
+      <GameFormat>Freezeout</GameFormat>
+      <GameFormat>Satellite</GameFormat>
+      <GameFormat>Hyper-Turbo</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>165.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>0</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>33.00</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>1500</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>9/30/2021 6:20:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Triple Threat Satellite [Hyper-Turbo]</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>236</ID>
+    <DatabaseId>3683</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>10</BlindLevels>
+    <BuyinCost>20</BuyinCost>
+    <BuyinRake>2</BuyinRake>
+    <EndTime>9/30/2021 7:06:17 PM</EndTime>
+    <Entrants>81</Entrants>
+    <EntrantsPaid>15</EntrantsPaid>
+    <Favorite>True</Favorite>
+    <FinishPosition>11</FinishPosition>
+    <Formats>
+      <GameFormat>Deep</GameFormat>
+      <GameFormat>Freezeout</GameFormat>
+      <GameFormat>Progressive Bounty</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>2000.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>60</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>28.80</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>5000</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>9/30/2021 4:15:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Deep Twenty-Two SC 2,000</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>True</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>418</ID>
+    <DatabaseId>3684</DatabaseId>
+    <AddonCost>30.00</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>10</BlindLevels>
+    <BuyinCost>30.00</BuyinCost>
+    <BuyinRake>3.00</BuyinRake>
+    <EndTime>9/30/2021 7:17:28 PM</EndTime>
+    <Entrants>25</Entrants>
+    <EntrantsPaid>4</EntrantsPaid>
+    <Favorite>False</Favorite>
+    <FinishPosition>15</FinishPosition>
+    <Formats>
+      <GameFormat>2R1A</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>2000.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>30</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>0</PrizeWon>
+    <RebuyCost>30.00</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>5000</StackSizeAddon>
+    <StackSizeStarting>3000</StackSizeStarting>
+    <StackSizeRebuy>3000</StackSizeRebuy>
+    <StartTime>9/30/2021 6:30:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Triple Threat SC 2,000</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>345</ID>
+    <DatabaseId>3685</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>3</BlindLevels>
+    <BuyinCost>6.00</BuyinCost>
+    <BuyinRake>0.4</BuyinRake>
+    <EndTime>10/5/2021 10:50:28 PM</EndTime>
+    <Entrants>7</Entrants>
+    <EntrantsPaid>3</EntrantsPaid>
+    <Favorite>True</Favorite>
+    <FinishPosition>3</FinishPosition>
+    <Formats>
+      <GameFormat>Freezeout</GameFormat>
+      <GameFormat>Satellite</GameFormat>
+      <GameFormat>Hyper-Turbo</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>99.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>0</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>33.00</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>1500</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>10/5/2021 10:35:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Fast Freeze Satellite [Hyper-Turbo]</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>274</ID>
+    <DatabaseId>3686</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>5</BlindLevels>
+    <BuyinCost>20</BuyinCost>
+    <BuyinRake>2</BuyinRake>
+    <EndTime>10/5/2021 11:08:25 PM</EndTime>
+    <Entrants>54</Entrants>
+    <EntrantsPaid>9</EntrantsPaid>
+    <Favorite>True</Favorite>
+    <FinishPosition>2</FinishPosition>
+    <Formats>
+      <GameFormat>Deep</GameFormat>
+      <GameFormat>Turbo</GameFormat>
+      <GameFormat>Freezeout</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>1000.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>30</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>216.00</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>10000</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>10/5/2021 9:00:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Early Night SC 1,000</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>17</ID>
+    <DatabaseId>3687</DatabaseId>
+    <AddonCost>3</AddonCost>
+    <AddonCount>1</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>5</BlindLevels>
+    <BuyinCost>3</BuyinCost>
+    <BuyinRake>0.3</BuyinRake>
+    <EndTime>10/5/2021 10:01:57 PM</EndTime>
+    <Entrants>125</Entrants>
+    <EntrantsPaid>27</EntrantsPaid>
+    <Favorite>True</Favorite>
+    <FinishPosition>95</FinishPosition>
+    <Formats>
+      <GameFormat>Turbo</GameFormat>
+      <GameFormat>2R1A</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>500</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>15</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>0</PrizeWon>
+    <RebuyCost>3</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>3000</StackSizeAddon>
+    <StackSizeStarting>3000</StackSizeStarting>
+    <StackSizeRebuy>3000</StackSizeRebuy>
+    <StartTime>10/5/2021 9:10:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Global Poker Live Stream SC 500</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>12</ID>
+    <DatabaseId>3688</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>10</BlindLevels>
+    <BuyinCost>50</BuyinCost>
+    <BuyinRake>5</BuyinRake>
+    <EndTime>10/5/2021 11:29:45 PM</EndTime>
+    <Entrants>205</Entrants>
+    <EntrantsPaid>36</EntrantsPaid>
+    <Favorite>True</Favorite>
+    <FinishPosition>25</FinishPosition>
+    <Formats>
+      <GameFormat>Deep</GameFormat>
+      <GameFormat>Freezeout</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>10000</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>60</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>87.12</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>10000</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>10/5/2021 8:30:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>
+    </TimeZoneName>
+    <TournamentName>Deep Freeze SC 10,000</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+  <Tournament>
+    <ID>346</ID>
+    <DatabaseId>3689</DatabaseId>
+    <AddonCost>0</AddonCost>
+    <AddonCount>0</AddonCount>
+    <AddonRake>0</AddonRake>
+    <BlindLevels>10</BlindLevels>
+    <BuyinCost>30.00</BuyinCost>
+    <BuyinRake>3.00</BuyinRake>
+    <EndTime>10/5/2021 11:36:42 PM</EndTime>
+    <Entrants>63</Entrants>
+    <EntrantsPaid>12</EntrantsPaid>
+    <Favorite>True</Favorite>
+    <FinishPosition>33</FinishPosition>
+    <Formats>
+      <GameFormat>Freezeout</GameFormat>
+      <GameFormat>Deep</GameFormat>
+      <GameFormat>Turbo</GameFormat>
+    </Formats>
+    <GameType>NLHE</GameType>
+    <Guarantee>1500.00</Guarantee>
+    <JackpotSpinMultiplier>0</JackpotSpinMultiplier>
+    <LateReg>60</LateReg>
+    <Note>
+    </Note>
+    <PrizeWon>0</PrizeWon>
+    <RebuyCost>0</RebuyCost>
+    <RebuyCount>0</RebuyCount>
+    <RebuyRake>0</RebuyRake>
+    <Screenshot>
+    </Screenshot>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeStarting>10000</StackSizeStarting>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StartTime>10/5/2021 10:50:00 PM</StartTime>
+    <TableSize>9</TableSize>
+    <TimeZoneName>Eastern Standard Time</TimeZoneName>
+    <TournamentName>Fast Freeze SC 1,500</TournamentName>
+    <Venue>Global Poker</Venue>
+    <IsBovadaBounty>False</IsBovadaBounty>
+    <IsSng>False</IsSng>
+    <Bounty>0</Bounty>
+    <BountyCount>0</BountyCount>
+  </Tournament>
+</Tournaments>

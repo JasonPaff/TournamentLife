@@ -1,0 +1,198 @@
+<Filters>
+  <TournamentFilters>
+    <Filter Name="Global Poker MTT's Only">
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>All-In</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker Satellites Only">
+      <IncludedFormats>
+        <IncludeFormat>Satellite</IncludeFormat>
+      </IncludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $33 MTT's Only">
+      <BuyinCostLow>33.00</BuyinCostLow>
+      <BuyinCostHigh>33.00</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $55 MTT's Only">
+      <BuyinCostLow>55.00</BuyinCostLow>
+      <BuyinCostHigh>55.00</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $22 MTT's Only">
+      <BuyinCostLow>22.00</BuyinCostLow>
+      <BuyinCostHigh>22.00</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $11 MTT's Only">
+      <BuyinCostLow>11.00</BuyinCostLow>
+      <BuyinCostHigh>11.00</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $5.50 MTT's Only">
+      <BuyinCostLow>5.50</BuyinCostLow>
+      <BuyinCostHigh>5.50</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $3.30 MTT's Only">
+      <BuyinCostLow>3.30</BuyinCostLow>
+      <BuyinCostHigh>3.30</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $110 MTT's Only">
+      <BuyinCostLow>110.00</BuyinCostLow>
+      <BuyinCostHigh>110.00</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker $218 MTT's Only">
+      <BuyinCostLow>218.00</BuyinCostLow>
+      <BuyinCostHigh>218.00</BuyinCostHigh>
+      <TableSizeLow>6</TableSizeLow>
+      <TableSizeHigh>9</TableSizeHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Heads-Up</ExcludeFormat>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Shovefest</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+    <Filter Name="Global Poker Sng's Only">
+      <IncludedFormats>
+        <IncludeFormat>Sng</IncludeFormat>
+      </IncludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+    </Filter>
+    <Filter Name="Global Poker MTTs $55 and below">
+      <BuyinCostLow>0</BuyinCostLow>
+      <BuyinCostHigh>55.00</BuyinCostHigh>
+      <ExcludedFormats>
+        <ExcludeFormat>Satellite</ExcludeFormat>
+        <ExcludeFormat>Sng</ExcludeFormat>
+      </ExcludedFormats>
+      <IncludedVenues>
+        <IncludeVenue>Global Poker</IncludeVenue>
+      </IncludedVenues>
+      <IncludedGameTypes>
+        <IncludeGameType>NLHE</IncludeGameType>
+      </IncludedGameTypes>
+    </Filter>
+  </TournamentFilters>
+  <SessionFilters />
+</Filters>

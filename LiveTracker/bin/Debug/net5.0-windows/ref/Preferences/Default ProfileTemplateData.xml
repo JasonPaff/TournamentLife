@@ -1,0 +1,63 @@
+<TemplateData>
+  <Formats>
+    <Format>1R1A</Format>
+    <Format>2R1A</Format>
+    <Format>2x-Chance</Format>
+    <Format>3R1A</Format>
+    <Format>Ante Up</Format>
+    <Format>Big Ante</Format>
+    <Format>Bounty</Format>
+    <Format>Deep</Format>
+    <Format>Freezeout</Format>
+    <Format>Heads-Up</Format>
+    <Format>Hyper-Turbo</Format>
+    <Format>Jackpot Sng</Format>
+    <Format>Progressive Bounty</Format>
+    <Format>Progressive Total Bounty</Format>
+    <Format>Re-Entry</Format>
+    <Format>Rebuy</Format>
+    <Format>Satellite</Format>
+    <Format>Shootout</Format>
+    <Format>Shovefest</Format>
+    <Format>Sng</Format>
+    <Format>Super Bounty</Format>
+    <Format>Super Deep</Format>
+    <Format>Total Bounty</Format>
+    <Format>Turbo</Format>
+    <Format>All-In</Format>
+    <DefaultFormat>Freezeout</DefaultFormat>
+    <DefaultFormat>Deep</DefaultFormat>
+  </Formats>
+  <GameTypes>
+    <GameType>FLHE</GameType>
+    <GameType>NLHE</GameType>
+    <GameType>PLO</GameType>
+    <GameType>PLO8</GameType>
+    <GameType>NLCP</GameType>
+    <DefaultGameType>NLHE</DefaultGameType>
+  </GameTypes>
+  <Venues>
+    <Venue>Americas Cardroom</Venue>
+    <Venue>BetOnline</Venue>
+    <Venue>Global Poker</Venue>
+    <Venue>Ignition</Venue>
+    <DefaultVenue>Global Poker</DefaultVenue>
+  </Venues>
+  <DefaultValues>
+    <TournamentName />
+    <AddonBaseCost>0</AddonBaseCost>
+    <AddonRakeCost>0</AddonRakeCost>
+    <BlindLevels>10</BlindLevels>
+    <BuyinBaseCost>10</BuyinBaseCost>
+    <BuyinRakeCost>1</BuyinRakeCost>
+    <Guarantee>0</Guarantee>
+    <LateReg>60</LateReg>
+    <RebuyBaseCost>0</RebuyBaseCost>
+    <RebuyRakeCost>0</RebuyRakeCost>
+    <StartTime>1/1/1111 5:00:00 PM</StartTime>
+    <StackSizeAddon>0</StackSizeAddon>
+    <StackSizeRebuy>0</StackSizeRebuy>
+    <StackSizeStarting>5000</StackSizeStarting>
+    <TableSize>9</TableSize>
+  </DefaultValues>
+</TemplateData>

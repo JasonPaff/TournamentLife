@@ -1,0 +1,66 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Datagrid_Views.UpdateEndTimeSelectedView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    mc:Ignorable="d"
+    Title="Ending Time"
+    SizeToContent="WidthAndHeight"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    ResizeMode="NoResize"
+    Height="450"
+    Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <syncfusion:SfDatePicker
+            Grid.Row="0"
+            Margin="5,5"
+            ToolTip="The date the tournament ended"
+            FontSize="{Binding FontSize}"
+            Value="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+        <syncfusion:SfTimePicker
+            Grid.Row="1"
+            Margin="5,5"
+            ToolTip="The time the tournament ended"
+            FontSize="{Binding FontSize}"
+            Value="{Binding EndTime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+        <StackPanel
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="82"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsDefault="True"
+                ToolTip="Update the ending time"
+                Command="{Binding SaveCommand}"
+                Content="Update"/>
+            <Button
+                MinHeight="25"
+                MinWidth="82"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close the window"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

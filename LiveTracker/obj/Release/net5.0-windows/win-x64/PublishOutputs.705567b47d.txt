@@ -1,0 +1,2 @@
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\publish\Tournament Life.pdb
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\publish\Tournament Life.exe

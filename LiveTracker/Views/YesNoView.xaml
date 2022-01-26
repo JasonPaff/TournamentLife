@@ -1,0 +1,51 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="Tournament_Life.Views.YesNoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    Title="{Binding Title}"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            FontSize="{Binding FontSize}"
+            HorizontalAlignment="Center"
+            Margin="5,5"
+            Content="{Binding Text}"/>
+        <StackPanel
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                ToolTip="Accept and close the window"
+                FontSize="{Binding FontSize}"
+                Margin="5,5,5,10"
+                IsDefault="True"
+                Command="{Binding SaveCommand}"
+                Content="Yes"/>
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                ToolTip="Decline and close the window"
+                FontSize="{Binding FontSize}"
+                Margin="5,5,5,10"
+                IsCancel="True"
+                Command="{Binding CancelCommand}"
+                Content="No"/>
+        </StackPanel>
+    </Grid>
+</syncfusion:ChromelessWindow>

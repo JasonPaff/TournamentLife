@@ -1,0 +1,133 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Template_Manager_Views.EditGameTypesView"
+    mc:Ignorable="d"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    FocusManager.FocusedElement="{Binding ElementName=Text}"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    Title="Edit Game Types"
+    x:Name="Window">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Add -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5,5"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                Margin="5,5"
+                Padding="5,5"
+                ToolTip="Add the game type from the text box"
+                FontSize="{Binding FontSize}"
+                Command="{Binding AddCommand}"
+                Content="Add Game Type"/>
+            <TextBox
+                x:Name="Text"
+                FontSize="{Binding FontSize}"
+                MinHeight="25"
+                MinWidth="157"
+                ToolTip="Enter new tournament game type here"
+                Text="{Binding AddText}"/>
+        </StackPanel>
+
+        <!-- Remove/Cancel -->
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="5,5"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="120"
+                Margin="5,5"
+                Padding="5,5"
+                ToolTip="Delete the selected tournament game type(s)"
+                FontSize="{Binding FontSize}"
+                Command="{Binding RemoveCommand}"
+                Content="Delete Game Type"/>
+            <Button
+                MinHeight="25"
+                MinWidth="105"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close edit game types window"
+                FontSize="{Binding FontSize}"
+                Command="{Binding CancelCommand}"
+                Content="Close Window"/>
+        </StackPanel>
+
+        <!-- Default Combo Box -->
+        <StackPanel
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="5,5"
+            Orientation="Horizontal">
+            <Label
+                FontSize="{Binding FontSize}"
+                ToolTip="Set the default game type for the tournament manager and quick start tournament menu option"
+                Content="Default Game Type"/>
+            <ComboBox
+                ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                FontSize="{Binding FontSize}"
+                HorizontalContentAlignment="Center"
+                ToolTip="Default tournament game type"
+                MinWidth="150">
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Check List Box -->
+        <syncfusion:CheckListBox
+            Grid.Row="4"
+            Grid.Column="0"
+            ItemsSource="{Binding ItemList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            DisplayMemberPath="DisplayString"
+            HorizontalContentAlignment="Center"
+            MinWidth="100"
+            MinHeight="100"
+            IsSelectAllEnabled="False"
+            MaxHeight="400"
+            Margin="0,10,0,0"
+            ToolTip="List of game types">
+            <syncfusion:CheckListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type syncfusion:CheckListBoxItem}">
+                    <Setter
+                        Property="IsChecked"
+                        Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                </Style>
+            </syncfusion:CheckListBox.ItemContainerStyle>
+            <syncfusion:CheckListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </syncfusion:CheckListBox.ItemsPanel>
+        </syncfusion:CheckListBox>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

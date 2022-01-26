@@ -1,0 +1,8 @@
+C:\Users\jason\Desktop\Tournament Life\LiveTracker.pdb
+C:\Users\jason\Desktop\Tournament Life\AutoUpdater.NET.pdb
+C:\Users\jason\Desktop\Tournament Life\AutoUpdater.NET.xml
+C:\Users\jason\Desktop\Tournament Life\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\jason\Desktop\Tournament Life\GalaSoft.MvvmLight.Platform.xml
+C:\Users\jason\Desktop\Tournament Life\GalaSoft.MvvmLight.pdb
+C:\Users\jason\Desktop\Tournament Life\GalaSoft.MvvmLight.xml
+C:\Users\jason\Desktop\Tournament Life\LiveTracker.exe

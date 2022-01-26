@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>SleepyBookworm.ico</ApplicationIcon>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>1.3.0.9</AssemblyVersion>
+    <FileVersion>1.3.0.9</FileVersion>
+    <StartupObject>LiveTracker.App</StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <PackageId>Tournament Life</PackageId>
+    <Authors>Jason Paff</Authors>
+    <Company>Sleepy Bookworm Software</Company>
+    <Product>Tournament Life</Product>
+    <Description>A program for tracking your live and online poker tournaments.</Description>
+    <AssemblyName>Tournament Life</AssemblyName>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>IDon'tKnow.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SleepyBookworm.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
+    <PackageReference Include="PropertyChanged.Fody" Version="2.3.0" />
+    <PackageReference Include="SwiftExcel" Version="1.0.8" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="19.1.0.55" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="19.1.0.55" />
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="19.1.0.55" />
+    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="19.1.0.55" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="19.1.0.56" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="19.1.0.55" />
+    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="19.1.0.55" />
+    <PackageReference Include="Syncfusion.Themes.MaterialLight.WPF" Version="19.1.0.56" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="19.1.0.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET">
+      <HintPath>bin\Debug\net5.0-windows\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe">
+      <HintPath>bin\Debug\net5.0-windows\System.Data.SqlServerCe.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>bin\Debug\net5.0-windows\System.Windows.Interactivity.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SleepyBookworm.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Templates.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

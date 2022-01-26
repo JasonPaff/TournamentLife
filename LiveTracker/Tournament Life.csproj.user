@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+    <_LastSelectedProfileId>C:\Users\jason\source\repos\TournamentLife\LiveTracker\Properties\PublishProfiles\Test One.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Datagrid Views\AddToSessionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\AttachNoteView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Bankroll Views\AddBankrollView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Bankroll Views\AddVenueView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Bankroll Views\BankrollTransactionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Bankroll Views\RemoveBankrollView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Bankroll Views\RemoveVenueView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Bankroll Views\ViewTransactionsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\CancelSelectTournamentsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\ChangeTemplateDataView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\CreateDuplicateView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\FinishTournamentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\RemoveFromSessionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\FinishPositionGraphView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\SessionProfitGraphNoLabelView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\SessionProfitGraphView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\TournamentBuyinRoiHistogramView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\TournamentFormatRoiChartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\TournamentGameTypeRoiChartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\TournamentProfitGraphNoLabelView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\TournamentProfitGraphView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Graph Views\TournamentVenueRoiChartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\AddProfileView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\DatabaseView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\LiveTrackerMenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LiveTrackerWindowView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\UpdateEndTimeSelectedView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Datagrid Views\UpdateStartTimeSelectedView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\ProfilesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\QuickStartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\RegisterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Menu Views\SelectTemplatesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Misc Views\NewProfileView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OkView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Options\OptionsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\CreateTournamentFilterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\DeleteTournamentFilterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\EditRecordView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\LoadTournamentFilterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\QuickResultsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\RenameFilterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\SessionResultsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\TournamentsResultsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Results\TournamentsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Session Manager Views\SessionListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Session Manager Views\SessionManagerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Session Manager Views\SessionStartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\EditDefaultsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\EditFormatsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\EditGameTypesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\EditVenuesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\TemplateDeleteView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\TemplateExportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\TemplateImportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Template Manager Views\TemplateManagerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\YesNoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Datagrid Views\AddToSessionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\AttachNoteView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bankroll Views\AddBankrollView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bankroll Views\AddVenueView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bankroll Views\BankrollTransactionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bankroll Views\RemoveBankrollView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bankroll Views\RemoveVenueView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bankroll Views\ViewTransactionsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\CancelSelectTournamentsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\ChangeTemplateDataView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\CreateDuplicateView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\FinishTournamentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\RemoveFromSessionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\FinishPositionGraphView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\SessionProfitGraphNoLabelView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\SessionProfitGraphView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\TournamentBuyinRoiHistogramView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\TournamentFormatRoiChartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\TournamentGameTypeRoiChartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\TournamentProfitGraphNoLabelView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\TournamentProfitGraphView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Graph Views\TournamentVenueRoiChartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\AddProfileView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\DatabaseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\LiveTrackerMenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LiveTrackerWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\UpdateEndTimeSelectedView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Datagrid Views\UpdateStartTimeSelectedView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\ProfilesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\QuickStartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu Views\SelectTemplatesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Misc Views\NewProfileView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OkView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Options\OptionsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\CreateTournamentFilterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\DeleteTournamentFilterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\EditRecordView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\LoadTournamentFilterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\QuickResultsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\RenameFilterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\SessionResultsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\TournamentsResultsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Results\TournamentsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Session Manager Views\SessionListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Session Manager Views\SessionManagerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Session Manager Views\SessionStartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\EditDefaultsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\EditFormatsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\EditGameTypesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\EditVenuesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\TemplateDeleteView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\TemplateExportView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\TemplateImportView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Template Manager Views\TemplateManagerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\YesNoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

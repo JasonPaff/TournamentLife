@@ -1,0 +1,481 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="Tournament_Life.Views.Results.TournamentsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+	mc:Ignorable="d"
+    ResizeMode="CanResize"
+    UseNativeChrome="True"
+    SizeToContent="Height"
+    ShowMaximizeButton="False"
+    Width="1000"
+    Height="600"
+    MaxHeight="1000"
+    x:Name="Wind"
+    Title="{Binding Title}">
+
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:BoolToYesConverter x:Key="BoolToYesConverter"/>
+        <converters:SngToVisibilityConverter x:Key="SngToVisibleConverter"/>
+        <converters:DateToTimeConverter x:Key="DateToTimeConverter"/>
+        <converters:DateToDateConverter x:Key="DateToDateConverter"/>
+        <converters:LinkConverter x:Key="LinkConverter"/>
+
+        <Style x:Key="DataGridContextMenu" TargetType="syncfusion:MenuItemAdv">
+            <Setter Property="Foreground" Value="{Binding FontColor}"/>
+            <Setter Property="FontSize" Value="{Binding FontSize}"/>
+            <Setter Property="Padding" Value="-50,0,-40,0"/>
+        </Style>
+        <Style x:Key="DataGridContextMenu2" TargetType="MenuItem">
+            <Setter Property="Foreground" Value="{Binding FontColor}"/>
+            <Setter Property="FontSize" Value="{Binding FontSize}"/>
+        </Style>
+
+        <Style
+            TargetType="syncfusion:GridRowHeaderCell">
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="syncfusion:GridRowHeaderCell">
+                        <Border
+                            x:Name="PART_RowHeaderCellBorder"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid>
+                                <!-- RowIndex is displayed here -->
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding RowIndex, RelativeSource={RelativeSource TemplatedParent}}"
+                                    TextAlignment="Center" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    <DataTemplate x:Key="TournamentDesriptionToolTip">
+            <TextBlock Text="{Binding GraphDescription}"/>
+    </DataTemplate>
+
+    </syncfusion:ChromelessWindow.Resources>
+
+    <!-- Window Loaded Command -->
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding WindowLoadedCommand}"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Menu -->
+        <syncfusion:MenuAdv
+            ExpandMode="ExpandOnClick">
+
+            <!-- File Menu -->
+            <syncfusion:MenuItemAdv
+                Header="File"
+                Grid.Row="0"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Export to Excel File"
+                    ToolTip="Export this windows data to an excel spreadsheet"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding ExcelCommand}"/>
+                <syncfusion:MenuItemAdv
+                    Header="Exit"
+                    ToolTip="Close this window"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding ExitCommand}"/>
+            </syncfusion:MenuItemAdv>
+        </syncfusion:MenuAdv>
+
+        <!-- Templates DataGrid -->
+        <syncfusion:SfDataGrid
+            Grid.Row="1"
+            AutoGenerateColumns="False"
+            AllowResizingColumns="True"
+            ColumnSizer="Auto"
+            Padding="5,5"
+            EditTrigger="OnTap"
+            x:Name="TournamentsDataGrid"
+            SelectionMode="Single"
+            VerticalAlignment="Top"
+            ItemsSource="{Binding Tournaments, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            SelectedItem="{Binding SelectedTournament}"
+            ShowRowHeader="{Binding ShowRowHeader}"
+            ShowToolTip ="True">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="QueryColumnDragging">
+                    <b:InvokeCommandAction Command="{Binding UpdateColumnOrderCommand}"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+
+            <!-- Context Menu -->
+            <syncfusion:SfDataGrid.ContextMenu>
+                <ContextMenu StaysOpen="True" IsOpen="{Binding IsContextMenuOpen, Mode=OneWayToSource}">
+
+                    <syncfusion:MenuItemAdv
+                        Header="Edit Record..."
+                        ToolTip="Edit this tournament record"
+                        Command="{Binding EditRecordCommand}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="Delete Record"
+                        ToolTip="Delete this tournament record from the database"
+                        Command="{Binding DeleteRecordCommand}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                     <Separator Margin="-20,0,5,0"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="View Screenshot"
+                        ToolTip="View any screenshot attached to this record"
+                        Command="{Binding ViewScreenshotCommand}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="Save Screenshot..."
+                        ToolTip="Save a screenshot to this record"
+                        Command="{Binding AddScreenshotCommand}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="Delete Screenshot"
+                        ToolTip="Delete any screenshot saved to this record"
+                        Command="{Binding RemoveScreenshotCommand}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                     <Separator Margin="-20,0,5,0"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="View/Edit Notes..."
+                        ToolTip="Show/Edit any notes saved to the tournament"
+                        Command="{Binding ViewNotesCommand}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                </ContextMenu>
+            </syncfusion:SfDataGrid.ContextMenu>
+
+            <!-- Columns -->
+            <syncfusion:SfDataGrid.Columns>
+
+                <syncfusion:GridTextColumn
+                    MappingName="TournamentName"
+                    HeaderText="Tournament Name"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="Venue"
+                    HeaderText="Venue"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="GameType"
+                    HeaderText="Game Type"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="FormatString"
+                    HeaderText="Format(s)"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridDateTimeColumn
+                    DisplayBinding="{Binding StartTime, Converter={StaticResource DateToDateConverter}}"
+                    MappingName="StartDate"
+                    HeaderText="Start Date"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridDateTimeColumn
+                    DisplayBinding="{Binding StartTime, Converter={StaticResource DateToTimeConverter}}"
+                    MappingName="StartTime"
+                    HeaderText="Start Time"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridDateTimeColumn
+                    DisplayBinding="{Binding EndTime, Converter={StaticResource DateToDateConverter }}"
+                    MappingName="EndDate"
+                    HeaderText="End Date"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridDateTimeColumn
+                    DisplayBinding="{Binding EndTime, Converter={StaticResource DateToTimeConverter}}"
+                    MappingName="EndTime"
+                    HeaderText="End Time"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTimeSpanColumn
+                    MappingName="Length"
+                    HeaderText="Length"
+                    Format="hh:mm"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="Guarantee"
+                    HeaderText="Guarantee"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="TotalCost"
+                    HeaderText="Total Cost"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinTotalCost"
+                    HeaderText="Buyin Total"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinBaseCost"
+                    HeaderText="Buyin Base"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinRakeCost"
+                    HeaderText="Buyin Rake"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyTotalCost"
+                    HeaderText="Rebuy Total"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyBaseCost"
+                    HeaderText="Rebuy Base"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyRakeCost"
+                    HeaderText="Rebuy Rake"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonTotalCost"
+                    HeaderText="Addon Total"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonBaseCost"
+                    HeaderText="Addon Base"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonRakeCost"
+                    HeaderText="Addon Rake"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="BountyCount"
+                    HeaderText="Bounty Count"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="Bounty"
+                    HeaderText="Bovada Bounty"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="AddonCount"
+                    HeaderText="Addon Count"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="PrizeWon"
+                    HeaderText="Prize Won"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="Profit"
+                    HeaderText="Profit"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="FinishPosition"
+                    HeaderText="Finish"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="JackpotSpinMultiplier"
+                    HeaderText="Jackpot Multiplier"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="RebuyCount"
+                    HeaderText="Rebuy Count"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="StackSizeStarting"
+                    HeaderText="Starting Stack"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="StackSizeRebuy"
+                    HeaderText="Rebuy Stack"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="StackSizeAddon"
+                    HeaderText="Addon Stack"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="TableSize"
+                    HeaderText="Table Size"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="BlindLevels"
+                    HeaderText="Blind Levels"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="LateReg"
+                    HeaderText="Late Reg"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="Entrants"
+                    HeaderText="Entrants"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="EntrantsPaid"
+                    HeaderText="Entrants Paid"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="Note"
+                    DisplayBinding="{Binding Note, Converter={StaticResource LinkConverter}}"
+                    HeaderText="Note?"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="ScreenshotFilename"
+                    DisplayBinding="{Binding ScreenshotFilename, Converter={StaticResource LinkConverter}}"
+                    HeaderText="Screenshot?"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="IsSng"
+                    DisplayBinding="{Binding IsSng, Converter={StaticResource BoolToYesConverter}}"
+                    HeaderText="Sng?"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="IsBovadaBounty"
+                    DisplayBinding="{Binding IsBovadaBounty, Converter={StaticResource BoolToYesConverter}}"
+                    HeaderText="Fixed Bounty?"
+                    ToolTipTemplate="{StaticResource TournamentDesriptionToolTip}"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+            </syncfusion:SfDataGrid.Columns>
+
+            </syncfusion:SfDataGrid>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

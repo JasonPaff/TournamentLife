@@ -1,0 +1,422 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Results.SessionResultsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:commands="clr-namespace:LiveTracker.Commands"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    UseNativeChrome="True"
+    ResizeMode="CanMinimize"
+    ShowMaximizeButton="False"
+    SizeToContent="WidthAndHeight"
+    Title="{Binding Title}"
+    Height="450"
+    Width="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu -->
+        <syncfusion:MenuAdv
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            ExpandMode="ExpandOnClick">
+
+            <!-- File Menu -->
+            <syncfusion:MenuItemAdv
+                Header="File"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Close Window"
+                    ToolTip="Close the Session Results window"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                    CommandParameter="Exit"/>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Edit Menu -->
+            <!--<syncfusion:MenuItemAdv
+                Header="Filter"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="New Filter"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                    CommandParameter="NewFilter"/>
+                <syncfusion:MenuItemAdv
+                    Header="Load Filter"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                    CommandParameter="LoadFilter"/>
+              <syncfusion:MenuItemAdv
+                    Header="Show Current Filter"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                    CommandParameter="ShowCurrentFilter"/>
+            <syncfusion:MenuItemAdv
+                    Header="Clear Filter"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                    CommandParameter="ClearFilter"/>
+            </syncfusion:MenuItemAdv>-->
+
+        </syncfusion:MenuAdv>
+
+        <Grid
+            HorizontalAlignment="Center"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="7">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Expander
+                Grid.Row="1"
+                Grid.Column="0"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Graphs  ">
+                <StackPanel>
+                    <Button
+                        Content="Sessions Profit Graph"
+                        Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                        CommandParameter="SessionProfitGraph"
+                        ToolTip="Shows a profit graph for the sessions played"
+                        FontSize="{Binding FontSize}"
+                        Padding="5,5"
+                        Margin="5,5"/>
+                    <Button
+                        Content="View Tournaments"
+                        Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                        CommandParameter="ViewTournaments"
+                        ToolTip="View/Edit the tournaments in the sessions you have played in a table"
+                        FontSize="{Binding FontSize}"
+                        Padding="5,5"
+                        Margin="5,5"/>
+                    <Button
+                        Content="Single Session Position Graph"
+                        Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                        CommandParameter="FinishPositionGraph"
+                        ToolTip="Shows a bar graph of the finish positions for the tournaments in the sessions played"
+                        FontSize="{Binding FontSize}"
+                        Padding="5,5"
+                        Margin="5,5"/>
+                    <Button
+                        Content="Single Session Profit Graph"
+                        ToolTip="Shows a profit graph for the session played"
+                        Command="{Binding Source={x:Static Member=commands:SessionResultsCommands.MenuItem}}"
+                        CommandParameter="ProfitGraph"
+                        FontSize="{Binding FontSize}"
+                        Padding="5,5"
+                        Margin="5,5"/>
+                </StackPanel>
+            </Expander>
+
+            <Expander
+                Grid.Row="0"
+                Grid.Column="0"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Profit Stats  ">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Hourly:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding MoneyPerTournamentHeader}" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Total Profit:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Average Profit:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Most Profit:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Least Profit:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="{Binding Hourly}" ToolTip="Money per hour made across all sessions (total profit / total session hours)" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding DollarsPerTournament}" ToolTip="Money made per tournament across all sessions (total profit / tournaments played)" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsTotalProfit}" ToolTip="Total profit made from all the sessions" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsAverageProfit}" ToolTip="Average profit made in a session" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsMostProfit}" ToolTip="Most profit made in a session" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLeastProfit}" ToolTip="Least profit made in a session" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+
+            <Expander
+                Grid.Row="0"
+                Grid.Column="1"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Cost Stats  ">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Total Cost:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Highest Cost:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Average Cost:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Lowest Cost:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="{Binding SessionsTotalBuyins}" ToolTip="Total cost of all sessions" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsMostBuyins}" ToolTip="Highest cost of a session" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsAverageBuyins}" ToolTip="Average cost of a session" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLeastBuyins}" ToolTip="Lowest cost of a session" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+
+            <Expander
+                Grid.Row="0"
+                Grid.Column="2"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Prizes Stats  ">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Total Prizes:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Most Prizes:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Average Prizes:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Least Prizes:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="{Binding SessionsTotalPrizes}" ToolTip="Total prizes won in all sessions" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsMostPrizes}" ToolTip="Biggest prize won in a session" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsAveragePrizes}" ToolTip="Average prize won in a session" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLeastPrizes}" ToolTip="Lowest non-zero prize won in a session" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+
+            <Expander
+                Grid.Row="0"
+                Grid.Column="3"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Tournament Stats  ">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Total Tournaments:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Most Tournaments:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Average Tournament:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Least Tournaments:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="{Binding SessionsTotalTournaments}" ToolTip="Total number of tournaments played in all sessions" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsMostTournaments}" ToolTip="Most number of tournaments played in a session" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsAverageTournaments}" ToolTip="Average number of tournaments played per session" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLeastTournaments}" ToolTip="Least number of tournaments played in a session" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+
+            <Expander
+                Grid.Row="1"
+                Grid.Column="1"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Counting Stats  ">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Sessions Played:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Sessions Won:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Sessions Lost:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Losing Streak:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Winning Streak:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="{Binding SessionsPlayed}" ToolTip="Total number of sessions played" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsWon}" ToolTip="Total number of sessions won" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLost}" ToolTip="Total number of sessions lost" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLosingStreak}" ToolTip="Most losing sessions in a row" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsWinningStreak}" ToolTip="Most winning sessions in a row" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+
+            <Expander
+                Grid.Row="1"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                IsExpanded="True"
+                Margin="5,5"
+                Header="Session Time Stats  ">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Content="Average Session:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Longest Session:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Shortest Session:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                        <Label Content="Total Sessions:" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="{Binding SessionsAverageTime}" ToolTip="Average time played per session" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsLongestTime}" ToolTip="Longest session played" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsShortestTime}" ToolTip="Shortest session played" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                        <Label Content="{Binding SessionsTotalTime}" ToolTip="Total time of all sessions played" HorizontalContentAlignment="Left" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+        </Grid>
+
+        <!-- Session List -->
+        <Expander
+            IsExpanded="True"
+            Header="Sessions Played"
+            Margin="5,5"
+            Grid.Row="4"
+            Grid.Column="0">
+            <ListBox
+                SelectedItem="{Binding SelectedSession}"
+                ItemsSource="{Binding SessionList}"
+                SelectionMode="Single"
+                MaxHeight="300"
+                BorderThickness="1"
+                MinHeight="300"
+                MinWidth="300"
+                HorizontalContentAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding DisplayString}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                        <Setter Property="ToolTip" Value="{Binding Description}"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </Expander>
+
+        <!-- Selected Session Stats -->
+        <Expander
+            Header="Selected Session Stats"
+            BorderThickness="1"
+            IsExpanded="True"
+            Margin="5,5"
+            Grid.Row="4"
+            Grid.Column="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Orientation="Vertical">
+                    <Label Content="Tournament Count:" HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Session ROI:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="{Binding MoneyPerTournamentHeader}" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Total Profit:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Total Cost:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Total Prizes:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Average Profit:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Average Cost:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Average Prize:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Session Length:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Average Length:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Vertical">
+                    <Label Content="{Binding SelectedTournamentCount}" ToolTip="Number of tournaments playing during the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedRoi}" ToolTip="Total ROI for the session (total profit/total cost)" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedProfitPerTournament}" ToolTip="Money made per tournament for the session (total profit/tournaments played)" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedTotalProfit}" ToolTip="Total profit for the selected sessions (total prizes - total cost)" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedTotalCost}" ToolTip="Total cost of all tournaments played in the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedTotalPrizesWon}" ToolTip="Total prizes won in all the tournaments in the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedAverageProfit}" ToolTip="Average profit per tournament in the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedAverageCost}" ToolTip="Average cost per tournament in the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedAveragePrizeWon}" ToolTip="Average prize won per tournament in the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedSessionLength}" ToolTip="Total length of the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedAverageLength}" ToolTip="Average length of each tournament" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="2"
+                    Orientation="Vertical">
+                    <Label Content="Session ITM:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Late Finish:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Mid/Late Finish:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Mid Finish:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Early/Mid Finish:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Early Finish:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Average Finish:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Final Tables:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Min Cashes:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Near Bubbles:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                    <Label Content="Stone Bubbles:" FontSize="{Binding FontSize}" HorizontalAlignment="Right"/>
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="3"
+                    Orientation="Vertical">
+                    <Label Content="{Binding SelectedItmPercentage}" ToolTip="In the money percentage for the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedLateFinish}" ToolTip="Percentage of tournaments finished in late position (90%-100% of the field beaten" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedMidLateFinish}" ToolTip="Percentage of tournaments finished in mid/late position (70%-90% of the field beaten" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedMidFinish}" ToolTip="Percentage of tournaments finished in mid position (30%-70% of the field beaten" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedEarlyMidFinish}" ToolTip="Percentage of tournaments finished in early/mid position (10%-30% of the field beaten" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedEarlyFinish}" ToolTip="Percentage of tournaments finished in early position (0%-10% of the field beaten" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedAverageFinish}" ToolTip="Average percentage of the field beaten in the session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedFinalTables}" ToolTip="Final tables made in the session (includes satellite)" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedMinCashes}" ToolTip="Number of times finished a few places after the bubble broke this session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedNearBubbles}" ToolTip="Number of times finished within a few places of the bubble breaking this session" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding SelectedStoneBubbles}" ToolTip="Number of times your stone bubbled a tournament this session" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+    </Grid>
+</syncfusion:ChromelessWindow>

@@ -1,0 +1,457 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="Tournament_Life.Views.Results.EditRecordView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    Title="Edit Record"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    Height="450"
+    Width="800">
+
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:SngToVisibilityConverter x:Key="SngToVisibleConverter"/>
+    </syncfusion:ChromelessWindow.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Labels -->
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Orientation="Vertical">
+        <Label Content="Name"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Venue"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Game Type"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Formats"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Start Date"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Start Time"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="End Date"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="End Time"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Buyin"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Buyin Rake"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Rebuy"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Rebuy Rake"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Addon"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Addon Rake"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Bovada Bounty"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Guarantee"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Late Reg"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Blind Levels"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Table Size"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Starting Stack"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Rebuy Stack"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Addon Stack"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Entrants"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Entrants Paid"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Finish Position"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Prize Won"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Addon Count"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Rebuy Count"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Bounty Count"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+        <Label Content="Jackpot Spin"
+               HorizontalContentAlignment="Right"
+               FontSize="{Binding FontSize}"/>
+    </StackPanel>
+
+        <!-- Input Boxes -->
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Orientation="Vertical">
+        <TextBox
+            Text="{Binding TournamentData.TournamentName}"
+            TextAlignment="Left"
+            Margin="0,5,0,0"
+            VerticalContentAlignment="Center"
+            FontSize="{Binding FontSize}"
+            ToolTip="Tournament Name"
+            MinWidth="100"/>
+
+        <TextBox
+            Text="{Binding TournamentData.Venue}"
+            TextAlignment="Left"
+            Margin="0,6,0,0"
+            VerticalContentAlignment="Center"
+            FontSize="{Binding FontSize}"
+            ToolTip="Poker Site/Venue Name"/>
+
+        <TextBox
+            Text="{Binding TournamentData.GameType}"
+            TextAlignment="Left"
+            Margin="0,10,0,0"
+            VerticalContentAlignment="Center"
+            FontSize="{Binding FontSize}"
+            ToolTip="Game Type"/>
+
+        <TextBox
+            Text="{Binding Format}"
+            TextAlignment="Left"
+            Margin="0,8,0,0"
+            VerticalContentAlignment="Center"
+            FontSize="{Binding FontSize}"
+            ToolTip="Tournament Formats (separate formats with a comma)"/>
+
+        <syncfusion:SfDatePicker
+            Value="{Binding StartDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            Margin="0,5,0,0"
+            FontSize="{Binding FontSize}"
+            ToolTip="Starting Date"/>
+
+        <syncfusion:SfTimePicker
+            Value="{Binding StartTime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            Margin="0,0,0,0"
+            FontSize="{Binding FontSize}"
+            ToolTip="Starting Time"/>
+
+
+        <syncfusion:SfDatePicker
+            Value="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            ToolTip="Ending Date"/>
+
+
+        <syncfusion:SfTimePicker
+            Value="{Binding EndTime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            ToolTip="Ending Time"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.BuyinBaseCost}"
+            FontSize="{Binding FontSize}"
+            Margin="0,5,0,0"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Buyin base cost (buy-in cost without rake)"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.BuyinRakeCost}"
+            FontSize="{Binding FontSize}"
+            Margin="0,5,0,0"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Buyin Rake cost"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.RebuyBaseCost}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1.0"
+            Margin="0,7,0,0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Rebuy base cost (re-buy cost without rake)"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.RebuyRakeCost}"
+            FontSize="{Binding FontSize}"
+            Margin="0,7,0,0"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Rebuy Rake cost"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.AddonBaseCost}"
+            FontSize="{Binding FontSize}"
+            Margin="0,7,0,0"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Addon base cost (addon cost without rake"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.AddonRakeCost}"
+            FontSize="{Binding FontSize}"
+            Margin="0,8,0,0"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Addon Rake cost"/>
+
+        <syncfusion:CurrencyTextBox
+            x:Name="BovadaBounty"
+            Value="{Binding TournamentData.Bounty}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Bounty amount for Bovada bounty tournaments"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.Guarantee}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="500.0"
+            Margin="0,7,0,0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Guarantee"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.LateReg}"
+            FontSize="{Binding FontSize}"
+            Margin="0,6,0,0"
+            ScrollInterval="5"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Late Reg length (in minutes)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.BlindLevels}"
+            FontSize="{Binding FontSize}"
+            Margin="0,8,0,0"
+            ScrollInterval="5"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Blind Levels length (in minutes)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.TableSize}"
+            FontSize="{Binding FontSize}"
+            Margin="0,5,0,0"
+            ScrollInterval="1"
+            MinValue="2"
+            MaxValue="10"
+            TextAlignment="Right"
+            ToolTip="Players per table"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.StackSizeStarting}"
+            FontSize="{Binding FontSize}"
+            Margin="0,7,0,0"
+            ScrollInterval="500"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Starting Stack Size"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.StackSizeRebuy}"
+            FontSize="{Binding FontSize}"
+            Margin="0,7,0,0"
+            ScrollInterval="500"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Chip stack you get for a rebuy (if available)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.StackSizeAddon}"
+            FontSize="{Binding FontSize}"
+            Margin="0,7,0,0"
+            ScrollInterval="500"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Addon Stack Size"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.Entrants}"
+            FontSize="{Binding FontSize}"
+            Margin="0,8,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Number of players who entered the tournament"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.EntrantsPaid}"
+            FontSize="{Binding FontSize}"
+            Margin="0,5,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Players who cashed in the tournament"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.FinishPosition}"
+            FontSize="{Binding FontSize}"
+            Margin="0,8,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Position finished in the tournament"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding TournamentData.PrizeWon}"
+            FontSize="{Binding FontSize}"
+            Margin="0,9,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Prize won in the tournament"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.AddonCount}"
+            FontSize="{Binding FontSize}"
+            Margin="0,7,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Position finished in the tournament"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.RebuyCount}"
+            FontSize="{Binding FontSize}"
+            Margin="0,5,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Position finished in the tournament"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.BountyCount}"
+            FontSize="{Binding FontSize}"
+            Margin="0,8,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Bounties won in Bovada bounty tournaments"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding TournamentData.JackpotSpinMultiplier}"
+            FontSize="{Binding FontSize}"
+            Margin="0,8,0,0"
+            ScrollInterval="1"
+            MinValue="0"
+            TextAlignment="Right"
+            ToolTip="Spin multiplier for jackpot sngs"/>
+    </StackPanel>
+
+        <!-- Check boxes -->
+        <StackPanel
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Grid.Row="2"
+            Margin="5,5"
+            HorizontalAlignment="Left"
+            Orientation="Vertical">
+
+            <CheckBox
+                HorizontalAlignment="Center"
+                Content="Tournament is a Sit and Go"
+                IsChecked="{Binding SngCheckBox}"
+                ToolTip="Tag this tournament as a sng tournament"
+                Margin="0,0,0,5"
+                FontSize="{Binding FontSize}"/>
+        <CheckBox
+                HorizontalAlignment="Center"
+                Content="Tournament is a Bovada Bounty"
+                Margin="11,0,-13,5"
+                IsChecked="{Binding BovadaCheckBox}"
+                ToolTip="The bounty amount for Bovada/BetOnline tournaments where the bounty isn't counted in the final prize total in the lobby"
+                FontSize="{Binding FontSize}"/>
+
+        </StackPanel>
+
+        <!-- Buttons -->
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,0">
+
+            <Button
+                MinHeight="25"
+                MinWidth="90"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                ToolTip="Save these changes"
+                Command="{Binding SaveCommand}"
+                Content="Save"/>
+            <Button
+                MinHeight="25"
+                MinWidth="90"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Cancel these changes"
+                Command="{Binding CancelCommand}"
+                Content="Cancel"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

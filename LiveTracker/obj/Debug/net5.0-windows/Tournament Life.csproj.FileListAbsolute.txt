@@ -1,0 +1,587 @@
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.cache
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.lref
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.exe
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.deps.json
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.json
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.dev.json
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Compression.Base.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Data.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.DocIO.Base.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Licensing.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.OfficeChart.Base.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfChart.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfGrid.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfInput.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfRichTextBoxAdv.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfSkinManager.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Shared.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialDark.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialLight.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Tools.WPF.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\System.Windows.Interactivity.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.g.resources
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfoInputs.cache
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfo.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CopyComplete
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.genruntimeconfig.cache
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\SwiftExcel.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\bin\Debug\net5.0-windows\PropertyChanged.dll
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.exe
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.deps.json
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.json
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.dev.json
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\PropertyChanged.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\SwiftExcel.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Compression.Base.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Data.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.DocIO.Base.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Licensing.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.OfficeChart.Base.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfChart.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfGrid.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfInput.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfRichTextBoxAdv.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfSkinManager.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Shared.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialDark.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialLight.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Tools.WPF.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\bin\Debug\net5.0-windows\System.Windows.Interactivity.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csprojAssemblyReference.cache
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.cache
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.lref
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.baml
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.g.resources
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfoInputs.cache
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfo.cs
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CopyComplete
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\source\repos\TournamentLife - Copy\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.genruntimeconfig.cache
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphNoLabelView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphNoLabelView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentBuyinRoiHistogramView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentBuyinRoiHistogramView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\App.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentFormatRoiChartView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentFormatRoiChartView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentGameTypeRoiChartView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentVenueRoiChartView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentGameTypeRoiChartView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentVenueRoiChartView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\DeleteTournamentFilterView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\DeleteTournamentFilterView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\RenameFilterView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Results\RenameFilterView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\FinishTournamentView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\FinishTournamentView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\YesNoView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\YesNoView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\OkView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\OkView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionStartView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionStartView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CreateDuplicateView.g.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CreateDuplicateView.baml
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csprojAssemblyReference.cache
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.exe
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.deps.json
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.json
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.dev.json
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\PropertyChanged.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\SwiftExcel.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Compression.Base.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Data.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.DocIO.Base.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Licensing.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.OfficeChart.Base.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfChart.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfGrid.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfInput.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfRichTextBoxAdv.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfSkinManager.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Shared.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialDark.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialLight.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Tools.WPF.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\System.Windows.Interactivity.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csprojAssemblyReference.cache
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphNoLabelView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentBuyinRoiHistogramView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentFormatRoiChartView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentGameTypeRoiChartView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentVenueRoiChartView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\OkView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\DeleteTournamentFilterView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\RenameFilterView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionStartView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\YesNoView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\App.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CreateDuplicateView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\FinishTournamentView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphNoLabelView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentBuyinRoiHistogramView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentFormatRoiChartView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentGameTypeRoiChartView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentVenueRoiChartView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\OkView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\DeleteTournamentFilterView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\RenameFilterView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionStartView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\YesNoView.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.cache
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.lref
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CreateDuplicateView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\FinishTournamentView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.baml
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.g.resources
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfoInputs.cache
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfo.cs
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CoreCompileInputs.cache
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CopyComplete
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.genruntimeconfig.cache
+C:\Users\jason\Documents\GitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Templates.xml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.AssemblyReference.cache
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphNoLabelView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentBuyinRoiHistogramView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentFormatRoiChartView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentGameTypeRoiChartView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentVenueRoiChartView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\OkView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\DeleteTournamentFilterView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\RenameFilterView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionStartView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\YesNoView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\App.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddBankrollView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveBankrollView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\RemoveVenueView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\ViewTransactionsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AddToSessionView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\AttachNoteView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CancelSelectTournamentsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CreateDuplicateView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\FinishTournamentView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\RemoveFromSessionView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateEndTimeSelectedView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\UpdateStartTimeSelectedView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\FinishPositionGraphView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphNoLabelView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\SessionProfitGraphView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentBuyinRoiHistogramView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentFormatRoiChartView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentGameTypeRoiChartView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphNoLabelView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentProfitGraphView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Graph Views\TournamentVenueRoiChartView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\AddProfileView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\ProfilesView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\RegisterView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Misc Views\NewProfileView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\OkView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Options\OptionsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\CreateTournamentFilterView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\DeleteTournamentFilterView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\LoadTournamentFilterView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\QuickResultsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\RenameFilterView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionListView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionStartView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditFormatsView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditGameTypesView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditVenuesView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\YesNoView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.cache
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life_MarkupCompile.lref
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Templates.xml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.exe
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.deps.json
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.json
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.runtimeconfig.dev.json
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\ref\Tournament Life.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Tournament Life.pdb
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\PropertyChanged.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\SwiftExcel.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Compression.Base.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Data.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.DocIO.Base.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Licensing.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.OfficeChart.Base.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfChart.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfGrid.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfInput.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfRichTextBoxAdv.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.SfSkinManager.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Shared.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialDark.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Themes.MaterialLight.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\bin\Debug\net5.0-windows\Syncfusion.Tools.WPF.dll
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\SelectTemplatesView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.g.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\AddVenueView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Bankroll Views\BankrollTransactionView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\ChangeTemplateDataView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\CreateDuplicateView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Datagrid Views\FinishTournamentView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\LiveTrackerWindowView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\DatabaseView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\LiveTrackerMenuView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Menu Views\QuickStartView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\EditRecordView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\SessionResultsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsResultsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Results\TournamentsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Session Manager Views\SessionManagerView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\EditDefaultsView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateDeleteView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateExportView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateImportView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Views\Template Manager Views\TemplateManagerView.baml
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.g.resources
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfoInputs.cache
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.AssemblyInfo.cs
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.csproj.CoreCompileInputs.cache
+C:\Users\jason\Documents\LitHub\Tournament-Life\LiveTracker\obj\Debug\net5.0-windows\Tournament Life.genruntimeconfig.cache

@@ -1,0 +1,612 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="Tournament_Life.Views.Results.TournamentsResultsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:commands="clr-namespace:LiveTracker.Commands"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    ResizeMode="CanMinimize"
+    ShowMaximizeButton="False"
+    UseNativeChrome="True"
+    SizeToContent="WidthAndHeight"
+    Title="{Binding Title}"
+    Height="450"
+    Width="800">
+
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding AfterLoadCommand}"/>
+        </b:EventTrigger>
+        <b:EventTrigger EventName="Closed">
+            <b:InvokeCommandAction Command="{Binding AfterCloseCommand}"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu -->
+        <syncfusion:MenuAdv
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="10"
+            ExpandMode="ExpandOnClick">
+
+            <!-- File Menu -->
+            <syncfusion:MenuItemAdv
+                Header="File"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Close Window"
+                    ToolTip="Close this window"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Exit"/>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Filters Menu -->
+            <syncfusion:MenuItemAdv
+                Header="Filters"
+                FontSize="{Binding FontSize}">
+
+                <syncfusion:MenuItemAdv
+                    Header="Clear Current Filter"
+                    ToolTip="Clear the tournament filter and reset the tournament results to their default values"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="ClearFilter"/>
+                <syncfusion:MenuItemAdv
+                    Header="Show Current Filter"
+                    ToolTip="Show the current filter being used"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="ShowCurrentFilter"/>
+
+                <syncfusion:MenuItemSeparator Width="105" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="New Filter..."
+                    ToolTip="Create a new filter for the tournament results"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="CreateFilter"/>
+                <syncfusion:MenuItemAdv
+                    Header="Load Filter..."
+                    ToolTip="Load a previously created tournament results filter"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="LoadFilter"/>
+                <syncfusion:MenuItemAdv
+                    Header="Delete Filter..."
+                    ToolTip="Delete a previously created tournament results filter"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="DeleteFilter"/>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Quick Filter Menu -->
+            <syncfusion:MenuItemAdv
+                Header="Quick Filters"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Clear Current Filter"
+                    ToolTip="Clear the tournament filter and reset the tournament results to their default values"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="ClearFilter"/>
+                <syncfusion:MenuItemAdv
+                    Header="Show Current Filter"
+                    ToolTip="Show the current filter being used"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="ShowCurrentFilter"/>
+
+                <syncfusion:MenuItemSeparator Width="105" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Last 12 Hours"
+                    ToolTip="Results for tournaments played in the last 12 hours"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="12Hours"/>
+                <syncfusion:MenuItemAdv
+                    Header="Last 24 Hours"
+                    ToolTip="Results for tournaments played in the last 24 hours"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="24Hours"/>
+                <syncfusion:MenuItemAdv
+                    Header="Last 7 Days"
+                    ToolTip="Results for tournaments played in the last 7 days"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="7Days"/>
+                <syncfusion:MenuItemAdv
+                    Header="Last 30 Days"
+                    ToolTip="Results for tournaments played in the last 30 days"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="30Days"/>
+                <syncfusion:MenuItemAdv
+                    Header="Last 90 Days"
+                    ToolTip="Results for tournaments played in the last 90 days"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="90Days"/>
+
+                <syncfusion:MenuItemSeparator Width="100" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Yesterday"
+                    ToolTip="Results for tournaments played yesterday"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Yesterday"/>
+                <syncfusion:MenuItemAdv
+                    Header="Today"
+                    ToolTip="Results for tournaments played today"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Today"/>
+                <syncfusion:MenuItemAdv
+                    Header="Week to Date"
+                    ToolTip="Results for tournaments played during the current week"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="WeekToDate"/>
+                <syncfusion:MenuItemAdv
+                    Header="Month to Date"
+                    ToolTip="Results for tournaments played during the current month"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="MonthToDate"/>
+                <syncfusion:MenuItemAdv
+                    Header="Year to Date"
+                    ToolTip="Results for tournaments played during the current year"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="YearToDate"/>
+
+                <syncfusion:MenuItemSeparator Width="100" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Previous 50"
+                    ToolTip="Results for tournaments played during the previous 50 tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Last50"/>
+                <syncfusion:MenuItemAdv
+                    Header="Previous 100"
+                    ToolTip="Results for tournaments played during the previous 100 tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Last100"/>
+                <syncfusion:MenuItemAdv
+                    Header="Previous 250"
+                    ToolTip="Results for tournaments played during the previous 250 tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Last250"/>
+                <syncfusion:MenuItemAdv
+                    Header="Previous 500"
+                    ToolTip="Results for tournaments played during the previous 500 tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Last500"/>
+                <syncfusion:MenuItemAdv
+                    Header="Previous 1000"
+                    ToolTip="Results for tournaments played during the previous 1000 tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="Last1000"/>
+            </syncfusion:MenuItemAdv>
+        </syncfusion:MenuAdv>
+
+        <Expander
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5,5"
+            Padding="5,5"
+            Header="Tournament Cost Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Total Cost: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Highest Cost: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Lowest Cost: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Cost: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Rake Paid: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.TotalCost}" ContentStringFormat="C" ToolTip="The total costs (buy-in + rebuy + addon) of all the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.HighestCost}" ContentStringFormat="C" ToolTip="The highest total cost (buy-in + rebuy + addon) of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestCost}" ContentStringFormat="C" ToolTip="The lowest total cost (buy-in + rebuy + addon) of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageCost}" ContentStringFormat="C" ToolTip="The average total cost (buy-in + rebuy + addon) of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.RakePaid}" ContentStringFormat="C" ToolTip="The total rake paid across all tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="1"
+            Grid.Column="1"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Buy-in Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Total Buy-in: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Highest Buy-in: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Lowest Buy-in: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Buy-in: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.TotalBuyinCost}" ContentStringFormat="C" ToolTip="The total buy-ins of all the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.HighestBuyin}" ContentStringFormat="C" ToolTip="The highest buy-in of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestBuyin}" ContentStringFormat="C" ToolTip="The lowest buy-in of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageBuyin}" ContentStringFormat="C" ToolTip="The average buy-in of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="1"
+            Grid.Column="2"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Profit Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Total Profit: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Highest Profit: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Lowest Profit: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Profit: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.TotalProfit}" ContentStringFormat="C" ToolTip="The total profit of all the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.HighestProfit}" ContentStringFormat="C" ToolTip="Highest profit of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestProfit}" ContentStringFormat="C" ToolTip="Lowest profit of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageProfit}" ContentStringFormat="C" ToolTip="Average profit of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="1"
+            Grid.Column="3"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Prize Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Total Prizes: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Highest Prizes: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Lowest Prize: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Prize: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.TotalPrizeWon}" ContentStringFormat="C" ToolTip="The total prizes won in all the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.HighestPrizeWon}" ContentStringFormat="C" ToolTip="The highest prize won in a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestPrizeWon}" ContentStringFormat="C" ToolTip="The lowest prize won in a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AveragePrizeWon}" ContentStringFormat="C" ToolTip="The average prize won in a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="2"
+            Grid.Column="0"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Overall Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Tournaments: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Hourly: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="$/Tournament: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="ROI: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="ITM: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.TournamentsPlayed}" ToolTip="The total tournaments played in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.Hourly}" ContentStringFormat="C" ToolTip="The hourly rate of the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.ProfitPerTournament}" ContentStringFormat="C" ToolTip="The profit per tournament made in the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.Roi}" ContentStringFormat="P2" ToolTip="The return on investment for the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.Itm}" ContentStringFormat="P2" ToolTip="The in the money percentage for the tournaments in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="2"
+            Grid.Column="1"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Counting Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Winning Streak: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Losing Streak: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Cashing Streak: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Stone Bubbles: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Final Table Bubbles: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.WinningStreak}" ToolTip="The most tournaments won in a row in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LosingStreak}" ToolTip="The most tournaments lost in a row in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.CashingStreak}" ToolTip="The most tournaments cashed in a row in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.StoneBubbles}" ToolTip="The total number of times finished on the stone bubble of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.FinalTableBubbles}" ToolTip="The total number of times finished on the final table bubble in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="2"
+            Grid.Column="2"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Final Table Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Final Tables: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Make Final Table: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Win Final Table: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Total Wins: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Win Tournament: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.FinalTables}" ToolTip="The total number of final tables made in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.FinalTablePercentage}" ContentStringFormat="P2" ToolTip="The percentage of the time a final table is made in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.FinalTableWinningPercentage}" ContentStringFormat="P2" ToolTip="The percentage of the time a final table is won after making the final table in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.TotalWins}" ToolTip="The total number of tournaments won (1st place) in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.WinningPercentage}" ContentStringFormat="P2" ToolTip="The percentage of the time a tournament is won in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="2"
+            Grid.Column="3"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Rebuy Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Most Rebuys: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Least Rebuys: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Rebuys: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.HighestRebuys}" ToolTip="The highest number of rebuys used in a tournament that offered rebuys" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestRebuys}" ToolTip="The lowest number of rebuys used in a tournament that offered rebuys" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageRebuys}" ContentStringFormat="N2" ToolTip="The average number of rebuys used when a tournament offered rebuys" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+
+        <Expander
+            Grid.Row="3"
+            Grid.Column="0"
+            VerticalContentAlignment="Center"
+            IsExpanded="True"
+            Margin="5,5"
+            Header="Tournament Graphs">
+            <StackPanel>
+                <Button
+                    Content="Buy-in/Roi Chart"
+                    ToolTip="View a bar graph of the roi for the different buy-in levels in the tournament results"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="BuyinRoiHistogram"
+                    FontSize="{Binding FontSize}"
+                    Padding="5,5"
+                    Margin="5,5"/>
+                <Button
+                    Content="Finish Position Graph"
+                    ToolTip="View a bar graph of the roi for the different finish positions in the tournament results"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="FinishPositionGraph"
+                    FontSize="{Binding FontSize}"
+                    Padding="5,5"
+                    Margin="5,5"/>
+                <Button
+                    Content="Format/Roi Chart"
+                    ToolTip="View a bar graph of the roi for the different formats in the tournament results"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="FormatRoiChart"
+                    FontSize="{Binding FontSize}"
+                    Padding="5,5"
+                    Margin="5,5"/>
+                <Button
+                    Content="GameType/Roi Chart"
+                    ToolTip="View a bar graph of the roi for the different game types in the tournament results"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="GameTypeRoiChart"
+                    FontSize="{Binding FontSize}"
+                    Padding="5,5"
+                    Margin="5,5"/>
+                <Button
+                    Content="Tournament Profit Graph"
+                    ToolTip="View a line graph of the profit for the tournament results"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="ProfitGraph"
+                    FontSize="{Binding FontSize}"
+                    Padding="5,5"
+                    Margin="5,5"/>
+                <Button
+                    Content="View Tournaments"
+                    ToolTip="View the tournaments for these results in a table"
+                    Command="{Binding Source={x:Static Member=commands:TournamentResultsCommands.MenuItemCommand}}"
+                    CommandParameter="ViewTournaments"
+                    FontSize="{Binding FontSize}"
+                    Padding="5,5"
+                    Margin="5,5"/>
+            </StackPanel>
+        </Expander>
+
+        <Expander
+            Grid.Row="3"
+            Grid.Column="1"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Entrant Stats"
+            IsExpanded="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                   </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Most Entrants: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Lowest Entrants: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Entrants: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Best Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Worst Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.HighestEntrants}" ToolTip="The highest number of entrants for a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestEntrants}" ToolTip="The lowest number of entrants for a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageEntrants}" ToolTip="The average number of entrants for a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LowestFinishPosition}" ToolTip="The highest finish position in a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.HighestFinishPosition}" ToolTip="The lowest finish position in a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageFinishPosition}" ToolTip="The average finish position in a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+        <Expander
+            Grid.Row="3"
+            Grid.Column="2"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Finish % Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Average Beaten: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Early Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Early/Mid Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Mid Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Mid/Late Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Late Finish: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Most Tournaments: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Least Tournaments: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Tournaments: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.AveragePercentBeaten}" ContentStringFormat="P2"  ToolTip="The percentage of the field beaten on average in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.EarlyFinish}" ContentStringFormat="P2" ToolTip="The percentage of the time finished within the first 10% of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.EarlyMidFinish}" ContentStringFormat="P2"  ToolTip="The percentage of the time finished within 10%-30% of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.MidFinish}" ContentStringFormat="P2" ToolTip="The percentage of the time finished within 30%-70% of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.MidLateFinish}" ContentStringFormat="P2"  ToolTip="The percentage of the time finished within 70%-90% of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LateFinish}" ContentStringFormat="P2" ToolTip="The percentage of the time finished within the final 10% of a tournament in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.MaxTournaments}" ToolTip="The most tournaments played in a single session" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.MinTournaments}" ToolTip="The least amount of tournaments played in a single session" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageTournaments}" ToolTip="The average amount of tournaments played in a single session" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+        <Expander
+            Grid.Row="3"
+            Grid.Column="3"
+            Padding="5,5"
+            Margin="5,5"
+            Header="Tournament Day/Time Stats"
+            IsExpanded="True">
+            <Grid>
+               <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+               </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="First Date Played: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Last Date Played: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Longest Tournament: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Shortest Tournament: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Average Tournament: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Total Days Played: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Winning Days: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Losing Days: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                    <Label Content="Break-even Days: " HorizontalAlignment="Right" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="{Binding Stats.EarliestStartDate}" ContentStringFormat="M/dd/yy" ToolTip="The earliest date a tournament was played on in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LatestStartDate}" ContentStringFormat="M/dd/yy" ToolTip="The latest date a tournament was played on in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LongestLength}" ContentStringFormat="{}{0:hh}:{0:mm}" ToolTip="The longest length of time a tournament was played for in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.ShortestLength}" ContentStringFormat="{}{0:hh}:{0:mm}" ToolTip="The shortest length of time a tournament was played for in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.AverageLength}" ContentStringFormat="{}{0:hh}:{0:mm}" ToolTip="The average length of time a tournament was played for in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.TotalDays}" ToolTip="The total number of unique days a tournament was played on in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.WinningDays}" ToolTip="The total number of winning days in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.LosingDays}" ToolTip="The total number of losing days in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                    <Label Content="{Binding Stats.BreakevenDays}" ToolTip="The total number of break-even days in the results" HorizontalAlignment="Left" FontSize="{Binding FontSize}"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

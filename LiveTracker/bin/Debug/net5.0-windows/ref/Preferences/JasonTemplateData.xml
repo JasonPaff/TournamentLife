@@ -1,0 +1,64 @@
+<TemplateData>
+  <Formats>
+    <Format>1R1A</Format>
+    <Format>2R1A</Format>
+    <Format>2x-Chance</Format>
+    <Format>3R1A</Format>
+    <Format>All-In</Format>
+    <Format>Ante Up</Format>
+    <Format>Big Ante</Format>
+    <Format>Bounty</Format>
+    <Format>Deep</Format>
+    <Format>Freezeout</Format>
+    <Format>Heads-Up</Format>
+    <Format>Hyper-Turbo</Format>
+    <Format>Jackpot Sng</Format>
+    <Format>Progressive Bounty</Format>
+    <Format>Progressive Total Bounty</Format>
+    <Format>Rebuy</Format>
+    <Format>Satellite</Format>
+    <Format>Shootout</Format>
+    <Format>Shovefest</Format>
+    <Format>Sng</Format>
+    <Format>Super Bounty</Format>
+    <Format>Super Deep</Format>
+    <Format>Total Bounty</Format>
+    <Format>Turbo</Format>
+    <Format>Re-Entry</Format>
+    <DefaultFormat>Deep</DefaultFormat>
+    <DefaultFormat>Freezeout</DefaultFormat>
+  </Formats>
+  <GameTypes>
+    <GameType>NLCP</GameType>
+    <GameType>NLHE</GameType>
+    <GameType>PLO</GameType>
+    <GameType>PLO8</GameType>
+    <DefaultGameType>NLHE</DefaultGameType>
+  </GameTypes>
+  <Venues>
+    <Venue>BetOnline</Venue>
+    <Venue>Bovada</Venue>
+    <Venue>Global Poker</Venue>
+    <Venue>Ignition</Venue>
+    <Venue>Americas Cardroom</Venue>
+    <DefaultVenue>Global Poker</DefaultVenue>
+  </Venues>
+  <DefaultValues>
+    <DefaultName>
+    </DefaultName>
+    <DefaultAddon>0</DefaultAddon>
+    <DefaultAddonRake>0</DefaultAddonRake>
+    <DefaultBlindLevels>10</DefaultBlindLevels>
+    <DefaultBuyin>10</DefaultBuyin>
+    <DefaultBuyinRake>1</DefaultBuyinRake>
+    <DefaultGuarantee>0</DefaultGuarantee>
+    <DefaultLateReg>60</DefaultLateReg>
+    <DefaultRebuy>0</DefaultRebuy>
+    <DefaultRebuyRake>0</DefaultRebuyRake>
+    <DefaultStartTime>1/1/0001 5:00:00 PM</DefaultStartTime>
+    <DefaultStackSizeAddon>0</DefaultStackSizeAddon>
+    <DefaultStackSizeRebuy>0</DefaultStackSizeRebuy>
+    <DefaultStackSizeStarting>5000</DefaultStackSizeStarting>
+    <DefaultTableSize>9</DefaultTableSize>
+  </DefaultValues>
+</TemplateData>

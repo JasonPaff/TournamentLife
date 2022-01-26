@@ -1,0 +1,77 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Session_Manager_Views.SessionListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+	mc:Ignorable="d"
+    WindowStartupLocation="CenterScreen"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    Title="{Binding Title}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+        <Button
+            FontSize="{Binding FontSize}"
+            Command="{Binding SaveCommand}"
+            Height="26"
+            MinWidth="80"
+            Margin="5,5"
+            Padding="5,5"
+            Content="{Binding SaveButtonText}"
+            ToolTip="{Binding SaveButtonToolTipText}"/>
+        <Button
+            FontSize="{Binding FontSize}"
+            Command="{Binding CloseCommand}"
+            Height="26"
+            Margin="5,5"
+            Padding="5,5"
+            Content="Close Window"
+            ToolTip="Close window"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0">
+        <ListBox
+            ItemsSource="{Binding SessionList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            SelectedItem="{Binding SelectedSession, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            MinWidth="200"
+            MaxHeight="500"
+            Margin="5,5"
+            Padding="5,5"
+            HorizontalContentAlignment="Center"
+            BorderThickness="1"
+            SelectionMode="Single" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    <Setter Property="ToolTip" Value="{Binding Description}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

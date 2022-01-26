@@ -1,0 +1,74 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Datagrid_Views.AddToSessionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    mc:Ignorable="d"
+    Title="Add to Session(s)"
+    SizeToContent="WidthAndHeight"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    ResizeMode="NoResize"
+    Height="450"
+    Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+       <StackPanel Grid.Row="0">
+        <ListBox
+            ItemsSource="{Binding SessionList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            MinWidth="300"
+            MaxHeight="400"
+            BorderThickness="1"
+            Margin="5,5"
+            Padding="5,5"
+            SelectionMode="Multiple" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding DisplayString}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    <Setter Property="ToolTip" Value="{Binding Description}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="82"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsDefault="True"
+                Command="{Binding SaveCommand}"
+                Content="Save"/>
+            <Button
+                MinHeight="25"
+                MinWidth="82"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                Command="{Binding CloseCommand}"
+                Content="Cancel"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

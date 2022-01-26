@@ -1,0 +1,94 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Results.QuickResultsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    Title="{Binding Title}"
+    UseNativeChrome="True"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="CanMinimize"
+    ShowMaximizeButton="False"
+    Height="300"
+    Width="100">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu --><!--
+        <syncfusion:MenuAdv
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            ExpandMode="ExpandOnClick">
+
+            --><!-- File Menu --><!--
+            <syncfusion:MenuItemAdv
+                Header="File"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Close Window"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding ExitCommand}"
+                    CommandParameter="Exit"/>
+            </syncfusion:MenuItemAdv>
+        </syncfusion:MenuAdv>-->
+
+    <Label Content="Tournaments Played: " Grid.Column="0" Grid.Row="1" FontSize="{Binding FontSize}" ToolTip="Number of tournaments played"/>
+            <Label Content="{Binding TournamentStats.TournamentsPlayed}"  Grid.Column="1" Grid.Row="1"  FontSize="{Binding FontSize}" ToolTip="Number of tournaments played"/>
+
+            <Label Content="Total Profit: " Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Total profit made in tournaments played (total prizes - total cost)"/>
+            <Label Content="{Binding TournamentStats.TotalProfit}" ContentStringFormat="C2" Grid.Column="1" Grid.Row="2"  FontSize="{Binding FontSize}" ToolTip="Total profit made in tournaments played (total prizes - total cost)"/>
+
+            <Label Content="Hourly: " Grid.Column="0" Grid.Row="3" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Money made per hour of tournament session play (total profit / total session hours)"/>
+            <Label Content="{Binding TournamentStats.Hourly}" ContentStringFormat="C2" Grid.Column="1" Grid.Row="3"  FontSize="{Binding FontSize}" ToolTip="Money made per hour of tournament session play (total profit / total session hours)"/>
+
+            <Label Content="$/Tournament: " Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Money made per tournament played (total profit / tournaments played)"/>
+            <Label Content="{Binding TournamentStats.ProfitPerTournament}"  ContentStringFormat="C2" Grid.Column="1" Grid.Row="4"  FontSize="{Binding FontSize}" ToolTip="Money made per tournament played (total profit / tournaments played)"/>
+
+            <Label Content="ROI: "  Grid.Column="0" Grid.Row="5" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Return on investment (total profit / total cost)"/>
+            <Label Content="{Binding TournamentStats.Roi}"  ContentStringFormat="P2" Grid.Column="1" Grid.Row="5"  FontSize="{Binding FontSize}" ToolTip="Return on investment (total profit / total cost)"/>
+
+            <Label Content="ITM: " Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Percentage of tournaments finished in the money"/>
+            <Label Content="{Binding TournamentStats.Itm}" ContentStringFormat="P2" Grid.Column="1" Grid.Row="6"  FontSize="{Binding FontSize}" ToolTip="Percentage of tournaments finished in the money"/>
+
+            <Label Content="Average Buy-in: "  Grid.Column="0" Grid.Row="7" HorizontalContentAlignment="Right" FontSize="{Binding FontSize}" ToolTip="Average buy-in per tournament (total buy-in / tournaments played)"/>
+            <Label Content="{Binding TournamentStats.AverageBuyin}"  ContentStringFormat="C2" Grid.Column="1" Grid.Row="7"  FontSize="{Binding FontSize}" ToolTip="Average buy-in per tournament (total buy-in / tournaments played)"/>
+
+            <Label Content="Average Total Cost: "  Grid.Column="0" Grid.Row="8" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Average cost per tournament (total cost (buy-in + rebuy(s) + addon) / tournaments played)"/>
+            <Label Content="{Binding TournamentStats.AverageCost}"  ContentStringFormat="C2" Grid.Column="1" Grid.Row="8"  FontSize="{Binding FontSize}" ToolTip="Average cost per tournament (total cost (buy-in + rebuy(s) + addon) / tournaments played)"/>
+
+            <Label Content="Total Cost: "  Grid.Column="0" Grid.Row="9" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Total cost of all tournaments played"/>
+            <Label Content="{Binding TournamentStats.TotalCost}"  ContentStringFormat="C2" Grid.Column="1" Grid.Row="9"  FontSize="{Binding FontSize}" ToolTip="Total cost of all tournaments played"/>
+
+            <Label Content="Total Prizes Won: "  Grid.Column="0" Grid.Row="10" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Total prizes won in tournaments played"/>
+            <Label Content="{Binding TournamentStats.TotalPrizeWon}"  ContentStringFormat="C2" Grid.Column="1" Grid.Row="10"  FontSize="{Binding FontSize}" ToolTip="Total prizes won in tournaments played"/>
+
+            <Label Content="Hours Played: " Grid.Column="0" Grid.Row="11" HorizontalContentAlignment="Right"  FontSize="{Binding FontSize}" ToolTip="Total session time played"/>
+            <Label Content="{Binding Hours}"  ContentStringFormat="P2" Grid.Column="1" Grid.Row="11"  FontSize="{Binding FontSize}" ToolTip="{Binding TimePlayed}"/>
+    </Grid>
+</syncfusion:ChromelessWindow>

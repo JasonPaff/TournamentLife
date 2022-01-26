@@ -1,0 +1,148 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Bankroll_Views.BankrollTransactionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    mc:Ignorable="d"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    FocusManager.FocusedElement="{Binding ElementName=Text}"
+    Title="{Binding Title}"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    Height="450"
+    Width="800">
+
+    <!-- Resources -->
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:BoolToVisibleConverter x:Key="WindowVisibleConverter" TrueValue="Visible" FalseValue="Collapsed"/>
+    </syncfusion:ChromelessWindow.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            ToolTip="Bankroll being used"
+            HorizontalAlignment="Right"
+            FontSize="{Binding FontSize}"
+            Content="Bankroll"/>
+        <ComboBox
+            Grid.Row="0"
+            Grid.Column="1"
+            ToolTip="Bankroll being used"
+            FontSize="{Binding FontSize}"
+            ItemsSource="{Binding Bankrolls, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding SelectedBankroll, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="Transaction type"
+            FontSize="{Binding FontSize}"
+            Content="Type"/>
+        <ComboBox
+            Grid.Row="1"
+            Grid.Column="1"
+            ToolTip="Transaction Type"
+            FontSize="{Binding FontSize}"
+            ItemsSource="{Binding TransactionTypes, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding SelectedTransactionType, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            ToolTip="Bonus type given"
+            HorizontalAlignment="Right"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding BonusVisible, Converter={StaticResource WindowVisibleConverter}}"
+            Content="Bonus"/>
+        <ComboBox
+            Grid.Row="2"
+            Grid.Column="1"
+            ToolTip="Bonus type given"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding BonusVisible, Converter={StaticResource WindowVisibleConverter}}"
+            ItemsSource="{Binding BonusList, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding SelectedBonus, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            ToolTip="Amount of transaction"
+            HorizontalAlignment="Right"
+            FontSize="{Binding FontSize}"
+            Content="Amount"/>
+        <syncfusion:CurrencyTextBox
+            x:Name="Text"
+            Grid.Row="3"
+            Grid.Column="1"
+            ToolTip="Amount of transaction"
+            FontSize="{Binding FontSize}"
+            CurrencySymbol="$"
+            Culture="en-US"
+            Value="{Binding Amount, UpdateSourceTrigger=PropertyChanged}"
+            MinWidth="100"
+            MinValue="0.00"/>
+
+        <Label
+            Grid.Row="4"
+            Grid.Column="0"
+            ToolTip="Date of transaction"
+            HorizontalAlignment="Right"
+            FontSize="{Binding FontSize}"
+            Content="Date"/>
+        <syncfusion:SfDatePicker
+            x:Name="DatePicker"
+            Grid.Row="4"
+            Grid.Column="1"
+            ToolTip="Date of transaction"
+            FontSize="{Binding FontSize}"
+            Value="{Binding Date, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <StackPanel
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="24"
+                MinWidth="90"
+                ToolTip="Complete transaction"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                Padding="5,5"
+                Command="{Binding SaveCommand}"
+                Content="{Binding SaveButton}"/>
+            <Button
+                MinHeight="24"
+                MinWidth="90"
+                ToolTip="Close the window"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                Padding="5,5"
+                IsCancel="True"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

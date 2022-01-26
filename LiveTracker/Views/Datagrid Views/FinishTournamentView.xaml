@@ -1,0 +1,261 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="Tournament_Life.Views.Datagrid_Views.FinishTournamentView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    Title="Finish Tournament"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize">
+
+    <!-- Resources -->
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:BoolToVisibleConverter x:Key="WindowVisibleConverter" TrueValue="Visible" FalseValue="Collapsed"/>
+    </syncfusion:ChromelessWindow.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,5,0,0"
+            HorizontalAlignment="Center"
+            ToolTip="{Binding TournamentToolTip}"
+            FontSize="{Binding FontSize}"
+            Foreground="CornflowerBlue"
+            Content="{Binding Name}"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The date and time the tournament began"
+            FontSize="{Binding FontSize}"
+            Content="Start Time:"/>
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="1"
+            ToolTip="The date and time the tournament began"
+            Margin="0,0,5,0"
+            FontSize="{Binding FontSize}"
+            Content="{Binding StartTime}"/>
+
+        <Label
+            Grid.Row="4"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The date and time the tournament ended"
+            FontSize="{Binding FontSize}"
+            Content="End Time:"/>
+
+        <Label
+            Grid.Row="4"
+            Grid.Column="1"
+            ToolTip="The date and time the tournament ended"
+            FontSize="{Binding FontSize}"
+            Content="{Binding EndTime}"/>
+
+        <Label
+            Grid.Row="6"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The total number of entries in the tournament"
+            FontSize="{Binding FontSize}"
+            Content="Entrants:"/>
+
+        <Label
+            Grid.Row="6"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The total number of entries in the tournament"
+            Foreground="{Binding EntrantsColor}"
+            FontSize="{Binding FontSize}"
+            Content="{Binding Entrants}"/>
+
+        <Label
+            Grid.Row="7"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The total number of entries that cash in the tournament"
+            FontSize="{Binding FontSize}"
+            Content="Entrants Paid:"/>
+
+        <Label
+            Grid.Row="7"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The total number of entries that cash in the tournament"
+            Foreground="{Binding EntrantsPaidColor}"
+            FontSize="{Binding FontSize}"
+            Content="{Binding EntrantsPaid}"/>
+
+        <Label
+            Grid.Row="8"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="Your finishing position in the tournament"
+            FontSize="{Binding FontSize}"
+            Content="Finish Position:"/>
+
+        <Label
+            Grid.Row="8"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="Your finishing position in the tournament"
+            Foreground="{Binding FinishPositionColor}"
+            FontSize="{Binding FontSize}"
+            Content="{Binding FinishPosition}"/>
+
+        <Label
+            Grid.Row="10"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The total prize won in the tournament"
+            FontSize="{Binding FontSize}"
+            Content="Prize Won:"/>
+
+        <Label
+            Grid.Row="10"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The total prize won in the tournament"
+            ContentStringFormat="C2"
+            Foreground="{Binding PrizeWonColor}"
+            FontSize="{Binding FontSize}"
+            Content="{Binding PrizeWon}"/>
+
+        <Label
+            Grid.Row="12"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The total number of times you re-bought in the tournament"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding ShowRebuy, Converter={StaticResource WindowVisibleConverter}}"
+            Content="Rebuy(s):"/>
+
+        <Label
+            Grid.Row="12"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The total number of times you re-bought in the tournament"
+            Foreground="{Binding RebuyCountColor}"
+            Visibility="{Binding ShowRebuy, Converter={StaticResource WindowVisibleConverter}}"
+            FontSize="{Binding FontSize}"
+            Content="{Binding Rebuy}"/>
+
+        <Label
+            Grid.Row="13"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The total number of times you added-on in the tournament"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding ShowAddon, Converter={StaticResource WindowVisibleConverter}}"
+            Content="Addon(s):"/>
+
+        <Label
+            Grid.Row="13"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The total number of times you added-on in the tournament"
+            Visibility="{Binding ShowAddon, Converter={StaticResource WindowVisibleConverter}}"
+            Foreground="{Binding AddonCountColor}"
+            FontSize="{Binding FontSize}"
+            Content="{Binding Addon}"/>
+
+        <Label
+            Grid.Row="14"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The total number of bounties you won in the tournament"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding ShowBounty, Converter={StaticResource WindowVisibleConverter}}"
+            Content="Bounties:"/>
+
+        <Label
+            Grid.Row="14"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The total number of bounties you won in the tournament"
+            Visibility="{Binding ShowBounty, Converter={StaticResource WindowVisibleConverter}}"
+            FontSize="{Binding FontSize}"
+            Foreground="{Binding BountyWonColor}"
+            Content="{Binding BountyWonCount}"/>
+
+        <Label
+            Grid.Row="14"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            ToolTip="The multiplier for the jackpot sng"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding ShowJackpot, Converter={StaticResource WindowVisibleConverter}}"
+            Content="Multiplier:"/>
+
+        <Label
+            Grid.Row="14"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            ToolTip="The multiplier for the jackpot sng"
+            Visibility="{Binding ShowJackpot, Converter={StaticResource WindowVisibleConverter}}"
+            FontSize="{Binding FontSize}"
+            Foreground="{Binding JackpotColor}"
+            Content="{Binding JackpotMultiplier}"/>
+
+        <StackPanel
+            Grid.Row="16"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                ToolTip="Finalizes the tournament and saves it to the database"
+                FontSize="{Binding FontSize}"
+                Margin="5,5,5,10"
+                IsDefault="True"
+                Command="{Binding SaveCommand}"
+                Content="Yes"/>
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                ToolTip="Cancels the finalization of the tournament and closes this window"
+                FontSize="{Binding FontSize}"
+                Margin="5,5,5,10"
+                IsCancel="True"
+                Command="{Binding CancelCommand}"
+                Content="No"/>
+        </StackPanel>
+    </Grid>
+</syncfusion:ChromelessWindow>

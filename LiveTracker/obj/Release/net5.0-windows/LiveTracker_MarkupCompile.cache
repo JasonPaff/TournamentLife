@@ -1,0 +1,20 @@
+﻿LiveTracker
+0.0.0.2
+
+winexe
+C#
+.cs
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\obj\Release\net5.0-windows\
+LiveTracker
+none
+false
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
+C:\Users\jason\source\repos\TournamentLife\LiveTracker\App.xaml
+361321625265
+
+1171798933313
+213311719030
+Views\Bankroll Views\AddBankrollView.xaml;Views\Bankroll Views\AddVenueView.xaml;Views\Bankroll Views\BankrollTransactionView.xaml;Views\Bankroll Views\RemoveBankrollView.xaml;Views\Bankroll Views\RemoveVenueView.xaml;Views\Bankroll Views\ViewTransactionsView.xaml;Views\Datagrid Views\AddToSessionView.xaml;Views\Datagrid Views\AttachNoteView.xaml;Views\Datagrid Views\CancelSelectTournamentsView.xaml;Views\Datagrid Views\ChangeTemplateDataView.xaml;Views\Datagrid Views\RemoveFromSessionView.xaml;Views\Datagrid Views\UpdateEndTimeSelectedView.xaml;Views\Datagrid Views\UpdateStartTimeSelectedView.xaml;Views\Graph Views\FinishPositionGraphView.xaml;Views\Graph Views\TournamentProfitGraphView.xaml;Views\LiveTrackerWindowView.xaml;Views\Menu Views\AddProfileView.xaml;Views\Menu Views\DatabaseView.xaml;Views\Menu Views\LiveTrackerMenuView.xaml;Views\Menu Views\ProfilesView.xaml;Views\Menu Views\QuickStartView.xaml;Views\Menu Views\RegisterView.xaml;Views\Menu Views\SelectTemplatesView.xaml;Views\Options\OptionsView.xaml;Views\Results\QuickResultsView.xaml;Views\Results\SessionResultsView.xaml;Views\Session Manager Views\SessionListView.xaml;Views\Session Manager Views\SessionManagerView.xaml;Views\Template Manager Views\EditDefaultsView.xaml;Views\Template Manager Views\EditFormatsView.xaml;Views\Template Manager Views\EditGameTypesView.xaml;Views\Template Manager Views\EditVenuesView.xaml;Views\Template Manager Views\TemplateDeleteView.xaml;Views\Template Manager Views\TemplateExportView.xaml;Views\Template Manager Views\TemplateImportView.xaml;Views\Template Manager Views\TemplateManagerView.xaml;
+
+False
+

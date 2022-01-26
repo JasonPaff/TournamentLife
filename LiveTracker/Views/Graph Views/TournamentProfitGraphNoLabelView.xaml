@@ -1,0 +1,73 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Graph_Views.TournamentProfitGraphNoLabelView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    UseNativeChrome="True"
+    ResizeMode="CanResize"
+    Title="{Binding Title}"
+    Height="800"
+    Width="1200">
+    <syncfusion:ChromelessWindow.Resources>
+        <DataTemplate x:Key="yPrefix">
+            <TextBlock FontSize="{Binding FontSize}" VerticalAlignment="Center" Text="$"/>
+        </DataTemplate>
+    </syncfusion:ChromelessWindow.Resources>
+    <Grid>
+
+        <!-- Menu -->
+        <syncfusion:MenuAdv
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            ExpandMode="ExpandOnClick">
+
+            <!-- File Menu -->
+            <syncfusion:MenuItemAdv
+                Header="File"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Save Image..."
+                    ToolTip="Save an image of the graph to disk"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding SaveImageCommand}"/>
+                <syncfusion:MenuItemAdv
+                    Header="Graph Filter..."
+                    ToolTip="Show the filter used to create the graph"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding GraphInfoCommand}"/>
+                <syncfusion:MenuItemSeparator Width="140" HorizontalAlignment="Left"/>
+                <syncfusion:MenuItemAdv
+                    Header="Exit"
+                    ToolTip="Close the graph window"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding CloseCommand}"/>
+            </syncfusion:MenuItemAdv>
+        </syncfusion:MenuAdv>
+
+        <chart:SfChart x:Name="chart"  Header="" FontSize="{Binding FontSize}" Margin="10,10" Palette="{Binding Palette}">
+            <chart:SfChart.Behaviors>
+                <chart:ChartZoomPanBehavior EnableMouseWheelZooming="True" EnableDirectionalZooming="True" EnablePanning="True" ZoomRelativeToCursor="True" MaximumZoomLevel="5.0" ResetOnDoubleTap="True"/>
+            </chart:SfChart.Behaviors>
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis Header="Tournaments Played" FontSize="{Binding FontSize}" RangePadding="Auto" LabelExtent="20" StartRangeFromZero="True"/>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Header="Total Profit" FontSize="{Binding FontSize}" RangePadding="Auto" LabelExtent="50" LabelFormat="{Binding YAxisLabelFormat, UpdateSourceTrigger=PropertyChanged}" StartRangeFromZero="True"/>
+            </chart:SfChart.SecondaryAxis>
+            <chart:FastLineSeries ItemsSource="{Binding Tournaments}" XBindingPath="Count" YBindingPath="Profit" ShowTooltip="False" EnableAnimation="True">
+                <chart:FastLineSeries.TooltipTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Item.Description}" Foreground="{Binding FontColor}"/>
+                    </DataTemplate>
+                </chart:FastLineSeries.TooltipTemplate>
+            </chart:FastLineSeries>
+        </chart:SfChart>
+    </Grid>
+</syncfusion:ChromelessWindow>

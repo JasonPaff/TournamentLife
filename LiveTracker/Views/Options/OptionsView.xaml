@@ -1,0 +1,100 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Options.OptionsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    Title="Options" ResizeMode=" NoResize" SizeToContent="WidthAndHeight"  Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Font Size -->
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Orientation="Horizontal">
+            <Label
+                Content="Font Size"/>
+            <ComboBox
+                ItemsSource="{Binding FontSizes}"
+                SelectedValue="{Binding SelectedFontSize}">
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Max Show in View -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Orientation="Horizontal">
+            <Label
+                Content="Max tournaments to show in view"/>
+            <ComboBox
+                ItemsSource="{Binding MaxShowInViewSizes}"
+                SelectedValue="{Binding SelectedMaxSizeInView}">
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Show/Hide Tournament Counter Row Header -->
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            Orientation="Horizontal">
+            <Label
+                Content="Show tournament counter column"/>
+            <CheckBox
+                IsChecked="{Binding ShowRowHeader}"/>
+        </StackPanel>
+
+        <!-- Show/Hide
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            Orientation="Horizontal">
+            <Label
+                Content="Single Row View in Tournaments Grid"/>
+            <CheckBox
+                IsChecked="{Binding SingleRowMode}"/>
+        </StackPanel> -->
+
+        <!-- Reset/Start/Cancel -->
+        <StackPanel
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Left"
+            Margin="5,5"
+            Orientation="Horizontal">
+            <!--<Button
+                MinHeight="25"
+                MinWidth="90"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                ToolTip="Start the tournament(s)"
+                Command="{Binding SaveCommand}"
+                Content="Save"/>-->
+            <Button
+                MinHeight="25"
+                MinWidth="90"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close window"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

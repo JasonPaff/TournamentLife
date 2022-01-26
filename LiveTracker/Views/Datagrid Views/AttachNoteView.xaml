@@ -1,0 +1,64 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Datagrid_Views.AttachNoteView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    FocusManager.FocusedElement="{Binding ElementName=TextBox}"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    mc:Ignorable="d"
+    Title="{Binding Title}"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    Height="Auto"
+    Width="Auto">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox
+            x:Name="TextBox"
+            Grid.Row="0"
+            FontSize="{Binding FontSize}"
+            Margin="5,5"
+            MinHeight="200"
+            MinWidth="400"
+            VerticalContentAlignment="Top"
+            AcceptsReturn="True"
+            AcceptsTab="True"
+            BorderThickness="1"
+            Text="{Binding NoteText}"/>
+
+        <StackPanel
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsDefault="True"
+                ToolTip="Close window and save any changes"
+                Command="{Binding SaveCommand}"
+                Content="Save"/>
+            <Button
+                MinHeight="25"
+                MinWidth="80"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close window without saving any changes"
+                Command="{Binding CloseCommand}"
+                Content="Close"/>
+        </StackPanel>
+    </Grid>
+</syncfusion:ChromelessWindow>

@@ -1,0 +1,851 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Template_Manager_Views.TemplateManagerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:commands="clr-namespace:LiveTracker.Commands"
+    xmlns:converters="clr-namespace:LiveTracker.Converters"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    FocusManager.FocusedElement="{Binding ElementName=NameTextBox}"
+	mc:Ignorable="d"
+    UseNativeChrome="True"
+    SizeToContent="WidthAndHeight"
+    Height="500"
+    Width="800"
+    ShowMaximizeButton="False"
+    ResizeMode="CanMinimize"
+    Title="{Binding Title, UpdateSourceTrigger=PropertyChanged}">
+
+    <syncfusion:ChromelessWindow.Resources>
+        <converters:BoolToYesConverter x:Key="BoolToYesConverter"/>
+        <converters:SngToVisibilityConverter x:Key="SngToVisibleConverter"/>
+        <converters:DateToTimeConverter x:Key="DateToTimeConverter"/>
+
+        <Style x:Key="DataGridContextMenu" TargetType="syncfusion:MenuItemAdv">
+            <Setter Property="Foreground" Value="{Binding FontColor}"/>
+            <Setter Property="FontSize" Value="{Binding FontSize}"/>
+            <Setter Property="Padding" Value="-50,0,-40,0"/>
+        </Style>
+        <Style x:Key="DataGridContextMenu2" TargetType="MenuItem">
+            <Setter Property="Foreground" Value="{Binding FontColor}"/>
+            <Setter Property="FontSize" Value="{Binding FontSize}"/>
+        </Style>
+
+        <Style
+            TargetType="syncfusion:GridRowHeaderCell">
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="syncfusion:GridRowHeaderCell">
+                        <Border
+                            x:Name="PART_RowHeaderCellBorder"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid>
+                                <!-- RowIndex is displayed here -->
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding RowIndex, RelativeSource={RelativeSource TemplatedParent}}"
+                                    TextAlignment="Center" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </syncfusion:ChromelessWindow.Resources>
+
+    <!-- Window Loaded Command -->
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}" CommandParameter="WindowLoaded"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu -->
+        <syncfusion:MenuAdv
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            ExpandMode="ExpandOnClick">
+
+            <!-- File Menu -->
+            <syncfusion:MenuItemAdv
+                Header="File"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Import Tournaments..."
+                    ToolTip="Import tournaments from a saved tournaments file"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="ImportTemplates"/>
+                <syncfusion:MenuItemAdv
+                    Header="Export Tournaments..."
+                    ToolTip="Export tournaments to a tournaments file"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="ExportTemplates"/>
+
+                <syncfusion:MenuItemSeparator Width="110" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Delete Tournaments..."
+                    ToolTip="Delete tournaments from a list of all the tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="DeleteTemplates"/>
+
+                <syncfusion:MenuItemSeparator Width="110" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Exit"
+                    ToolTip="Exit tournament manager"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="Exit"/>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Edit Menu -->
+            <syncfusion:MenuItemAdv
+                Header="Edit"
+                FontSize="{Binding FontSize}">
+                <syncfusion:MenuItemAdv
+                    Header="Edit Formats..."
+                    ToolTip="Add/Remove formats from the tournament formats list"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="EditFormats"/>
+                <syncfusion:MenuItemAdv
+                    Header="Edit Game Types..."
+                    ToolTip="Add/Remove game types from the tournament game types list"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="EditGameTypes"/>
+                <syncfusion:MenuItemAdv
+                    Header="Edit Venues..."
+                    ToolTip="Add/Remove venues from the tournament venues list"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="EditVenues"/>
+                <syncfusion:MenuItemAdv
+                    Header="Edit Default Values..."
+                    ToolTip="Change the default values for the tournament manager and quick start tournament menu option"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                    CommandParameter="EditDefaults"/>
+
+            </syncfusion:MenuItemAdv>
+
+        </syncfusion:MenuAdv>
+
+        <!-- New Template Labels -->
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            Orientation="Vertical">
+
+        <Label
+            Content="Name"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Venue"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Game Type"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+
+        <Label
+            Content="Start Time"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Buyin"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Buyin Rake"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Rebuy"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Rebuy Rake"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Addon"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Addon Rake"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Guarantee"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Bovada Bounty"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            Visibility="{Binding BovadaCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Late Reg"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Blind Levels"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Table Size"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Starting Stack"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Rebuy Stack"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Addon Stack"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Entrants"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            Visibility="{Binding SngCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Entrants Paid"
+            Margin="0,2,0,0"
+            HorizontalContentAlignment="Right"
+            Visibility="{Binding SngCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            FontSize="{Binding FontSize}"/>
+        <Label
+            Content="Sng Payouts"
+            Margin="0,4,0,0"
+            HorizontalContentAlignment="Right"
+            Visibility="{Binding SngCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            FontSize="{Binding FontSize}"/>
+        
+        </StackPanel>
+
+        <!-- New Template Inputs -->
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="1">
+
+        <TextBox
+            x:Name="NameTextBox"
+            Text="{Binding Template.TournamentName, UpdateSourceTrigger=PropertyChanged}"
+            FontSize="{Binding FontSize}"
+            TextAlignment="Left"
+            VerticalContentAlignment="Center"
+            MinHeight="26"
+            MinWidth="100"
+            ToolTip="Tournament Name"/>
+
+        <ComboBox
+            MinHeight="26"
+            MinWidth="100"
+            ToolTip="Tournament venue (add/remove venues under Edit menu)"
+            FontSize="{Binding FontSize}"
+            ItemsSource="{Binding Venues}"
+            SelectedItem="{Binding SelectedVenue}"/>
+
+        <ComboBox
+            MinHeight="26"
+            MinWidth="100"
+            ToolTip="Tournament Game Type (add/remove game types under Edit menu)"
+            FontSize="{Binding FontSize}"
+            ItemsSource="{Binding GameTypes}"
+            SelectedItem="{Binding SelectedGameType}"/>
+
+        <syncfusion:SfTimePicker
+            MinHeight="26"
+            Value="{Binding Template.StartTime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            FontSize="{Binding FontSize}"
+            ToolTip="Starting Time"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.BuyinBaseCost}"
+            FontSize="{Binding FontSize}"
+            MinHeight="26"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            TextAlignment="Right"
+            ToolTip="Buyin base cost (buy-in cost without rake)"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.BuyinRakeCost}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Buyin Rake cost"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.RebuyBaseCost}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Rebuy base cost (re-buy cost without rake)"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.RebuyRakeCost}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Rebuy Rake cost"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.AddonBaseCost}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Addon base cost (addon cost without rake"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.AddonRakeCost}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1.0"
+            MinValue="0"
+            Culture="en-US"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Addon Rake cost"/>
+
+        <syncfusion:CurrencyTextBox
+            Value="{Binding Template.Guarantee}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="500.0"
+            MinValue="0"
+            Culture="en-US"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Guarantee"/>
+
+        <syncfusion:CurrencyTextBox
+            x:Name="BovadaBounty"
+            Value="{Binding Template.Bounty}"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding BovadaCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            ScrollInterval="1"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Bounty amount for Bovada bounty tournaments"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.LateReg}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="5"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Late Reg length (in minutes)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.BlindLevels}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="5"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Blind Levels length (in minutes)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.TableSize}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="1"
+            MinValue="2"
+            MaxValue="10"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Players per table"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.StackSizeStarting}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="500"
+            MinValue="0"
+            TextAlignment="Right"
+            MinHeight="26"
+            ToolTip="Starting Stack Size"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.StackSizeRebuy}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="500"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Chip stack you get for a rebuy (if available)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.StackSizeAddon}"
+            FontSize="{Binding FontSize}"
+            ScrollInterval="500"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Addon Stack Size"/>
+
+        <syncfusion:IntegerTextBox
+            x:Name="SngEntrants"
+            Value="{Binding Template.Entrants}"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding SngCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            ScrollInterval="1"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Number of players who can enter the tournament (used for sngs)"/>
+
+        <syncfusion:IntegerTextBox
+            Value="{Binding Template.EntrantsPaid}"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding SngCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            ScrollInterval="1"
+            MinValue="0"
+            MinHeight="26"
+            TextAlignment="Right"
+            ToolTip="Players who cash in the tournament (used for sngs)"/>
+        <TextBox
+            Text="{Binding Template.SngPayouts}"
+            FontSize="{Binding FontSize}"
+            Visibility="{Binding SngCheckBox, Converter={StaticResource SngToVisibleConverter}}"
+            TextAlignment="Left"
+            Margin="0,5,0,0"
+            MinHeight="26"
+            MinWidth="160"
+            ToolTip="The payouts for the sit and go, start with 1st place prize and separate each value with a comma&#x0a;For example if the sng pays out top 3 places then you would enter the sng payouts as 45,27,15"/>
+
+        </StackPanel>
+
+        <!-- Formats -->
+        <StackPanel
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,5,0,0">
+            <syncfusion:CheckListBox
+                ItemsSource="{Binding FormatsList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                FontSize="{Binding FontSize}"
+                x:Name="Grid"
+                DisplayMemberPath="DisplayString"
+                HorizontalContentAlignment="Left"
+                MinWidth="100"
+                MinHeight="26"
+                MaxHeight="138"
+                Margin="10,0,0,0"
+                IsCheckOnFirstClick="true"
+                IsSelectAllEnabled="False"
+                ToolTip="Tournament formats (add/remove formats under Edit menu)">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger
+                        EventName="ItemChecked">
+                        <b:InvokeCommandAction
+                            Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                            CommandParameter="ItemChecked"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+                <syncfusion:CheckListBox.ItemContainerStyle>
+                    <Style
+                        TargetType="{x:Type syncfusion:CheckListBoxItem}">
+                        <Setter
+                            Property="IsChecked"
+                            Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                    </Style>
+                </syncfusion:CheckListBox.ItemContainerStyle>
+                <syncfusion:CheckListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </syncfusion:CheckListBox.ItemsPanel>
+            </syncfusion:CheckListBox>
+        </StackPanel>
+
+        <!-- New Template CheckBox Options -->
+        <StackPanel
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Orientation="Vertical">
+
+        <CheckBox
+            HorizontalAlignment="Center"
+            Content="Fixed Bounty Tournament"
+            IsChecked="{Binding BovadaCheckBox}"
+            FocusManager.FocusedElement="{Binding ElementName=BovadaBounty}"
+            ToolTip="-This will tag the tournament as a fixed bounty tournament&#x0a; (the amount you win from knocking someone out is fixed in size)&#x0a;&#x0a;-This tag is mainly useful for when you are playing at a venue&#x0a; (Bovada,Ignition,ect..) that doesn't track the fixed limit bounties&#x0a; won for you in the lobby. Tag it with the fixed bounty tag and use&#x0a; the bounty column in the main tracker to track the bounties won&#x0a;&#x0a;-Use the bounty column on the main tracker to track fixed limit bounties won.&#x0a; To turn on the bounty column right click any columns header on the&#x0a; main tracker and select the bounty column from the menu"
+            Margin="-6,5,0,0"
+            FontSize="{Binding FontSize}"/>
+        <CheckBox
+            HorizontalAlignment="Center"
+            FocusManager.FocusedElement="{Binding ElementName=SngEntrants}"
+            Content="Sit and Go Tournament"
+            IsChecked="{Binding SngCheckBox}"
+            ToolTip="-This will tag the tournament as a Sit and Go tournament&#x0a;  (a tournament that starts after a set number of people&#x0a;   have registered instead of at a set time)&#x0a;&#x0a;-When started by the tracker any tournament flagged as&#x0a; a Sit and Go will have its starting time set to the current&#x0a; time instead of the starting time selected here&#x0a;&#x0a;-When started by the tracker any tournament flagged as a&#x0a; Sit and Go will have its Entrants and Entrants Paid updated"
+            Margin="-20,5,0,0"
+            FontSize="{Binding FontSize}"/>
+        </StackPanel>
+
+        <!-- New Template Buttons -->
+        <StackPanel
+            Grid.Row="5"
+            Grid.Column="0"
+            Margin="15,5,0,0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+        <Button
+            Content="Save Tournament"
+            ToolTip="Save this tournament"
+            MinHeight="25"
+            MinWidth="60"
+            Padding="5,5"
+            Margin="0,0,5,0"
+            FontSize="{Binding FontSize}"
+            Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+            CommandParameter="SaveTemplate"/>
+        <Button
+            Content="Reset Values"
+            ToolTip="Reset tournament settings to default values, default values can be changed in the Edit menu"
+            MinHeight="25"
+            MinWidth="60"
+            Padding="5,5"
+            Margin="0,0,5,0"
+            FocusManager.FocusedElement="{Binding ElementName=NameTextBox}"
+            FontSize="{Binding FontSize}"
+            Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+            CommandParameter="ResetTemplate"/>
+        </StackPanel>
+
+        <!-- Templates DataGrid -->
+        <syncfusion:SfDataGrid
+            AutoGenerateColumns="False"
+            AllowResizingColumns="True"
+            ColumnSizer="Auto"
+            Grid.Row="2"
+            Grid.RowSpan="7"
+            Grid.Column="3"
+            x:Name="TemplatesDataGrid"
+            MaxHeight="755"
+            MaxWidth="1000"
+            SelectionMode="Single"
+            VerticalAlignment="Top"
+            ItemsSource="{Binding Templates, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+            SelectedItem="{Binding SelectedTemplate}"
+            ShowRowHeader="{Binding ShowRowHeader}"
+            ShowToolTip ="True">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="QueryColumnDragging">
+                    <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}" CommandParameter="UpdateColumnOrder"/>
+                </b:EventTrigger>
+                <b:EventTrigger EventName="SizeChanged">
+                    <b:InvokeCommandAction Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}" CommandParameter="UpdateColumnWidth"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+
+            <!-- Context Menu -->
+            <syncfusion:SfDataGrid.ContextMenu>
+                <ContextMenu StaysOpen="True" IsOpen="{Binding IsContextMenuOpen, Mode=OneWayToSource}">
+
+                    <syncfusion:MenuItemAdv
+                        Header="{Binding SelectedTemplate.FavoriteMenuString}"
+                        ToolTip="Add/Remove tournament to/from favorite tournaments list"
+                        Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                        CommandParameter="Favorite"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                     <Separator Margin="-20,0,5,0"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="Edit Tournament"
+                        ToolTip="Edit this tournament"
+                        Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                        CommandParameter="EditTemplate"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="Copy Tournament"
+                        ToolTip="Copy this tournament"
+                        Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                        CommandParameter="CopyTemplate"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                     <Separator Margin="-20,0,5,0"/>
+
+                    <syncfusion:MenuItemAdv
+                        Header="Delete Tournament"
+                        ToolTip="Delete this tournament"
+                        Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                        CommandParameter="DeleteTemplate"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}"/>
+
+                    <!--<syncfusion:MenuItemAdv
+                        Header="Recently Deleted Templates"
+                        ToolTip="Restores a recently deleted template"
+                        Command="{Binding Source={x:Static Member=commands:TemplateManagerCommands.MenuItem}}"
+                        CommandParameter="Favorite"
+                        ItemsSource="{Binding RecentlyDeleted}"
+                        FontSize="{Binding FontSize}"
+                        Foreground="{Binding FontColor}"
+                        Style="{StaticResource DataGridContextMenu}">
+                        <syncfusion:MenuItemAdv.ItemContainerStyle>
+                            <Style TargetType="{x:Type syncfusion:MenuItemAdv}">
+                                <Setter Property="Header" Value="{Binding TournamentName}"/>
+                                <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                                <Setter Property="Foreground" Value="{Binding FontColor}"/>
+                                <Setter Property="Command" Value="{Binding Source={x:Static Member=commands:TemplateManagerCommands.RecentlyDeletedCommand}}"/>
+                                <Setter Property="CommandParameter" Value="{Binding }"/>
+                                <Setter Property="ToolTip" Value="{Binding Description}"/>
+                                <Setter Property="Padding" Value="-10,0,10,0"/>
+                            </Style>
+                        </syncfusion:MenuItemAdv.ItemContainerStyle>
+                    </syncfusion:MenuItemAdv>-->
+                </ContextMenu>
+            </syncfusion:SfDataGrid.ContextMenu>
+
+            <!-- Columns -->
+            <syncfusion:SfDataGrid.Columns>
+
+                <syncfusion:GridTextColumn
+                    MappingName="TournamentName"
+                    HeaderText="Tournament Name"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="Venue"
+                    HeaderText="Venue"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="GameType"
+                    HeaderText="Game Type"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="FormatString"
+                    HeaderText="Format(s)"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridDateTimeColumn
+                    DisplayBinding="{Binding StartTime, Converter={StaticResource DateToTimeConverter}}"
+                    MappingName="StartTime"
+                    HeaderText="Start Time"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="Guarantee"
+                    HeaderText="Guarantee"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinTotalCost"
+                    HeaderText="Buyin Total"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinBaseCost"
+                    HeaderText="Buyin Base"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="BuyinRakeCost"
+                    HeaderText="Buyin Rake"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyTotalCost"
+                    HeaderText="Rebuy Total"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyBaseCost"
+                    HeaderText="Rebuy Base"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="RebuyRakeCost"
+                    HeaderText="Rebuy Rake"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonTotalCost"
+                    HeaderText="Addon Total"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonBaseCost"
+                    HeaderText="Addon Base"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="AddonRakeCost"
+                    HeaderText="Addon Rake"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridCurrencyColumn
+                    MappingName="Bounty"
+                    HeaderText="Bovada Bounty"
+                    TextAlignment="Center"
+                    AllowDragging="True"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="StackSizeStarting"
+                    HeaderText="Starting Stack"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="StackSizeRebuy"
+                    HeaderText="Rebuy Stack"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="StackSizeAddon"
+                    HeaderText="Addon Stack"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="TableSize"
+                    HeaderText="Table Size"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="BlindLevels"
+                    HeaderText="Blind Levels"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="LateReg"
+                    HeaderText="Late Reg"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="Entrants"
+                    HeaderText="Entrants"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="EntrantsPaid"
+                    HeaderText="Entrants Paid"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="IsSng"
+                    DisplayBinding="{Binding IsSng, Converter={StaticResource BoolToYesConverter}}"
+                    HeaderText="Sng?"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+                <syncfusion:GridTextColumn
+                    MappingName="IsBovadaBounty"
+                    DisplayBinding="{Binding IsBovadaBounty, Converter={StaticResource BoolToYesConverter}}"
+                    HeaderText="Bovada Bounty?"
+                    AllowDragging="True"
+                    TextAlignment="Center"/>
+
+            </syncfusion:SfDataGrid.Columns>
+
+            </syncfusion:SfDataGrid>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

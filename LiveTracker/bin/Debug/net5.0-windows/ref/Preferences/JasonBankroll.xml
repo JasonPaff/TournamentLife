@@ -1,0 +1,215 @@
+<Bankrolls>
+  <Bankroll>
+    <Venue>Global Poker</Venue>
+    <StartingAmount>0</StartingAmount>
+    <Transactions>
+      <Transaction>
+        <Amount>1500.00</Amount>
+        <Date>8/10/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>420.00</Amount>
+        <Date>8/2/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>500.00</Amount>
+        <Date>7/24/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>450.00</Amount>
+        <Date>7/20/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>700.00</Amount>
+        <Date>6/22/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>1100.00</Amount>
+        <Date>5/23/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>550.00</Amount>
+        <Date>5/17/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>1200.00</Amount>
+        <Date>4/28/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>1100.00</Amount>
+        <Date>4/24/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>600.00</Amount>
+        <Date>4/20/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>600.00</Amount>
+        <Date>4/12/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>600.00</Amount>
+        <Date>3/31/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>300.00</Amount>
+        <Date>3/21/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>300.00</Amount>
+        <Date>3/17/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>250.00</Amount>
+        <Date>3/6/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>250.00</Amount>
+        <Date>2/19/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>350.00</Amount>
+        <Date>2/10/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>350.00</Amount>
+        <Date>1/22/2021 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>1000.00</Amount>
+        <Date>11/20/2020 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>2300.00</Amount>
+        <Date>11/28/2020 10:42:14 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>2000.00</Amount>
+        <Date>11/12/2020 10:48:12 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>2125.00</Amount>
+        <Date>9/23/2020 10:48:12 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>3300.00</Amount>
+        <Date>9/18/2020 10:48:12 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>2800.00</Amount>
+        <Date>9/12/2020 10:48:12 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>3.56</Amount>
+        <Date>8/16/2021 5:25:48 PM</Date>
+        <TransactionType>0</TransactionType>
+        <Venue>Global Poker</Venue>
+        <BonusType>0</BonusType>
+      </Transaction>
+      <Transaction>
+        <Amount>530.00</Amount>
+        <Date>8/28/2021 11:17:46 PM</Date>
+        <TransactionType>1</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>300.00</Amount>
+        <Date>8/29/2021 11:40:57 AM</Date>
+        <TransactionType>1</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>22.00</Amount>
+        <Date>8/29/2021 11:43:50 AM</Date>
+        <TransactionType>0</TransactionType>
+        <Venue>Global Poker</Venue>
+        <BonusType>6</BonusType>
+      </Transaction>
+      <Transaction>
+        <Amount>4.73</Amount>
+        <Date>8/15/2021 8:03:26 PM</Date>
+        <TransactionType>0</TransactionType>
+        <Venue>Global Poker</Venue>
+        <BonusType>0</BonusType>
+      </Transaction>
+      <Transaction>
+        <Amount>2215.41</Amount>
+        <Date>9/11/2020 3:48:12 PM</Date>
+        <TransactionType>1</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>500.00</Amount>
+        <Date>8/25/2021 12:06:07 PM</Date>
+        <TransactionType>1</TransactionType>
+        <Venue>Global Poker</Venue>
+      </Transaction>
+    </Transactions>
+  </Bankroll>
+  <Bankroll>
+    <Venue>BetOnline</Venue>
+    <StartingAmount>299.30</StartingAmount>
+    <Transactions>
+      <Transaction>
+        <Amount>299.30</Amount>
+        <Date>2/16/2021 5:56:29 PM</Date>
+        <TransactionType>1</TransactionType>
+        <Venue>BetOnline</Venue>
+      </Transaction>
+      <Transaction>
+        <Amount>319.54</Amount>
+        <Date>10/5/2021 5:12:57 PM</Date>
+        <TransactionType>2</TransactionType>
+        <Venue>BetOnline</Venue>
+      </Transaction>
+    </Transactions>
+  </Bankroll>
+</Bankrolls>

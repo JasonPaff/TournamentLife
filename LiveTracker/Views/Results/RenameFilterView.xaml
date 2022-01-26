@@ -1,0 +1,73 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="Tournament_Life.Views.Results.RenameFilterView"
+    mc:Ignorable="d"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    FocusManager.FocusedElement="{Binding ElementName=Text}"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    Title="Rename Filter"
+    x:Name="Window">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Label/TextBox -->
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5,5"
+            HorizontalAlignment="Left"
+            Orientation="Horizontal">
+            <Label
+                FontSize="{Binding FontSize}"
+                ToolTip="New name for filter"
+                Content="Name"/>
+            <TextBox
+                x:Name="Text"
+                ToolTip="New name for filter"
+                MinWidth="125"
+                FontSize="{Binding FontSize}"
+                Text="{Binding Text}"/>
+        </StackPanel>
+
+        <!-- Rename/Cancel -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="5,5"
+            HorizontalAlignment="Left"
+            Orientation="Horizontal">
+            <Button
+                Height="25"
+                Width="80"
+                Margin="5,5"
+                ToolTip="Rename the filter"
+                FontSize="{Binding FontSize}"
+                Command="{Binding RenameCommand}"
+                Content="Rename"/>
+            <Button
+                Height="25"
+                Width="80"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close window"
+                FontSize="{Binding FontSize}"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

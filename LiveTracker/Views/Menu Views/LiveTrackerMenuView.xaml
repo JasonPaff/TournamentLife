@@ -1,0 +1,474 @@
+﻿<UserControl x:Class="LiveTracker.Views.Menu_Views.LiveTrackerMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:commands="clr-namespace:LiveTracker.Commands"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
+    <Grid>
+
+        <!-- Menu Bar -->
+        <syncfusion:MenuAdv
+            x:Name="LiveTrackerMenu"
+            ExpandMode="ExpandOnClick">
+
+            <!-- File Menu -->
+            <syncfusion:MenuItemAdv
+                FontSize="{Binding FontSize}"
+                Header="File">
+                <syncfusion:MenuItemAdv
+                    Header="Profiles..."
+                    ToolTip="Manager the Tournament Life user profiles here"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="ProfilesMenuItem"/>
+                <syncfusion:MenuItemAdv
+                    Header="Database..."
+                    ToolTip="Manager the currently loaded profiles database here"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="DatabaseMenuItem"/>
+
+                <syncfusion:MenuItemSeparator Width="65" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Exit"
+                    ToolTip="Exit the Tournament Life program (running tournaments data will be automatically saved upon exit and re-loaded at start"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="ExitMenuItem"/>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Options Menu -->
+            <syncfusion:MenuItemAdv
+                x:Name="ViewMenu"
+                    FontSize="{Binding FontSize}"
+                Header="Options">
+                <!--<syncfusion:MenuItemAdv
+                    x:Name="TournamentVisibilityMenuItem"
+                    FontSize="{Binding FontSize}"
+                    Header="Tournament Visibility">
+                    <syncfusion:MenuItemAdv
+                        x:Name="ShowAllMenuItem"
+                        Header="Show All Tournaments"
+                        IsCheckable ="True"
+                        CheckIconType="RadioButton"
+                        GroupName="TournamentVisibility"
+                        IsChecked="{Binding IsShowAllChecked}"
+                    FontSize="{Binding FontSize}"
+                        Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}"
+                        CommandParameter="ShowAllMenuItem"/>
+                    <syncfusion:MenuItemAdv
+                        x:Name="ShowStartedMenuItem"
+                        Header="Show Started Tournaments"
+                        IsCheckable ="True"
+                        CheckIconType="RadioButton"
+                        GroupName="TournamentVisibility"
+                        IsChecked="{Binding IsShowStartedChecked}"
+                    FontSize="{Binding FontSize}"
+                        Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}"
+                        CommandParameter="ShowStartedMenuItem"/>
+                    <syncfusion:MenuItemAdv
+                        x:Name="ShowStartFiveMenuItem"
+                        Header="Show Tournaments Starting in 5 Minutes"
+                        IsCheckable ="True"
+                        CheckIconType="RadioButton"
+                        GroupName="TournamentVisibility"
+                        IsChecked="{Binding IsShowFiveChecked}"
+                    FontSize="{Binding FontSize}"
+                        Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}"
+                        CommandParameter="ShowFiveMenuItem"/>
+                    <syncfusion:MenuItemAdv
+                        x:Name="ShowStartFifteenMenuItem"
+                        Header="Show Tournaments Starting in 15 Minutes"
+                        IsCheckable ="True"
+                        CheckIconType="RadioButton"
+                        GroupName="TournamentVisibility"
+                        IsChecked="{Binding IsShowFifteenChecked}"
+                    FontSize="{Binding FontSize}"
+                        Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}"
+                        CommandParameter="ShowFifteenMenuItem"/>
+                    <syncfusion:MenuItemAdv
+                        x:Name="ShowStartThirtyMenuItem"
+                        Header="Show Tournaments Starting in 30 Minutes"
+                        IsCheckable ="True"
+                        CheckIconType="RadioButton"
+                        GroupName="TournamentVisibility"
+                        IsChecked="{Binding IsShowThirtyChecked}"
+                    FontSize="{Binding FontSize}"
+                        Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}"
+                        CommandParameter="ShowThirtyMenuItem"/>
+                    <syncfusion:MenuItemAdv
+                        x:Name="ShowStartSixtyMenuItem"
+                        Header="Show Tournaments Starting in 60 Minutes"
+                        IsCheckable ="True"
+                        CheckIconType="RadioButton"
+                        GroupName="TournamentVisibility"
+                        IsChecked="{Binding IsShowSixtyChecked}"
+                    FontSize="{Binding FontSize}"
+                        Command="{Binding Source={x:Static Member=commands:LiveTrackerMenuCommands.MenuItem}}"
+                        CommandParameter="ShowSixtyMenuItem"/>
+                </syncfusion:MenuItemAdv>-->
+
+                <syncfusion:MenuItemAdv
+                    x:Name="KeepWindowOnTopMenuItem"
+                    Header="Keep the Tournament Life Window on Top"
+                    ToolTip="Keeps the Tournament Life window on top of other windows"
+                    FontSize="{Binding FontSize}"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsKeepWindowOnTopChecked}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="KeepWindowOnTopMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="GlobalPokerMenuItem"
+                    Header="Show the Currency Symbol as SC"
+                    ToolTip="Switch the currency symbol used by the tracker to SC instead of $ (Global Pokers sweeps coin currency)"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsSweepsCoinChecked}"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="SweepsCoinMenuItem"/>
+
+                <!--<syncfusion:MenuItemAdv
+                    Header="Options..."
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="OptionsMenuItem"/>-->
+            </syncfusion:MenuItemAdv>
+
+            <!-- Tournaments Menu -->
+            <syncfusion:MenuItemAdv
+                x:Name="TournamentsMenuItem"
+                    FontSize="{Binding FontSize}"
+                Header="Tournaments">
+
+                <syncfusion:MenuItemAdv
+                    x:Name="TemplateManagerMenuItem"
+                    Header="Tournament Creator..."
+                    ToolTip="Create and manage your tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="TemplateManagerMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="SelectTemplateMenuItem"
+                    Header="Select Tournament(s)..."
+                    ToolTip="Selectively start tournament(s) from a list"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="SelectTemplateMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="QuickTemplateMenuItem"
+                    Header="Quick Start Tournament..."
+                    ToolTip="Quickly create and start tournaments"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="QuickTemplateMenuItem"/>
+
+                <syncfusion:MenuItemSeparator Width="140" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="FavoriteTemplatesMenuItem"
+                    Header="Favorite Tournaments"
+                    ToolTip="Start tournaments that have been marked as a favorite"
+                    FontSize="{Binding FontSize}"
+                    ItemsSource="{Binding FavoriteTemplates}">
+                    <syncfusion:MenuItemAdv.ItemContainerStyle>
+                        <Style TargetType="{x:Type syncfusion:MenuItemAdv}">
+                        <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                        <Setter Property="Foreground" Value="{Binding FontColor}"/>
+                            <Setter Property="Header" Value="{Binding TournamentName}"/>
+                            <Setter Property="Command" Value="{Binding Source={x:Static Member=commands:MenuCommands.FavoriteTemplateMenuItem}}"/>
+                            <Setter Property="CommandParameter" Value="{Binding TemplateIdString}"/>
+                            <Setter Property="ToolTip" Value="{Binding DescriptionWithoutDayMonthYear}"/>
+                            <Setter Property="Padding" Value="-10,0,10,0"/>
+                            <Setter Property="ContextMenu">
+                                <Setter.Value>
+                                    <ContextMenu>
+                                    <MenuItem
+                                        Header="{Binding TournamentName}"
+                                        FontSize="{Binding FontSize}"
+                                        Foreground="CornflowerBlue"
+                                        StaysOpenOnClick="True"/>
+                                    <Separator/>
+                                    <MenuItem
+                                        Header="Remove from Favorites"
+                                        FontSize="{Binding FontSize}"
+                                        ToolTip="Removes this tournament from the favorites list"
+                                        Command="{Binding Source={x:Static Member=commands:MenuCommands.UnpinFromFavorite}}"
+                                        CommandParameter="{Binding TemplateId}"/>
+                                    <Separator/>
+                                        <MenuItem
+                                            Header="Edit Tournament"
+                                            FontSize="{Binding FontSize}"
+                                            ToolTip="Opens the Tournament Manager so this tournaments data can be edited"
+                                            Command="{Binding Source={x:Static Member=commands:MenuCommands.EditTemplateCommand}}"
+                                            CommandParameter="{Binding TemplateId}"/>
+                                        <MenuItem
+                                            Header="Copy Tournament"
+                                            FontSize="{Binding FontSize}"
+                                            ToolTip="Opens the Tournament Manager with this tournaments data loaded as a copy"
+                                            Command="{Binding Source={x:Static Member=commands:MenuCommands.CopyTemplateCommand}}"
+                                            CommandParameter="{Binding TemplateId}"/>
+                                        <MenuItem
+                                            Header="Delete Tournament"
+                                            ToolTip="Deletes this tournament from the tournament save file"
+                                            FontSize="{Binding FontSize}"
+                                            Command="{Binding Source={x:Static Member=commands:MenuCommands.DeleteTemplateCommand}}"
+                                            CommandParameter="{Binding TemplateId}"/>
+                                    <!--<MenuItem
+                                        Header="Edit Template"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        Command="{Binding EditTemplateCommand}"
+                                        CommandParameter="{Binding}"/>
+                                    <MenuItem
+                                        Header="Copy Template"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        Command="{Binding CopyTemplateCommand}"
+                                        CommandParameter="{Binding}"/>
+                                    <Separator/>
+                                    <MenuItem
+                                        Header="Delete Template"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        Command="{Binding DeleteTemplateCommand}"
+                                        CommandParameter="{Binding}"/>-->
+                                        </ContextMenu>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </syncfusion:MenuItemAdv.ItemContainerStyle>
+                </syncfusion:MenuItemAdv>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Sessions Menu -->
+            <syncfusion:MenuItemAdv
+                x:Name="SessionsMenuItem"
+                    FontSize="{Binding FontSize}"
+                Header="Sessions">
+
+                <syncfusion:MenuItemAdv
+                    x:Name="SessionManagerMenuItem"
+                    Header="Session Creator..."
+                    ToolTip="Create and manage your tournament sessions"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="SessionManagerMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="CreateSessionFromRunningMenuItem"
+                    Header="Create Session from Running..."
+                    ToolTip="Starts the session manager with the currently running tournaments (that are saved in your tournaments file)"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="CreateSessionFromRunningMenuItem"/>
+
+                <syncfusion:MenuItemSeparator Width="164" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="FavoriteSessionsMenuItem"
+                    Header="Sessions"
+                    ToolTip="Select a session to start its tournaments"
+                    ItemsSource="{Binding FavoriteSessions}">
+                    <syncfusion:MenuItemAdv.ItemContainerStyle>
+                        <Style TargetType="{x:Type syncfusion:MenuItemAdv}">
+                            <Setter Property="Header" Value="{Binding SessionName}"/>
+                        <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                        <Setter Property="Foreground" Value="{Binding FontColor}"/>
+                            <Setter Property="Command" Value="{Binding Source={x:Static Member=commands:MenuCommands.FavoriteSessionMenuItem}}"/>
+                            <Setter Property="CommandParameter" Value="{Binding SessionIdString}"/>
+                            <Setter Property="ToolTip" Value="{Binding Description}"/>
+                            <Setter Property="Padding" Value="-10,0,10,0"/>
+                            <!--<Setter Property="ContextMenu">
+                            <Setter.Value>
+                                <ContextMenu>
+                                    <MenuItem
+                                        Header="{Binding SessionName}"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        StaysOpenOnClick="True"/>
+                                    <Separator/>
+                                    <MenuItem
+                                        Header="Edit Session"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        Command="{Binding EditSessionCommand}"
+                                        CommandParameter="{Binding}"/>
+                                    <MenuItem
+                                        Header="Copy Session"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        Command="{Binding CopySessionCommand}"
+                                        CommandParameter="{Binding}"/>
+                                    <Separator/>
+                                    <MenuItem
+                                        Header="Delete Session"
+                                        Foreground="{Binding FontColor}"
+                                        FontSize="{Binding FontSize}"
+                                        Command="{Binding DeleteSessionCommand}"
+                                        CommandParameter="{Binding}"/>
+                                </ContextMenu>
+                            </Setter.Value>
+                            </Setter>-->
+                        </Style>
+                    </syncfusion:MenuItemAdv.ItemContainerStyle>
+                </syncfusion:MenuItemAdv>
+
+            </syncfusion:MenuItemAdv>
+
+            <!-- Bankroll Menu -->
+            <syncfusion:MenuItemAdv
+                x:Name="BankrollManagerMenuItem"
+                FontSize="{Binding FontSize}"
+                Header="Bankroll">
+
+                <syncfusion:MenuItemAdv
+                    x:Name="OverallBankrollMenuItem"
+                    Header="{Binding BankrollTotalHeader}"
+                    ItemsSource="{Binding Bankrolls}">
+                    <syncfusion:MenuItemAdv.ItemContainerStyle>
+                        <Style TargetType="{x:Type syncfusion:MenuItemAdv}">
+                            <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                            <Setter Property="Foreground" Value="{Binding FontColor}"/>
+                            <Setter Property="ToolTip" Value="{Binding ToolTip}"/>
+                            <Setter Property="Header" Value="{Binding BankrollHeader}"/>
+                            <Setter Property="Padding" Value="-10,0,10,0"/>
+                        </Style>
+                    </syncfusion:MenuItemAdv.ItemContainerStyle>
+                </syncfusion:MenuItemAdv>
+
+                <syncfusion:MenuItemSeparator Width="100" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="DepositMenuItem"
+                    Header="New Transaction..."
+                    ToolTip="Log a deposit to one of your poker bankrolls"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="NewTransactionMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="ViewTransactionMenuItem"
+                    Header="View Transactions..."
+                    ToolTip="View the transaction for your bankrolls"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="ViewTransactionsMenuItem"/>
+
+                <syncfusion:MenuItemSeparator Width="100" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="AddBankrollMenuItem"
+                    Header="Create Bankroll..."
+                    ToolTip="Add a new bankroll to tracking"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="AddBankrollMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="RemoveBankrollMenuItem"
+                    Header="Delete Bankroll..."
+                    ToolTip="Remove a bankroll from tracking"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="RemoveBankrollMenuItem"/>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Results Menu -->
+            <syncfusion:MenuItemAdv
+                x:Name="ResultsMenuItem"
+                FontSize="{Binding FontSize}"
+                Header="Results">
+
+                <syncfusion:MenuItemAdv
+                    x:Name="QuickStatsMenuItem"
+                    Header="Results Overview..."
+                    ToolTip="Shows a small window with a overall stats view of your results"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="QuickResultsMenuItem"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="SessionStatsMenuItem"
+                    Header="Session Results..."
+                    ToolTip="Shows a window with all your results broken down into individual sessions"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="SessionResults"/>
+
+                <syncfusion:MenuItemAdv
+                    x:Name="TournamentStatsMenuItem"
+                    Header="Tournament Results..."
+                    ToolTip="Shows a window with all your tournament results"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="TournamentResultsView"/>
+
+                <syncfusion:MenuItemSeparator Width="150" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                x:Name="UndoRecentlyFinishedMenuItem"
+                Header="Undo Recently Finished"
+                ToolTip="Remove a recently finished tournament from the database and return it to the main tracker window"
+                ItemsSource="{Binding RecentlyFinishedTournaments}">
+                <syncfusion:MenuItemAdv.ItemContainerStyle>
+                    <Style TargetType="{x:Type syncfusion:MenuItemAdv}">
+                        <Setter Property="Padding" Value="-10,0,10,0"/>
+                        <Setter Property="Foreground" Value="{Binding FontColor}"/>
+                        <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                        <Setter Property="Header" Value="{Binding TournamentName}"/>
+                        <Setter Property="Command" Value="{Binding Source={x:Static Member=commands:MenuCommands.UndoRecentlyFinishedTournamentMenuItem}}"/>
+                        <Setter Property="CommandParameter" Value="{Binding DatabaseId}"/>
+                        <Setter Property="ToolTip" Value="{Binding DatabaseDescription}"/>
+                    </Style>
+                </syncfusion:MenuItemAdv.ItemContainerStyle>
+                </syncfusion:MenuItemAdv>
+            </syncfusion:MenuItemAdv>
+
+            <!-- Help Menu -->
+            <syncfusion:MenuItemAdv
+                FontSize="{Binding FontSize}"
+                Header="Help">
+                <!--<syncfusion:MenuItemAdv
+                    Header="Register"
+                    FontSize="{Binding FontSize}"
+                    ToolTip="Register the program"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="RegisterMenuItem"/>-->
+                <!--<syncfusion:MenuItemAdv
+                    Header="Usage Guide"
+                    ToolTip="Launch usage guide"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="UsageGuideMenuItem"/>-->
+                <syncfusion:MenuItemAdv
+                    Header="Check for Updates"
+                    ToolTip="Check for program updates"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="UpdateMenuItem"/>
+                <syncfusion:MenuItemAdv
+                    Header="Version"
+                    ToolTip="Get version number"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="VersionMenuItem"/>
+                <syncfusion:MenuItemAdv
+                    Header="Donate"
+                    ToolTip="Donation link for people who wish to support the software"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding Source={x:Static Member=commands:MenuCommands.MenuItem}}"
+                    CommandParameter="DonateMenuItem"/>
+            </syncfusion:MenuItemAdv>
+
+        </syncfusion:MenuAdv>
+    </Grid>
+</UserControl>

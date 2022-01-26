@@ -1,0 +1,240 @@
+﻿<syncfusion:ChromelessWindow
+    x:Class="LiveTracker.Views.Menu_Views.SelectTemplatesView"
+    mc:Ignorable="d"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
+    FocusManager.FocusedElement="{Binding ElementName=Text}"
+    ResizeMode="CanMinimize"
+    UseNativeChrome="True"
+    SizeToContent="WidthAndHeight"
+    Title="Select Tournament(s)"
+    ShowMaximizeButton="False"
+    Height="550"
+    Width="250"
+    x:Name="Window">
+
+    <!-- Window Loaded Command -->
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Loaded">
+            <b:InvokeCommandAction Command="{Binding WindowLoadedCommand}"/>
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu Bar -->
+        <syncfusion:MenuAdv
+            x:Name="LiveTrackerMenu"
+            Grid.Row="0"
+            ExpandMode="ExpandOnClick">
+
+            <!-- Options Menu -->
+            <syncfusion:MenuItemAdv
+                FontSize="{Binding FontSize}"
+                Header="Options">
+                <syncfusion:MenuItemAdv
+                    Header="Close the select tournaments window after starting a tournament"
+                    ToolTip="Toggles whether to close the select tournaments window after starting your tournaments or not"
+                    IsCheckable="True"
+                    IsChecked="{Binding CloseOnStartToggle}"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding CloseOnStartCommand}"/>
+                <syncfusion:MenuItemAdv
+                    Header="Show a confirmation message before starting tournaments"
+                    ToolTip="Toggles whether to display a confirmation message prior to starting your tournaments or not"
+                    IsCheckable="True"
+                    IsChecked="{Binding ConfirmStartToggle}"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding ConfirmStartCommand}"/>
+                <syncfusion:MenuItemAdv
+                    Header="Select multiple tournaments in tournaments list"
+                    ToolTip="Toggles between single and multiple selection mode in the tournaments list"
+                    IsCheckable="True"
+                    IsChecked="{Binding MultiSelectionToggle}"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding SelectToggleCommand}"/>
+
+                <syncfusion:MenuItemSeparator Width="150" HorizontalAlignment="Left"/>
+
+                <syncfusion:MenuItemAdv
+                    Header="Close Window"
+                    ToolTip="Cancel the tournament and close the window"
+                    FontSize="{Binding FontSize}"
+                    Command="{Binding ExitCommand}"/>
+            </syncfusion:MenuItemAdv>
+        </syncfusion:MenuAdv>
+
+        <!-- Search/Venue -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            Orientation="Horizontal">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Content="Search"
+                    Margin="5,4,0,0"
+                    FontSize="{Binding FontSize}"/>
+
+                <TextBox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="Text"
+                    Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                    MinHeight="35"
+                    VerticalContentAlignment="Center"
+                    ToolTip="Search tournaments for specific text"
+                    FontSize="{Binding FontSize}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged">
+                            <i:InvokeCommandAction Command="{Binding TextChangedCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="5,4,0,0"
+                    Content="Venue"
+                   FontSize="{Binding FontSize}"/>
+
+                <ComboBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    x:Name="Combo"
+                    ItemsSource="{Binding Venues}"
+                    MinHeight="35"
+                    MinWidth="175"
+                    ToolTip="Filter the tournament by venue"
+                    FocusManager.FocusedElement="{Binding ElementName=Text}"
+                    SelectedItem="{Binding SelectedVenue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                    FontSize="{Binding FontSize}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding TextChangedCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+            </Grid>
+        </StackPanel>
+
+        <!-- Reset/Start/Cancel -->
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Left"
+            Margin="5,5"
+            Orientation="Horizontal">
+            <Button
+                Content="Reset"
+                Command="{Binding ResetCommand}"
+                Height="25"
+                MinWidth="65"
+                HorizontalAlignment="Left"
+                Margin="5,5"
+                ToolTip="Clear the text box and unselect all tournaments"
+                FontSize="{Binding FontSize}"
+                FocusManager.FocusedElement="{Binding ElementName=Text}"/>
+            <Button
+                MinHeight="25"
+                MinWidth="65"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                ToolTip="Start the tournament(s)"
+                Command="{Binding SaveCommand}"
+                Content="Start"/>
+            <Button
+                MinHeight="25"
+                MinWidth="65"
+                FontSize="{Binding FontSize}"
+                Margin="5,5"
+                IsCancel="True"
+                ToolTip="Close window"
+                Command="{Binding CancelCommand}"
+                Content="Close"/>
+        </StackPanel>
+
+        <!-- Check Box Option Toggles -->
+        <!--<StackPanel
+            Grid.Row="2"
+            Grid.Column="0">
+            <CheckBox
+                Content="Confirm Tournament(s) Start"
+                IsChecked="{Binding ConfirmStartToggle}"
+                Margin="10,0,0,0"
+                Padding="5"/>
+            <CheckBox
+                Content="Select Multiple Tournament(s)"
+                IsChecked="{Binding MultiSelectionToggle}"
+                Margin="10,0,0,0"
+                Padding="5"/>
+        </StackPanel>-->
+
+        <!-- Tournaments List Box -->
+        <StackPanel
+                Grid.Row="3"
+                Grid.Column="0">
+                <ListBox
+                    x:Name="TournamentList"
+                    ItemsSource="{Binding TemplateList, NotifyOnSourceUpdated=True}"
+                    SelectedItem="{Binding Path=TemplateSelectedItem, UpdateSourceTrigger=PropertyChanged}"
+                    MaxHeight="500"
+                    SelectionMode="Multiple"
+                    Margin="3,10,0,5"
+                    FontSize="{Binding FontSize}"
+                    ToolTip="Select tournament(s) to load">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding DisplayString}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ItemContainerStyle>
+                        <Style
+                            TargetType="{x:Type ListBoxItem}">
+                            <Setter
+                                Property="IsSelected"
+                                Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                            <Setter
+                                Property="ToolTip"
+                                Value="{Binding Description}"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+            </StackPanel>
+
+    </Grid>
+</syncfusion:ChromelessWindow>
