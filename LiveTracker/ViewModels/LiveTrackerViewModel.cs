@@ -85,7 +85,7 @@ namespace LiveTracker.ViewModels
         public void ProfileCheck()
         {
             // no preferences file, create default
-            if(XmlHelper.LoadXmlFile(XmlHelper.PreferencesFolderName + XmlHelper.ProfilesFileName) is null)
+            if (XmlHelper.LoadXmlFile(XmlHelper.PreferencesFolderName + XmlHelper.ProfilesFileName) is null)
                 ProfileHelper.CreateDefaultProfile();
         }
 
@@ -136,10 +136,9 @@ namespace LiveTracker.ViewModels
         /// <summary>
         /// update the title based on current profile and tournament visibility
         /// </summary>
-        /// <param name="visibility">tournament visibility</param>
         public void UpdateTitle()
         {
-            Title = "Tournament Life - " + ProfileHelper.GetCurrentProfile();
+            Title = $"Tournament Life - {ProfileHelper.GetCurrentProfile()}";
         }
     }
 }

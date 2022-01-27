@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jason\\RiderProjects\\Tournament-Life\\LiveTracker\\Tournament Life.csproj": {}
+    "C:\\Users\\jason\\RiderProjects\\TournamentLife\\LiveTracker\\Tournament Life.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jason\\RiderProjects\\Tournament-Life\\LiveTracker\\Tournament Life.csproj": {
+    "C:\\Users\\jason\\RiderProjects\\TournamentLife\\LiveTracker\\Tournament Life.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jason\\RiderProjects\\Tournament-Life\\LiveTracker\\Tournament Life.csproj",
+        "projectUniqueName": "C:\\Users\\jason\\RiderProjects\\TournamentLife\\LiveTracker\\Tournament Life.csproj",
         "projectName": "Tournament Life",
-        "projectPath": "C:\\Users\\jason\\RiderProjects\\Tournament-Life\\LiveTracker\\Tournament Life.csproj",
+        "projectPath": "C:\\Users\\jason\\RiderProjects\\TournamentLife\\LiveTracker\\Tournament Life.csproj",
         "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jason\\RiderProjects\\Tournament-Life\\LiveTracker\\obj\\",
+        "outputPath": "C:\\Users\\jason\\RiderProjects\\TournamentLife\\LiveTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,13 +44,19 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.6.0, )"
+            },
             "Microsoft.Xaml.Behaviors.Wpf": {
               "target": "Package",
               "version": "[1.1.31, )"
             },
             "PropertyChanged.Fody": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[3.4.0, )"
             },
             "SwiftExcel": {
               "target": "Package",

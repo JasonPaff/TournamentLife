@@ -1,13 +1,17 @@
-﻿using LiveTracker.Helpers;
+﻿using System.ComponentModel;
+using LiveTracker.Helpers;
 using Syncfusion.UI.Xaml.Utility;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Annotations;
 using Tournament_Life.Views;
 
 namespace Tournament_Life.ViewModels
 {
-    public class OkViewModel
+    public class OkViewModel : NotificationObject
     {
         public OkViewModel(string text, string title)
         {
@@ -23,11 +27,10 @@ namespace Tournament_Life.ViewModels
             // set text
             Text = text;
         }
-
-        public int FontSize { get; set; }
-        public string Text { get; set; }
-        public string Theme { get; set; }
-        public string Title { get; set; }
+        public int FontSize { get; }
+        public string Text { get; }
+        public string Theme { get; }
+        public string Title { get; }
         public ICommand CancelCommand => new BaseCommand(Cancel);
 
         /// <summary>
@@ -36,7 +39,7 @@ namespace Tournament_Life.ViewModels
         /// <param name="parameter"></param>
         private void Cancel(object parameter)
         {
-            Application.Current.Windows.OfType<OkView>().FirstOrDefault().Close();
+             Application.Current.Windows.OfType<OkView>().FirstOrDefault()?.Close();
         }
     }
 }
