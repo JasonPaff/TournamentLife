@@ -11,7 +11,9 @@ Tournament Life is a results tracker and analyzer for live/online poker tourname
 <br>Quick Start will open a window allowing you to create and start a tournament at the same time. It uses the default values from the Tournament Manager and gives you the option to start the tournament without or without saving it to the tournaments file. Tournaments not saved will not be able to be set as favorites or used as part of sessions. Any new Venues, GameTypes and Formats will be saved into the tournaments file. Options under the options menu control how the quick start window behaves.
 - FAVORITE TOURNAMENTS
 <br>This is where tournaments will appear when you tag them as a favorite. You can tag favorites in the tournament manager or in the right click context menu of any active tournament started in the tracker (excluding tournaments not saved as templates). Right click a favorite to remove it from the favorites list or load it into the tournament manager for editing/copying. You can also delete a tournament template from here.
-
+ 
+ ![session](session.png)
+ 
 - SESSIONS MENU
 - SESSION MANAGER
 <br>The Session Manager is where you go to create sessions out of your tournaments. Creating a session will allow you to start a full nights worth of tournaments with just a couple clicks. Created sessions will appear under the Sessions pop-out menu under Sessions. Only tournaments saved to the tournaments file will be available to use in sessions. 
