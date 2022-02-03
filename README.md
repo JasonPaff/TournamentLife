@@ -1,5 +1,7 @@
 Tournament Life is a results tracker and analyzer for live/online poker tournaments. It was designed with ease of use and multitabling poker players in mind. You are free to use it to track as little or as much data as you would like about the poker tournaments you play. I will go over the various parts and featurs of the Tournament Life tracker below.
-
+  
+ (main.png)
+  
 - TOURNAMENTS MENU
 - Tournament Manager
 <br>The Tournament Manager is where you can create/edit/copy/delete/import/export your tournament templates. You can import someone elses tournament templates file using the import option under the File menu. It will give the option to check for duplicates and also convert the starting times from the creators time zone to your time zone. Use the edit menu to add/remove/edit the venues, game types, formats and default values. The columns in the datagrid can be re-arranged to you liking and there is a right click context menu when you right click a tournament allowing you to copy/delete/edit and tag as favorites. Tournaments tagged as favorites will appear in the favorites menu under the Tournaments menu in the main tracker.
