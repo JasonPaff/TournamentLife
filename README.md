@@ -1,6 +1,6 @@
 Tournament Life is a results tracker and analyzer for live/online poker tournaments. It was designed with ease of use and multitabling poker players in mind. You are free to use it to track as little or as much data as you would like about the poker tournaments you play. I will go over the various parts and featurs of the Tournament Life tracker below.
   
- (main.png)
+![main](main.png)
   
 - TOURNAMENTS MENU
 - Tournament Manager
