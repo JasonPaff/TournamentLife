@@ -1,8 +1,8 @@
-﻿using LiveTracker.Helpers;
-using Syncfusion.UI.Xaml.Utility;
+﻿using Syncfusion.UI.Xaml.Utility;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using Tournament_Life.Helpers;
 using Tournament_Life.Views;
 
 namespace Tournament_Life.ViewModels

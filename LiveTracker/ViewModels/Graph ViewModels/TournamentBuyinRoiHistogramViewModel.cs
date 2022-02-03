@@ -4,12 +4,12 @@ using System.Windows.Input;
 using System.Collections.ObjectModel;
 using System.Windows;
 using Tournament_Life.Views.Graph_Views;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
 using Tournament_Life.Models.Graph;
 using Microsoft.Win32;
 using Syncfusion.Windows.Shared;
 using System;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
 
 namespace Tournament_Life.ViewModels.Graph_ViewModels

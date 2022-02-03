@@ -1,14 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
 using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using LiveTracker.Models.Tournaments;
 using System.Threading.Tasks;
 using System.Windows;
 using Tournament_Life.Views.Results;
 using System.Linq;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 
 namespace Tournament_Life.ViewModels.Results
 {

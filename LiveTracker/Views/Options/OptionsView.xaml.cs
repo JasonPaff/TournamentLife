@@ -1,7 +1,7 @@
-﻿using LiveTracker.ViewModels.Options;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Shared;
+using Tournament_Life.ViewModels.Options;
 
-namespace LiveTracker.Views.Options
+namespace Tournament_Life.Views.Options
 {
     /// <summary>
     /// Interaction logic for OptionsView.xaml

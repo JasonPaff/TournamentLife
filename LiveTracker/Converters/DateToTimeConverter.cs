@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace LiveTracker.Converters
+namespace Tournament_Life.Converters
 {
     public class DateToTimeConverter : IValueConverter
     {

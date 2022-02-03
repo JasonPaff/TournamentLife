@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace LiveTracker.Converters
+namespace Tournament_Life.Converters
 {
     public class SngToVisibilityConverter : IValueConverter
     {

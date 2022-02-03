@@ -1,7 +1,7 @@
-﻿using LiveTracker.Helpers;
-using System;
+﻿using System;
+using Tournament_Life.Helpers;
 
-namespace LiveTracker.Models.Bankroll_Model
+namespace Tournament_Life.Models.Bankroll_Model
 {
     public enum TransactionTypes
     {

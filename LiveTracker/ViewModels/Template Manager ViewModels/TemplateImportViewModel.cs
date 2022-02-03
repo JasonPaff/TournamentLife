@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using LiveTracker.Helpers;
-using Syncfusion.Windows.Shared;
-using System.Windows.Input;
-using Syncfusion.UI.Xaml.Utility;
-using System.Windows;
-using LiveTracker.Views.Template_Manager_Views;
 using System.Collections.ObjectModel;
-using LiveTracker.Models;
-using LiveTracker.Models.Tournaments;
 using System.Globalization;
+using System.Linq;
+using System.Windows;
+using System.Windows.Input;
 using System.Xml;
-using Tournament_Life.ViewModels;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.ViewModels.Template_Manager_ViewModels
+namespace Tournament_Life.ViewModels.Template_Manager_ViewModels
 {
     public class TemplateImportViewModel : NotificationObject
     {

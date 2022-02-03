@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
 using System.Linq;
-using LiveTracker.Helpers;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 
-
-namespace LiveTracker.Models.Sessions
+namespace Tournament_Life.Models.Sessions
 {
     public class SessionStats
     {

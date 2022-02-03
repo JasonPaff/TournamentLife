@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using LiveTracker.Models;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.Views;
-using LiveTracker.Commands;
+using Tournament_Life.Commands;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.Views;
 
-namespace LiveTracker.Factories
+namespace Tournament_Life.Factories
 {
     public static class TournamentFactory
     {
@@ -76,7 +77,7 @@ namespace LiveTracker.Factories
         /// Starts a tournament using a tournament running model
         /// may or may not have a template id
         /// </summary>
-        /// <param name="tournamentTemplate">tournament to start</param>
+        /// <param name="tournament">tournament to start</param>
         public static void StartTournaments(TournamentRunning tournament)
         {
             // null/invalid id check

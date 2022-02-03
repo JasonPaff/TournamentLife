@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Xml;
-using LiveTracker.Models.Bankroll_Model;
+using Tournament_Life.Models.Bankroll_Model;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public static class BankrollHelper
     {

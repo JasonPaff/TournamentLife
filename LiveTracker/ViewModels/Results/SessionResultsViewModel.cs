@@ -1,24 +1,16 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.Models.Sessions;
-using LiveTracker.ViewModels.Graph_ViewModels;
-using LiveTracker.Views.Graph_Views;
-using LiveTracker.Views.Results;
-using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using Tournament_Life.ViewModels.Graph_ViewModels;
-using Tournament_Life.ViewModels.Results;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views.Results;
 
-namespace LiveTracker.ViewModels.Results
+namespace Tournament_Life.ViewModels.Results
 {
     public class SessionResultsViewModel : NotificationObject
     {

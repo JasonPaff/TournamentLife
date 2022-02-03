@@ -1,22 +1,19 @@
-﻿using LiveTracker.Models;
-using LiveTracker.ViewModels.Graph_ViewModels;
-using LiveTracker.Views.Graph_Views;
-using Syncfusion.UI.Xaml.Utility;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using Tournament_Life.ViewModels.Results;
+using Syncfusion.UI.Xaml.Utility;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels;
 using Tournament_Life.ViewModels.Graph_ViewModels;
+using Tournament_Life.ViewModels.Results;
+using Tournament_Life.Views;
 using Tournament_Life.Views.Graph_Views;
 using Tournament_Life.Views.Results;
-using LiveTracker.Helpers;
-using Tournament_Life.ViewModels;
-using Tournament_Life.Views;
-using LiveTracker.Views;
 
-namespace LiveTracker.Commands
+namespace Tournament_Life.Commands
 {
     public static class TournamentResultsCommands
     {

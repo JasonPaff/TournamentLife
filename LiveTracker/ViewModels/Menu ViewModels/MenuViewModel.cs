@@ -4,18 +4,17 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.Models.Bankroll_Model;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Results;
-using LiveTracker.Views;
-using LiveTracker.Views.Results;
 using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Bankroll_Model;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
 using Tournament_Life.ViewModels.Results;
+using Tournament_Life.Views;
 using Tournament_Life.Views.Results;
 
-namespace LiveTracker.ViewModels.Menu_ViewModels
+namespace Tournament_Life.ViewModels.Menu_ViewModels
 {
     public class MenuViewModel : NotificationObject
     {

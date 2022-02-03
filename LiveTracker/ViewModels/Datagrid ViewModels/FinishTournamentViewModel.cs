@@ -1,12 +1,12 @@
-﻿using LiveTracker.Helpers;
-using LiveTracker.Models;
-using Syncfusion.UI.Xaml.Utility;
+﻿using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
 using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views.Datagrid_Views;
 
 namespace Tournament_Life.ViewModels.Datagrid_ViewModels

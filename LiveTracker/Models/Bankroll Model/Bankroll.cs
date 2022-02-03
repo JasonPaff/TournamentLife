@@ -1,10 +1,10 @@
-﻿using LiveTracker.Helpers;
-using Syncfusion.Windows.Shared;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
 
-namespace LiveTracker.Models.Bankroll_Model
+namespace Tournament_Life.Models.Bankroll_Model
 {
     public class Bankroll : NotificationObject
     {

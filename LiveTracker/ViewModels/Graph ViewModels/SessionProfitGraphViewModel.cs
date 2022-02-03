@@ -1,6 +1,4 @@
-﻿using LiveTracker.Helpers;
-using LiveTracker.Models;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using Syncfusion.UI.Xaml.Utility;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,6 +9,9 @@ using Tournament_Life.Views.Graph_Views;
 using Syncfusion.Windows.Shared;
 using Tournament_Life.Views;
 using System;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 
 namespace Tournament_Life.ViewModels.Graph_ViewModels
 {

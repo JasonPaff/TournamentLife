@@ -1,25 +1,23 @@
-﻿using Syncfusion.UI.Xaml.Utility;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
 using System.Windows;
-using LiveTracker.Views.Template_Manager_Views;
-using LiveTracker.ViewModels.Template_Manager_ViewModels;
-using LiveTracker.Helpers;
-using LiveTracker.Models.Tournaments;
-using System.Collections.Generic;
-using LiveTracker.Models;
-using LiveTracker.Views;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.Enums;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
+using System.Windows.Input;
 using Syncfusion.UI.Xaml.Grid;
-using LiveTracker.Views.Menu_Views;
+using Syncfusion.UI.Xaml.Utility;
+using Tournament_Life.Enums;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
+using Tournament_Life.ViewModels.Template_Manager_ViewModels;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Menu_Views;
+using Tournament_Life.Views.Session_Manager_Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.Commands
+namespace Tournament_Life.Commands
 {
     public static class TemplateManagerCommands
     {

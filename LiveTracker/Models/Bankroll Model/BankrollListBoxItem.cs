@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Shared;
 
-namespace LiveTracker.Models.Bankroll_Model
+namespace Tournament_Life.Models.Bankroll_Model
 {
     public class BankrollListBoxItem : NotificationObject
     {

@@ -1,10 +1,10 @@
-﻿using LiveTracker.Models;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using SwiftExcel;
 using System.Windows;
 using System.Globalization;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
 using Tournament_Life.Views;
 

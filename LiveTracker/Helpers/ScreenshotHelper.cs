@@ -2,11 +2,11 @@
 using System.Globalization;
 using System.IO;
 using System.Windows;
-using LiveTracker.Models;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
 using Tournament_Life.Views;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public static class ScreenshotHelper
     {

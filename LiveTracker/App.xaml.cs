@@ -1,11 +1,8 @@
-﻿using System.Diagnostics;
-using System.Reflection;
-using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
 
-namespace LiveTracker
+namespace Tournament_Life
 {
     /// <summary>
     /// Interaction logic for App.xaml

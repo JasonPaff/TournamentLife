@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
-using LiveTracker.Enums;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.Views;
 using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using System.Threading.Tasks;
-using System.Threading;
+using Tournament_Life.Enums;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.Views;
 
-namespace LiveTracker.ViewModels.Datagrid_ViewModels
+namespace Tournament_Life.ViewModels.Datagrid_ViewModels
 {
     public class DataGridViewModel : NotificationObject
     {

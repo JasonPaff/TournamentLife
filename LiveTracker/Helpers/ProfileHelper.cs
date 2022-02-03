@@ -1,16 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Xml;
-using System.IO;
-using LiveTracker.Models;
-using System;
-using System.Globalization;
-using Tournament_Life.ViewModels;
-using Tournament_Life.Views;
-using System.Windows;
-using LiveTracker.Views.Menu_Views;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public static class ProfileHelper
     {

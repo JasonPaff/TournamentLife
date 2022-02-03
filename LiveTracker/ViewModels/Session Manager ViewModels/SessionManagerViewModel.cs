@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using Syncfusion.Windows.Shared;
-using LiveTracker.Helpers;
-using LiveTracker.Models.Tournaments;
 using System.Collections.ObjectModel;
-using LiveTracker.Models;
-using LiveTracker.Models.Sessions;
-using LiveTracker.Enums;
+using System.Linq;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
-using System.Windows;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Enums;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.ViewModels.Session_Manager_ViewModels
+namespace Tournament_Life.ViewModels.Session_Manager_ViewModels
 {
     public class SessionManagerViewModel : NotificationObject
     {

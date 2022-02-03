@@ -1,18 +1,18 @@
-﻿using LiveTracker.Models;
-using Syncfusion.UI.Xaml.Utility;
+﻿using Syncfusion.UI.Xaml.Utility;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using System.Windows;
 using Tournament_Life.Views.Session_Manager_Views;
-using LiveTracker.Factories;
-using LiveTracker.Helpers;
-using LiveTracker.Models.Tournaments;
 using System.Collections.Generic;
 using System;
 using Tournament_Life.Views;
 using Syncfusion.Windows.Shared;
-using LiveTracker.Commands;
+using Tournament_Life.Commands;
+using Tournament_Life.Factories;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 
 namespace Tournament_Life.ViewModels.Session_Manager_ViewModels
 {

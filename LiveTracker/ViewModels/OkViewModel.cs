@@ -1,12 +1,9 @@
-﻿using System.ComponentModel;
-using LiveTracker.Helpers;
-using Syncfusion.UI.Xaml.Utility;
+﻿using Syncfusion.UI.Xaml.Utility;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 using Syncfusion.Windows.Shared;
-using Tournament_Life.Annotations;
+using Tournament_Life.Helpers;
 using Tournament_Life.Views;
 
 namespace Tournament_Life.ViewModels

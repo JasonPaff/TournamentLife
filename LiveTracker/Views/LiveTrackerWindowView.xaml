@@ -1,20 +1,21 @@
 ﻿<syncfusion:ChromelessWindow
-    x:Class="LiveTracker.Views.LiveTrackerWindowView"
+    x:Class="Tournament_Life.Views.LiveTrackerWindowView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:viewmodel="clr-namespace:LiveTracker.ViewModels"
-    xmlns:menuviewmodels="clr-namespace:LiveTracker.ViewModels.Menu_ViewModels"
-    xmlns:datagridViewModels="clr-namespace:LiveTracker.ViewModels.Datagrid_ViewModels"
-    xmlns:menuviews="clr-namespace:LiveTracker.Views.Menu_Views"
+    xmlns:menuviews="clr-namespace:Tournament_Life.Views.Menu_Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-    xmlns:commands="clr-namespace:LiveTracker.Commands"
     xmlns:System="clr-namespace:System;assembly=mscorlib"
     xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
-    xmlns:converters="clr-namespace:LiveTracker.Converters"
     xmlns:collections="clr-namespace:System.Collections;assembly=System.Runtime"
     xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:viewModels="clr-namespace:Tournament_Life.ViewModels"
+    xmlns:converters="clr-namespace:Tournament_Life.Converters"
+    xmlns:datagridViewModels="clr-namespace:Tournament_Life.ViewModels.Datagrid_ViewModels"
+    xmlns:menuViewModels="clr-namespace:Tournament_Life.ViewModels.Menu_ViewModels"
+    xmlns:commands="clr-namespace:Tournament_Life.Commands"
+    xmlns:menuViews="clr-namespace:Tournament_Life.Views.Menu_Views"
     syncfusionskin:SfSkinManager.VisualStyle="{Binding Theme}"
 	mc:Ignorable="d"
     UseNativeChrome="True"
@@ -32,14 +33,14 @@
 
     <!-- View Data Context -->
     <syncfusion:ChromelessWindow.DataContext>
-        <viewmodel:LiveTrackerViewModel/>
+        <viewModels:LiveTrackerViewModel/>
     </syncfusion:ChromelessWindow.DataContext>
 
     <!-- Resources -->
     <syncfusion:ChromelessWindow.Resources>
         <converters:ThemeConverter x:Key="ThemeConverter"/>
         <datagridViewModels:DataGridViewModel x:Key="DataGridViewModel"/>
-        <menuviewmodels:MenuViewModel x:Key="MenuViewModel"/>
+        <menuViewModels:MenuViewModel x:Key="MenuViewModel"/>
         <converters:ColumnVisibleMenuConverter x:Key="ColumnVisibleMenuConverter"/>
         <converters:BoolToVisibleConverter x:Key="WindowVisibleConverter" TrueValue="Visible" FalseValue="Collapsed"/>
         <converters:DateToTimeConverter x:Key="DateToTimeConverter"/>
@@ -185,7 +186,7 @@
     <StackPanel
         x:Name="LiveTrackerMenu"
         DataContext="{StaticResource MenuViewModel}">
-        <menuviews:LiveTrackerMenuView/>
+        <menuViews:LiveTrackerMenuView/>
 
         <syncfusion:SfDataGrid
             AutoGenerateColumns="False"

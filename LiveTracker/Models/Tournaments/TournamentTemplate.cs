@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Syncfusion.Windows.Shared;
-using LiveTracker.Helpers;
+using Tournament_Life.Helpers;
 
-namespace LiveTracker.Models
+namespace Tournament_Life.Models.Tournaments
 {
     public class TournamentTemplate :  NotificationObject
     {

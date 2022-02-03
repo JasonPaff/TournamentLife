@@ -1,7 +1,7 @@
-﻿using Syncfusion.Windows.Shared;
-using System;
+﻿using System;
+using Syncfusion.Windows.Shared;
 
-namespace LiveTracker.Models.Tournaments
+namespace Tournament_Life.Models.Tournaments
 {
     public class TemplateListBoxItem : NotificationObject
     {

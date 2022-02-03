@@ -1,8 +1,7 @@
-﻿using Syncfusion.Windows.Shared;
-using System;
-using System.Globalization;
+﻿using System;
+using Syncfusion.Windows.Shared;
 
-namespace LiveTracker.Models.Bankroll_Model
+namespace Tournament_Life.Models.Bankroll_Model
 {
     public class TransactionListBoxItem : NotificationObject
     {

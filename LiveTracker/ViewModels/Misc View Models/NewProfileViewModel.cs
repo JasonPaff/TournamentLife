@@ -1,14 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System.IO;
 using System.Linq;
-using Syncfusion.Windows.Shared;
+using System.Windows;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
-using System.Windows;
-using LiveTracker.Helpers;
-using LiveTracker.Views.Misc_Views;
-using System.IO;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Views.Misc_Views;
 
-namespace LiveTracker.ViewModels.Misc_View_Models
+namespace Tournament_Life.ViewModels.Misc_View_Models
 {
     public class NewProfileViewModel : NotificationObject
     {

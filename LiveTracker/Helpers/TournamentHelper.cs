@@ -1,12 +1,12 @@
-﻿using LiveTracker.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Xml;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public static class TournamentHelper
     {

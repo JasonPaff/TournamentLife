@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
 using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
 using Tournament_Life.Views.Results;
 

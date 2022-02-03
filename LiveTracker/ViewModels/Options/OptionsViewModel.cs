@@ -1,22 +1,22 @@
-﻿using LiveTracker.Views.Options;
-using Syncfusion.UI.Xaml.Utility;
-using Syncfusion.Windows.Shared;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Views;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.Views.Template_Manager_Views;
-using LiveTracker.ViewModels.Template_Manager_ViewModels;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using LiveTracker.ViewModels.Results;
-using LiveTracker.Views.Results;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.ViewModels.Results;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
+using Tournament_Life.ViewModels.Template_Manager_ViewModels;
+using Tournament_Life.Views;
+using Tournament_Life.Views.Options;
+using Tournament_Life.Views.Results;
+using Tournament_Life.Views.Session_Manager_Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.ViewModels.Options
+namespace Tournament_Life.ViewModels.Options
 {
     public class OptionsViewModel : NotificationObject
     {

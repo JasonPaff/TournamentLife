@@ -2,10 +2,11 @@
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
-using LiveTracker.Helpers;
 using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.Models
+namespace Tournament_Life.Models.Sessions
 {
     public class SessionTemplate : NotificationObject
     {

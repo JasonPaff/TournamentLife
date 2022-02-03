@@ -1,14 +1,14 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Views.Datagrid_Views;
 using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using LiveTracker.Commands;
-using LiveTracker.Models;
+using Tournament_Life.Commands;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.Views.Datagrid_Views;
 
-namespace LiveTracker.ViewModels.Datagrid_ViewModels
+namespace Tournament_Life.ViewModels.Datagrid_ViewModels
 {
     public class AttachNoteViewModel : NotificationObject
     {

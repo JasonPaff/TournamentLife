@@ -1,11 +1,11 @@
-﻿using AutoUpdaterDotNET;
-using LiveTracker.Helpers;
-using Syncfusion.Windows.Shared;
-using System;
+﻿using System;
 using System.IO;
 using System.Net;
+using AutoUpdaterDotNET;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
 
-namespace LiveTracker.ViewModels
+namespace Tournament_Life.ViewModels
 {
     public class LiveTrackerViewModel : NotificationObject
     {

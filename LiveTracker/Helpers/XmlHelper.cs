@@ -7,7 +7,7 @@ using System.Xml.Schema;
 using Tournament_Life.ViewModels;
 using Tournament_Life.Views;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
 
     public static class XmlHelper

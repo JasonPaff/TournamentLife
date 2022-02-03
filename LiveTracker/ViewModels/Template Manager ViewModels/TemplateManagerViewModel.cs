@@ -1,14 +1,13 @@
-﻿using LiveTracker.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using LiveTracker.Enums;
-using LiveTracker.Models;
-using Syncfusion.Windows.Shared;
 using System.Collections.ObjectModel;
-using LiveTracker.Models.Tournaments;
+using System.Linq;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Enums;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.ViewModels.Template_Manager_ViewModels
+namespace Tournament_Life.ViewModels.Template_Manager_ViewModels
 {
     public class TemplateManagerViewModel : NotificationObject
     {

@@ -1,30 +1,26 @@
-﻿using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.Views;
-using LiveTracker.Views.Datagrid_Views;
-using LiveTracker.Views.Results;
-using LiveTracker.ViewModels.Results;
-using Syncfusion.UI.Xaml.Grid;
-using Syncfusion.UI.Xaml.Utility;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using Syncfusion.UI.Xaml.Grid;
+using Syncfusion.UI.Xaml.Utility;
+using Tournament_Life.Enums;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
 using Tournament_Life.ViewModels.Results;
 using Tournament_Life.Views;
-using Tournament_Life.Views.Results;
-using Tournament_Life.ViewModels.Datagrid_ViewModels;
 using Tournament_Life.Views.Datagrid_Views;
-using System.Diagnostics;
-using System.Collections.Generic;
-using LiveTracker.Enums;
-using System;
-using System.ComponentModel;
+using Tournament_Life.Views.Results;
 
-namespace LiveTracker.Commands
+namespace Tournament_Life.Commands
 {
     public static class DataGridCommands
     {

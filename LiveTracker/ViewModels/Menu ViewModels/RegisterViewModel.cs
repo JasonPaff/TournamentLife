@@ -1,15 +1,14 @@
-﻿using LiveTracker.Helpers;
-using System;
+﻿using System;
 using System.Linq;
+using System.Windows;
+using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using System.Windows.Input;
-using LiveTracker.Views.Menu_Views;
-using System.Windows;
-using Tournament_Life.ViewModels;
+using Tournament_Life.Helpers;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Menu_Views;
 
-namespace LiveTracker.ViewModels.Menu_ViewModels
+namespace Tournament_Life.ViewModels.Menu_ViewModels
 {
     public class RegisterViewModel : NotificationObject
     {

@@ -1,11 +1,12 @@
-﻿using System.Xml;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Globalization;
-using LiveTracker.Models;
-using LiveTracker.Models.Sessions;
+using System.Linq;
+using System.Xml;
+using Tournament_Life.Models;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public static class SessionTemplateHelper
     {

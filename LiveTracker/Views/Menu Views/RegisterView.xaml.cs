@@ -1,7 +1,7 @@
-﻿using LiveTracker.ViewModels.Menu_ViewModels;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Shared;
+using Tournament_Life.ViewModels.Menu_ViewModels;
 
-namespace LiveTracker.Views.Menu_Views
+namespace Tournament_Life.Views.Menu_Views
 {
     /// <summary>
     /// Interaction logic for RegisterView.xaml

@@ -1,36 +1,31 @@
-﻿using System.Linq;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Input;
-using LiveTracker.Enums;
-using LiveTracker.Factories;
-using LiveTracker.Helpers;
-using LiveTracker.ViewModels;
-using LiveTracker.ViewModels.Bankroll_ViewModels;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.ViewModels.Template_Manager_ViewModels;
-using LiveTracker.Views;
-using LiveTracker.Views.Bankroll_Views;
-using LiveTracker.Views.Menu_Views;
 using Syncfusion.UI.Xaml.Utility;
-using System.Reflection;
-using System.Collections.ObjectModel;
-using LiveTracker.ViewModels.Options;
-using LiveTracker.Views.Options;
-using LiveTracker.Views.Template_Manager_Views;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.Views.Results;
-using LiveTracker.ViewModels.Results;
-using Tournament_Life.Views.Results;
-using Tournament_Life.ViewModels.Results;
+using Tournament_Life.Enums;
+using Tournament_Life.Factories;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
-using Tournament_Life.Views;
+using Tournament_Life.ViewModels.Bankroll_ViewModels;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.ViewModels.Options;
+using Tournament_Life.ViewModels.Results;
 using Tournament_Life.ViewModels.Session_Manager_ViewModels;
+using Tournament_Life.ViewModels.Template_Manager_ViewModels;
+using Tournament_Life.Views;
+using Tournament_Life.Views.Bankroll_Views;
+using Tournament_Life.Views.Menu_Views;
+using Tournament_Life.Views.Options;
+using Tournament_Life.Views.Results;
 using Tournament_Life.Views.Session_Manager_Views;
-using LiveTracker.Models;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.Commands
+namespace Tournament_Life.Commands
 {
     public static class MenuCommands
     {

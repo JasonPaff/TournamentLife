@@ -1,27 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using LiveTracker.Helpers;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.Models
+namespace Tournament_Life.Models.Sessions
 {
-
     public class SessionModel
     {
-        public SessionModel()
-        {
+        public decimal AddonCostTotal =>
+            Tournaments.Count is 0 ? 0 : Tournaments.Sum(i => i.AddonTotalCost * i.AddonCount);
 
-        }
+        public decimal AverageAddonCostTotal =>
+            TournamentCount is 0 || AddonCostTotal is 0 ? 0 : AddonCostTotal / TournamentCount;
 
-        public decimal AddonCostTotal => Tournaments.Count is 0 ? 0 : Tournaments.Sum(i => i.AddonTotalCost * i.AddonCount);
-        public decimal AverageAddonCostTotal => TournamentCount is 0 || AddonCostTotal is 0 ? 0 : AddonCostTotal / TournamentCount;
-        public decimal AverageBuyinCostTotal => TournamentCount is 0 || BuyinCostTotal is 0 ? 0 : BuyinCostTotal / TournamentCount;
-        public TimeSpan AverageLength => TournamentCount is 0 ? TimeSpan.Zero : new TimeSpan((long) Tournaments.Average(i => i.Length.Ticks));
+        public decimal AverageBuyinCostTotal =>
+            TournamentCount is 0 || BuyinCostTotal is 0 ? 0 : BuyinCostTotal / TournamentCount;
+
+        public TimeSpan AverageLength => TournamentCount is 0
+            ? TimeSpan.Zero
+            : new TimeSpan((long) Tournaments.Average(i => i.Length.Ticks));
+
         public decimal AveragePercentBeaten
         {
             get
@@ -32,16 +32,18 @@ namespace LiveTracker.Models
                 return (Tournaments.Sum(i => i.PercentFieldBeaten * 100) / TournamentCount) / 100;
             }
         }
+
         public decimal AveragePrizeWon
         {
             get
             {
                 if (PrizesWonTotal is 0 || TournamentCount is 0)
                     return 0;
-
+        
                 return PrizesWonTotal / TournamentCount;
             }
         }
+
         public decimal AveragePrizesWonTotal
         {
             get
@@ -52,6 +54,7 @@ namespace LiveTracker.Models
                 return PrizesWonTotal / TournamentCount;
             }
         }
+
         public decimal AverageProfitWon
         {
             get
@@ -62,6 +65,7 @@ namespace LiveTracker.Models
                 return TotalProfit / TournamentCount;
             }
         }
+
         public decimal AverageRebuyCostTotal
         {
             get
@@ -72,6 +76,7 @@ namespace LiveTracker.Models
                 return RebuyCostTotal / TournamentCount;
             }
         }
+
         public decimal AverageTotalCost
         {
             get
@@ -82,6 +87,7 @@ namespace LiveTracker.Models
                 return TotalCost / TournamentCount;
             }
         }
+
         public decimal AverageTotalProfit
         {
             get
@@ -92,6 +98,8 @@ namespace LiveTracker.Models
                 return TotalProfit / TournamentCount;
             }
         }
+
+
         public decimal BuyinCostTotal
         {
             get
@@ -102,20 +110,33 @@ namespace LiveTracker.Models
                 return Tournaments.Sum(i => i.BuyinTotalCost);
             }
         }
+
         public decimal EarlyMidPercentFinish
         {
             get
             {
-                return Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 10 && i.PercentFieldBeaten * 100 < 30).Any() && Tournaments.Count > 0 ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 10 && i.PercentFieldBeaten * 100 < 30).Count() / (decimal)Tournaments.Count : 0;
+                return
+                    Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 10 && i.PercentFieldBeaten * 100 < 30).Any() &&
+                    Tournaments.Count > 0
+                        ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 10 && i.PercentFieldBeaten * 100 < 30)
+                            .Count() / (decimal) Tournaments.Count
+                        : 0;
             }
         }
+
         public decimal EarlyPercentFinish
         {
             get
             {
-                return Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 0 && i.PercentFieldBeaten * 100 < 10).Any() && Tournaments.Count > 0 ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 0 && i.PercentFieldBeaten * 100 < 10).Count() / (decimal)Tournaments.Count : 0;
+                return
+                    Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 0 && i.PercentFieldBeaten * 100 < 10).Any() &&
+                    Tournaments.Count > 0
+                        ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 0 && i.PercentFieldBeaten * 100 < 10)
+                            .Count() / (decimal) Tournaments.Count
+                        : 0;
             }
         }
+
         public DateTime EndTime
         {
             get
@@ -126,13 +147,16 @@ namespace LiveTracker.Models
                     return DateTime.MaxValue;
             }
         }
+
         public int FinalTables
         {
             get
             {
-                return Tournaments.Select(x => x).Where(x => x.FinishPosition > 0 && x.FinishPosition <= x.TableSize).Count();
+                return Tournaments.Select(x => x).Where(x => x.FinishPosition > 0 && x.FinishPosition <= x.TableSize)
+                    .Count();
             }
         }
+
         public string GraphDescription
         {
             get
@@ -148,7 +172,8 @@ namespace LiveTracker.Models
                 sb.AppendLine(String.Format(new CultureInfo("en-US"), "End Time: {0:h:mm tt}", EndTime));
                 sb.AppendLine();
                 sb.AppendLine(String.Format(new CultureInfo("en-US"), "Session Length: {0:h\\:mm}", SessionLength));
-                sb.AppendLine(String.Format(new CultureInfo("en-US"), "Average Tournament Length: {0:h\\:mm}", AverageLength));
+                sb.AppendLine(String.Format(new CultureInfo("en-US"), "Average Tournament Length: {0:h\\:mm}",
+                    AverageLength));
                 sb.AppendLine();
                 sb.AppendLine("ROI: " + Roi.ToString("P", new CultureInfo("en-US")));
                 sb.AppendLine("ITM: " + Itm.ToString("P", new CultureInfo("en-US")));
@@ -176,51 +201,79 @@ namespace LiveTracker.Models
                 return sb.ToString().TrimEnd();
             }
         }
+
         public int ID { get; set; }
+
         public decimal Itm
         {
             get
             {
-                if (TournamentCount is 0 || Tournaments.Count(x => x.PrizeWon > 0 && x.FinishPosition <= x.EntrantsPaid) is 0) return 0;
+                if (TournamentCount is 0 ||
+                    Tournaments.Count(x => x.PrizeWon > 0 && x.FinishPosition <= x.EntrantsPaid) is 0) return 0;
 
-                return Tournaments.Count(x => x.PrizeWon > 0 && x.FinishPosition <= x.EntrantsPaid) / (decimal)TournamentCount;
+                return Tournaments.Count(x => x.PrizeWon > 0 && x.FinishPosition <= x.EntrantsPaid) /
+                       (decimal) TournamentCount;
             }
         }
+
         public decimal LatePercentFinish
         {
             get
             {
-                return Tournaments.Any(i => i.PercentFieldBeaten * 100 >= 90 && i.PercentFieldBeaten * 100 < 100) && Tournaments.Count > 0 ? Tournaments.Count(i => i.PercentFieldBeaten * 100 >= 90 && i.PercentFieldBeaten * 100 < 100) / (decimal)Tournaments.Count : 0;
+                return Tournaments.Any(i => i.PercentFieldBeaten * 100 >= 90 && i.PercentFieldBeaten * 100 < 100) &&
+                       Tournaments.Count > 0
+                    ? Tournaments.Count(i => i.PercentFieldBeaten * 100 >= 90 && i.PercentFieldBeaten * 100 < 100) /
+                      (decimal) Tournaments.Count
+                    : 0;
             }
         }
+
         public int MinCashes
         {
             get
             {
-                return Tournaments.Count(x => x.FinishPosition >= x.EntrantsPaid - Math.Round(x.EntrantsPaid * ((double)5 / 100)) && x.FinishPosition <= x.EntrantsPaid);
+                return Tournaments.Count(x =>
+                    x.FinishPosition >= x.EntrantsPaid - Math.Round(x.EntrantsPaid * ((double) 5 / 100)) &&
+                    x.FinishPosition <= x.EntrantsPaid);
             }
         }
+
         public decimal MidLatePercentFinish
         {
             get
             {
-                return Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 70 && i.PercentFieldBeaten * 100 < 90).Any() && Tournaments.Count > 0 ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 70 && i.PercentFieldBeaten * 100 < 90).Count() / (decimal)Tournaments.Count : 0;
+                return
+                    Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 70 && i.PercentFieldBeaten * 100 < 90).Any() &&
+                    Tournaments.Count > 0
+                        ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 70 && i.PercentFieldBeaten * 100 < 90)
+                            .Count() / (decimal) Tournaments.Count
+                        : 0;
             }
         }
+
         public decimal MidPercentFinish
         {
             get
             {
-                return Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 30 && i.PercentFieldBeaten * 100 < 70).Any() && Tournaments.Count > 0 ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 30 && i.PercentFieldBeaten * 100 < 70).Count() / (decimal)Tournaments.Count : 0;
+                return
+                    Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 30 && i.PercentFieldBeaten * 100 < 70).Any() &&
+                    Tournaments.Count > 0
+                        ? Tournaments.Where(i => i.PercentFieldBeaten * 100 >= 30 && i.PercentFieldBeaten * 100 < 70)
+                            .Count() / (decimal) Tournaments.Count
+                        : 0;
             }
         }
+
         public int NearBubbles
         {
             get
             {
-                return Tournaments.Count(x => x.FinishPosition >= x.EntrantsPaid + 1 && x.FinishPosition <= x.EntrantsPaid + 1 + Math.Round(x.EntrantsPaid * ((double)1 / 100)));
+                return Tournaments.Count(x =>
+                    x.FinishPosition >= x.EntrantsPaid + 1 && x.FinishPosition <=
+                    x.EntrantsPaid + 1 + Math.Round(x.EntrantsPaid * ((double) 1 / 100)));
             }
         }
+
         public decimal PrizesWonTotal
         {
             get
@@ -231,16 +284,10 @@ namespace LiveTracker.Models
                 return Tournaments.Sum(i => i.PrizeWon);
             }
         }
-        public decimal ProfitPerTournament
-        {
-            get
-            {
-                if (TotalProfit is 0 || TournamentCount is 0)
-                    return 0;
 
-                return TotalProfit / TournamentCount;
-            }
-        }
+        public decimal ProfitPerTournament =>
+            TotalProfit is 0 || TournamentCount is 0 ? 0 : TotalProfit / TournamentCount;
+
         public decimal RebuyCostTotal
         {
             get
@@ -251,6 +298,7 @@ namespace LiveTracker.Models
                 return Tournaments.Sum(i => i.RebuyTotalCost * i.RebuyCount);
             }
         }
+
         public decimal Roi
         {
             get
@@ -261,7 +309,10 @@ namespace LiveTracker.Models
                 return (TotalProfit / TotalCost);
             }
         }
-        public ObservableCollection<TournamentFinished> Tournaments { get; private set; } = new ObservableCollection<TournamentFinished>();
+
+        public ObservableCollection<TournamentFinished> Tournaments { get; private set; } =
+            new ObservableCollection<TournamentFinished>();
+
         public TimeSpan SessionLength
         {
             get
@@ -272,40 +323,19 @@ namespace LiveTracker.Models
                 return new TimeSpan((EndTime - StartTime).Hours, (EndTime - StartTime).Minutes, 0);
             }
         }
-        public DateTime StartTime
-        {
-            get
-            {
-                if (Tournaments.Count < 0) return DateTime.MinValue;
 
-                return Tournaments.Min(i => i.StartTime);
-            }
-        }
+        public DateTime StartTime => Tournaments.Count <= 0 ? DateTime.MinValue : Tournaments.Min(i => i.StartTime);
+
         public int StoneBubbles
         {
-            get
-            {
-                return Tournaments.Select(x => x).Where(x => x.FinishPosition == x.EntrantsPaid + 1).Count();
-            }
+            get { return Tournaments.Select(x => x).Count(x => x.FinishPosition == x.EntrantsPaid + 1); }
         }
-        public int TournamentCount
-        {
-            get { return Tournaments.Count; }
-        }
-        public decimal TotalCost
-        {
-            get
-            {
-                return BuyinCostTotal + RebuyCostTotal + AddonCostTotal;
-            }
-        }
-        public decimal TotalProfit
-        {
-            get
-            {
-                return PrizesWonTotal - TotalCost;
-            }
-        }
+
+        public int TournamentCount => Tournaments.Count;
+        public decimal TotalCost => BuyinCostTotal + RebuyCostTotal + AddonCostTotal;
+
+        public decimal TotalProfit => PrizesWonTotal - TotalCost;
+
         public void AddTournament(TournamentFinished tournament)
         {
             Tournaments.Add(tournament);

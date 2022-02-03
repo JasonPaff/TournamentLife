@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
 using Syncfusion.Windows.Shared;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
@@ -10,8 +8,11 @@ using System.Windows;
 using Tournament_Life.Views.Results;
 using System.Xml;
 using System.Globalization;
-using LiveTracker.Commands;
+using Tournament_Life.Commands;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models;
 using Tournament_Life.Models.Filters;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
 
 namespace Tournament_Life.ViewModels.Results

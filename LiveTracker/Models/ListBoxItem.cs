@@ -1,7 +1,7 @@
 ﻿using System;
 using Syncfusion.Windows.Shared;
 
-namespace LiveTracker.Models
+namespace Tournament_Life.Models
 {
     public class ListBoxItem : NotificationObject
     {

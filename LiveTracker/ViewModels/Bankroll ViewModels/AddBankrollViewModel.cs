@@ -3,16 +3,15 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Models.Bankroll_Model;
-using LiveTracker.Views.Bankroll_Views;
 using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using Tournament_Life.ViewModels;
+using Tournament_Life.Commands;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Bankroll_Model;
 using Tournament_Life.Views;
-using LiveTracker.Commands;
+using Tournament_Life.Views.Bankroll_Views;
 
-namespace LiveTracker.ViewModels.Bankroll_ViewModels
+namespace Tournament_Life.ViewModels.Bankroll_ViewModels
 {
     public class AddBankrollViewModel : NotificationObject
     {

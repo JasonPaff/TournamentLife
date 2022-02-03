@@ -1,27 +1,23 @@
-﻿using LiveTracker.Helpers;
-using LiveTracker.ViewModels;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Graph_ViewModels;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.ViewModels.Results;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using LiveTracker.ViewModels.Template_Manager_ViewModels;
-using LiveTracker.Views;
-using LiveTracker.Views.Graph_Views;
-using LiveTracker.Views.Results;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.Views.Template_Manager_Views;
-using Syncfusion.UI.Xaml.Utility;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using Tournament_Life.Views.Results;
-using Tournament_Life.ViewModels.Results;
+using Syncfusion.UI.Xaml.Utility;
+using Tournament_Life.Helpers;
+using Tournament_Life.ViewModels;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
 using Tournament_Life.ViewModels.Graph_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.ViewModels.Results;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
+using Tournament_Life.ViewModels.Template_Manager_ViewModels;
+using Tournament_Life.Views;
 using Tournament_Life.Views.Graph_Views;
-using LiveTracker.Views.Menu_Views;
+using Tournament_Life.Views.Menu_Views;
+using Tournament_Life.Views.Results;
+using Tournament_Life.Views.Session_Manager_Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.Commands
+namespace Tournament_Life.Commands
 {
     public static class LiveTrackerWindowCommands
     {

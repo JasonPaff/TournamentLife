@@ -1,19 +1,17 @@
-﻿using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.Views.Template_Manager_Views;
-using Syncfusion.UI.Xaml.Utility;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
-using System.Collections.ObjectModel;
-using LiveTracker.Models.Tournaments;
-using Tournament_Life.ViewModels;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.ViewModels.Template_Manager_ViewModels
+namespace Tournament_Life.ViewModels.Template_Manager_ViewModels
 {
     public class EditDefaultsViewModel : NotificationObject
     {

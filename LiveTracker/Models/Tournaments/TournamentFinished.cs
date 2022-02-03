@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using System.Windows.Input;
 
-namespace LiveTracker.Models
+namespace Tournament_Life.Models.Tournaments
 {
     public class TournamentFinished : TournamentRunning
     {

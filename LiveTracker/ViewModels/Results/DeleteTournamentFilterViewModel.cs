@@ -1,11 +1,11 @@
-﻿using LiveTracker.Helpers;
-using Syncfusion.UI.Xaml.Utility;
+﻿using Syncfusion.UI.Xaml.Utility;
 using Syncfusion.Windows.Shared;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Xml;
+using Tournament_Life.Helpers;
 using Tournament_Life.Views.Results;
 using Tournament_Life.Models.Filters;
 using Tournament_Life.Views;

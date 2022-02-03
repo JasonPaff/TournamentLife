@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public static class RegistrationHelper
     {

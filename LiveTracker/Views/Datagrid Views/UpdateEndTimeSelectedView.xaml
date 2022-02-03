@@ -1,5 +1,5 @@
 ﻿<syncfusion:ChromelessWindow
-    x:Class="LiveTracker.Views.Datagrid_Views.UpdateEndTimeSelectedView"
+    x:Class="Tournament_Life.Views.Datagrid_Views.UpdateEndTimeSelectedView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

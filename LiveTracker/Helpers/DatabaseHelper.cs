@@ -7,11 +7,11 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using LiveTracker.Models;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
 using Tournament_Life.Views;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
 
     public static class DatabaseHelper
@@ -53,6 +53,7 @@ namespace LiveTracker.Helpers
         /// Adds a record to the database
         /// </summary>
         /// <param name="tournament">record to add</param>
+        /// <param name="overrideDatabaseName">optional database name</param>
         /// <returns>false if failed</returns>
         public static bool AddRecord(TournamentFinished tournament, string overrideDatabaseName = null)
         {

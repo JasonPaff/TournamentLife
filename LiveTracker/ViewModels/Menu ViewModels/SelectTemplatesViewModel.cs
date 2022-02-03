@@ -1,20 +1,18 @@
-﻿using Syncfusion.UI.Xaml.Utility;
-using Syncfusion.Windows.Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
-using LiveTracker.Views.Menu_Views;
 using System.Windows;
-using LiveTracker.Views;
-using LiveTracker.Models.Tournaments;
-using LiveTracker.Helpers;
-using LiveTracker.Factories;
-using Tournament_Life.ViewModels;
+using System.Windows.Input;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Factories;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Menu_Views;
 
-namespace LiveTracker.ViewModels.Menu_ViewModels
+namespace Tournament_Life.ViewModels.Menu_ViewModels
 {
     public class SelectTemplatesViewModel : NotificationObject
     {

@@ -1,22 +1,20 @@
-﻿using LiveTracker.Factories;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using LiveTracker.ViewModels.Template_Manager_ViewModels;
-using LiveTracker.Views;
-using LiveTracker.Views.Menu_Views;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.Views.Template_Manager_Views;
-using Syncfusion.UI.Xaml.Utility;
-using Syncfusion.Windows.Shared;
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using Tournament_Life.ViewModels;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Factories;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
+using Tournament_Life.ViewModels.Template_Manager_ViewModels;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Menu_Views;
+using Tournament_Life.Views.Session_Manager_Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.ViewModels.Menu_ViewModels
+namespace Tournament_Life.ViewModels.Menu_ViewModels
 {
     public class QuickStartViewModel : NotificationObject
     {

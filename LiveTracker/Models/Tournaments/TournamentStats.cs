@@ -1,10 +1,10 @@
-﻿using LiveTracker.Helpers;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using LiveTracker.Models.Sessions;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
 
-namespace LiveTracker.Models.Tournaments
+namespace Tournament_Life.Models.Tournaments
 {
     public class TournamentStats
     {
@@ -318,7 +318,7 @@ namespace LiveTracker.Models.Tournaments
             AverageFinishPosition = tournaments.Any() ? (int)tournaments.Average(i => i.FinishPosition) : 0;
 
             NearBubbles = tournaments.Any(i => i.FinishPosition > i.EntrantsPaid + stoneBubble && i.FinishPosition <= i.EntrantsPaid + Math.Round(i.EntrantsPaid * (nearBubble / 100)) + stoneBubble) ? tournaments.Count(i => i.FinishPosition > i.EntrantsPaid + stoneBubble && i.FinishPosition <= i.EntrantsPaid + Math.Round(i.EntrantsPaid * (nearBubble / 100)) + stoneBubble) : 0;
-            MinCashes = tournaments.Where(i => i.FinishPosition <= i.EntrantsPaid && i.FinishPosition >= i.EntrantsPaid - Math.Round(i.EntrantsPaid * (nearBubble / 100))).Any() ? tournaments.Where(i => i.FinishPosition <= i.EntrantsPaid && i.FinishPosition >= i.EntrantsPaid - Math.Round(i.EntrantsPaid * (nearBubble / 100))).Count() : 0;
+            MinCashes = tournaments.Any(i => i.FinishPosition <= i.EntrantsPaid && i.FinishPosition >= i.EntrantsPaid - Math.Round(i.EntrantsPaid * (nearBubble / 100))) ? tournaments.Count(i => i.FinishPosition <= i.EntrantsPaid && i.FinishPosition >= i.EntrantsPaid - Math.Round(i.EntrantsPaid * (nearBubble / 100))) : 0;
 
             Itm = tournaments.Any(i => i.PrizeWon > 0 && i.FinishPosition <= i.EntrantsPaid) && tournaments.Count > 0 ? tournaments.Count(i => i.PrizeWon > 0 && i.FinishPosition <= i.EntrantsPaid) / (decimal)tournaments.Count : 0;
             AveragePercentBeaten = tournaments.Any() ? (tournaments.Sum(i => i.PercentFieldBeaten * 100) / tournaments.Count) / 100 : 0;

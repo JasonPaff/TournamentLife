@@ -1,7 +1,7 @@
-﻿using LiveTracker.ViewModels.Datagrid_ViewModels;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Shared;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
 
-namespace LiveTracker.Views.Datagrid_Views
+namespace Tournament_Life.Views.Datagrid_Views
 {
     /// <summary>
     /// Interaction logic for AttachNoteView.xaml

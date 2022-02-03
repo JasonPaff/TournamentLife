@@ -1,14 +1,4 @@
-﻿using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.Models.Tournaments;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.ViewModels.Results;
-using LiveTracker.Views;
-using LiveTracker.Views.Menu_Views;
-using LiveTracker.Views.Results;
-using Syncfusion.UI.Xaml.Utility;
-using Syncfusion.Windows.Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
@@ -17,12 +7,16 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels.Results;
-using Tournament_Life.Views.Results;
-using Tournament_Life.ViewModels;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Menu_Views;
+using Tournament_Life.Views.Results;
 
-namespace LiveTracker.ViewModels.Menu_ViewModels
+namespace Tournament_Life.ViewModels.Menu_ViewModels
 {
     public class DatabaseViewModel : NotificationObject
     {

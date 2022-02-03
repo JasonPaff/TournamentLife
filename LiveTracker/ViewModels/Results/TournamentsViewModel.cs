@@ -1,7 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
 using Syncfusion.Windows.Shared;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
@@ -11,14 +9,16 @@ using Syncfusion.UI.Xaml.Grid;
 using Tournament_Life.Helpers;
 using System.IO;
 using System.Diagnostics;
-using LiveTracker.Views.Results;
-using LiveTracker.ViewModels.Results;
-using LiveTracker.Views;
-using LiveTracker.ViewModels.Menu_ViewModels;
+using Tournament_Life.Views.Results;
 using Tournament_Life.Views;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.Views.Datagrid_Views;
+using Tournament_Life.Views;
+using Tournament_Life.Views.Datagrid_Views;
 using System.ComponentModel;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.Views.Datagrid_Views;
 
 namespace Tournament_Life.ViewModels.Results
 {

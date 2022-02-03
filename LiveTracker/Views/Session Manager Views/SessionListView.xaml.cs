@@ -1,7 +1,7 @@
-﻿using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Shared;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
 
-namespace LiveTracker.Views.Session_Manager_Views
+namespace Tournament_Life.Views.Session_Manager_Views
 {
     /// <summary>
     /// Interaction logic for SessionListView.xaml

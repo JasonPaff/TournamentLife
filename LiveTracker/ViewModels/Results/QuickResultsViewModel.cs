@@ -1,12 +1,11 @@
-﻿using System.Globalization;
-using LiveTracker.Helpers;
-using LiveTracker.Models.Sessions;
+﻿using System.Collections.ObjectModel;
+using System.Globalization;
 using Syncfusion.Windows.Shared;
-using LiveTracker.Models.Tournaments;
-using System.Collections.ObjectModel;
-using LiveTracker.Models;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 
-namespace LiveTracker.ViewModels.Results
+namespace Tournament_Life.ViewModels.Results
 {
     public class QuickResultsViewModel : NotificationObject
     {

@@ -1,13 +1,12 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using LiveTracker.Helpers;
-using LiveTracker.Views.Bankroll_Views;
 using Syncfusion.UI.Xaml.Utility;
-using Tournament_Life.ViewModels;
+using Tournament_Life.Helpers;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Bankroll_Views;
 
-namespace LiveTracker.ViewModels.Bankroll_ViewModels
+namespace Tournament_Life.ViewModels.Bankroll_ViewModels
 {
     public class AddVenueViewModel
     {

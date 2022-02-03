@@ -2,10 +2,10 @@
 using System.Globalization;
 using System.IO;
 using System.Xml;
-using LiveTracker.Enums;
 using Syncfusion.Windows.Shared;
+using Tournament_Life.Enums;
 
-namespace LiveTracker.Helpers
+namespace Tournament_Life.Helpers
 {
     public class PreferencesHelper
     {

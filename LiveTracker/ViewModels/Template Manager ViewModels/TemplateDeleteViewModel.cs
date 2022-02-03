@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
-using LiveTracker.Helpers;
-using Syncfusion.Windows.Shared;
+using System.Windows;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
-using System.Windows;
-using LiveTracker.Views.Template_Manager_Views;
-using System.Collections.ObjectModel;
-using LiveTracker.Models;
-using LiveTracker.Models.Tournaments;
-using System.Globalization;
-using LiveTracker.Views;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using LiveTracker.ViewModels.Datagrid_ViewModels;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using Tournament_Life.ViewModels;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Tournaments;
+using Tournament_Life.ViewModels.Datagrid_ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
 using Tournament_Life.Views;
+using Tournament_Life.Views.Session_Manager_Views;
+using Tournament_Life.Views.Template_Manager_Views;
 
-namespace LiveTracker.ViewModels.Template_Manager_ViewModels
+namespace Tournament_Life.ViewModels.Template_Manager_ViewModels
 {
     public class TemplateDeleteViewModel : NotificationObject
     {

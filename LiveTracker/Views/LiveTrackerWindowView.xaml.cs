@@ -1,9 +1,6 @@
-﻿using AutoUpdaterDotNET;
-using Syncfusion.Windows.Shared;
-using System;
-using System.Net;
+﻿using Syncfusion.Windows.Shared;
 
-namespace LiveTracker.Views
+namespace Tournament_Life.Views
 {
     /// <summary>
     /// Interaction logic for LiveTrackerWindowView.xaml

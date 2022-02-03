@@ -1,19 +1,18 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
-using LiveTracker.Helpers;
-using LiveTracker.Models;
-using LiveTracker.Models.Graph;
-using Syncfusion.UI.Xaml.Charts;
-using Syncfusion.Windows.Shared;
-using System.Windows.Input;
-using Syncfusion.UI.Xaml.Utility;
 using System.Windows;
-using LiveTracker.Views.Graph_Views;
+using System.Windows.Input;
 using Microsoft.Win32;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Graph;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
-using Tournament_Life.ViewModels;
+using Tournament_Life.Views.Graph_Views;
 
-namespace LiveTracker.ViewModels.Graph_ViewModels
+namespace Tournament_Life.ViewModels.Graph_ViewModels
 {
     public class FinishPositionGraphViewModel : NotificationObject
     {

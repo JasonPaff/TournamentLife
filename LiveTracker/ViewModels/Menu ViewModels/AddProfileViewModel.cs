@@ -1,16 +1,13 @@
-﻿using LiveTracker.Helpers;
-using Syncfusion.UI.Xaml.Utility;
-using System.Linq;
-using System.Windows.Input;
-using Syncfusion.Windows.Shared;
+﻿using System.Linq;
 using System.Windows;
-using LiveTracker.Views.Menu_Views;
-using Tournament_Life.ViewModels;
+using System.Windows.Input;
+using Syncfusion.UI.Xaml.Utility;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Helpers;
 using Tournament_Life.Views;
-using System.Collections.Generic;
-using System;
+using Tournament_Life.Views.Menu_Views;
 
-namespace LiveTracker.ViewModels.Menu_ViewModels
+namespace Tournament_Life.ViewModels.Menu_ViewModels
 {
     public class AddProfileViewModel : NotificationObject
     {

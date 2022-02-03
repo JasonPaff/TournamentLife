@@ -1,18 +1,17 @@
-﻿using System.Linq;
-using LiveTracker.Helpers;
-using LiveTracker.Views.Datagrid_Views;
-using Syncfusion.Windows.Shared;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
-using LiveTracker.Models;
-using System.Collections.ObjectModel;
-using LiveTracker.Models.Sessions;
-using Tournament_Life.ViewModels;
+using Syncfusion.Windows.Shared;
+using Tournament_Life.Commands;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.Views;
-using LiveTracker.Commands;
+using Tournament_Life.Views.Datagrid_Views;
 
-namespace LiveTracker.ViewModels.Datagrid_ViewModels
+namespace Tournament_Life.ViewModels.Datagrid_ViewModels
 {
     public class AddToSessionViewModel : NotificationObject
     {

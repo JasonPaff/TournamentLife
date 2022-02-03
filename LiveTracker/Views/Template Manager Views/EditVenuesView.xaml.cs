@@ -1,7 +1,7 @@
-﻿using LiveTracker.ViewModels.Template_Manager_ViewModels;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Shared;
+using Tournament_Life.ViewModels.Template_Manager_ViewModels;
 
-namespace LiveTracker.Views.Template_Manager_Views
+namespace Tournament_Life.Views.Template_Manager_Views
 {
     /// <summary>
     /// Interaction logic for EditVenuesView.xaml

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LiveTracker.Models.Sessions
+namespace Tournament_Life.Models.Sessions
 {
     public class SessionListBoxItem
     {

@@ -1,20 +1,19 @@
-﻿using System.Linq;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Syncfusion.UI.Xaml.Utility;
-using LiveTracker.Views.Session_Manager_Views;
-using LiveTracker.ViewModels.Session_Manager_ViewModels;
-using LiveTracker.Enums;
-using LiveTracker.Models;
-using LiveTracker.Helpers;
-using LiveTracker.Views;
-using LiveTracker.ViewModels.Menu_ViewModels;
-using System.Collections.ObjectModel;
+using Tournament_Life.Enums;
+using Tournament_Life.Helpers;
+using Tournament_Life.Models.Sessions;
+using Tournament_Life.Models.Tournaments;
 using Tournament_Life.ViewModels;
+using Tournament_Life.ViewModels.Menu_ViewModels;
+using Tournament_Life.ViewModels.Session_Manager_ViewModels;
 using Tournament_Life.Views;
-using LiveTracker.Models.Sessions;
+using Tournament_Life.Views.Session_Manager_Views;
 
-namespace LiveTracker.Commands
+namespace Tournament_Life.Commands
 {
     public static class SessionManagerCommands
     {

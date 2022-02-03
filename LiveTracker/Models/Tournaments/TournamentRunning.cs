@@ -2,9 +2,9 @@
 using System.Globalization;
 using System.Text;
 using System.Windows.Input;
-using LiveTracker.Enums;
+using Tournament_Life.Enums;
 
-namespace LiveTracker.Models
+namespace Tournament_Life.Models.Tournaments
 {
 
     public class TournamentRunning : TournamentTemplate
