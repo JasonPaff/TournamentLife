@@ -4,6 +4,9 @@ Tournament Life is a results tracker and analyzer for live/online poker tourname
   
 - TOURNAMENTS MENU
 - Tournament Manager
+
+ ![templates](templates.png)
+
 <br>The Tournament Manager is where you can create/edit/copy/delete/import/export your tournament templates. You can import someone elses tournament templates file using the import option under the File menu. It will give the option to check for duplicates and also convert the starting times from the creators time zone to your time zone. Use the edit menu to add/remove/edit the venues, game types, formats and default values. The columns in the datagrid can be re-arranged to you liking and there is a right click context menu when you right click a tournament allowing you to copy/delete/edit and tag as favorites. Tournaments tagged as favorites will appear in the favorites menu under the Tournaments menu in the main tracker.
 - SELECT TOURNAMENTS
 <br>This is where you go to start tournaments from your list of tournaments. Hover over a tournament to get a pop-up showing all the template information for the tournament. There are some options for filtering/searching and some options under the options menu to control how the select tournaments window operates. 
@@ -43,6 +46,9 @@ Tournament Life is a results tracker and analyzer for live/online poker tourname
 - UNDO RECENTLY FINISHED
 <br>Shows the 10 most recently saved tournaments. Selecting one will remove the record from your database and load the tournament back into the main tracker display. Hover over a recently finished tournament to see the data for that tournament.
 
+
+ ![results](results.png)
+
 - MAIN TRACKER WINDOW
 <br>The heart of the software! Right click the header of any column to show/hide columns. Only the tournament name column is required to stay in view. You can also arrange the order of the columns however you like. You are not required to enter any data at all, the only thing that is required to finish a tournament is a name and a starting time that is before the ending time.
 - RIGHT CLICK CONTEXT MENU
@@ -52,6 +58,9 @@ Tournament Life is a results tracker and analyzer for live/online poker tourname
 <br>the top option will open a window for you to select any starting date and time that you want. By default tournaments will use the starting time set in the template and set the date to the current date. Sessions loaded in the afternoon/evening that have tournaments for after midnight will adjust and use the date from after midnight. Tournaments flagged as sng tournaments will use the current date and time from when they were started. The bottom option will set the starting time to the current time. This is useful for when you late reg a tournament and you just want to quickly update the starting time to the current time.
 - ENDING TIME
 <br>You can manually update the end time here but if you don't then when you finish a tournament the end time will be set to the current time. If you finished the tournament but don't want to remove it from the tracker right away then you would use one of the ending time options to set the end time manually. the top option will open a window for you to select any ending date and time that you want and the bottom option will set the ending time to the current time.
+
+
+
 - TOURNAMENT DATA
 - UPDATE TOURNAMENT DATA
 <br>This will launch a window that allows you to update the template data for the selected tournament. You can update the data for just the tournament started and not change the template. You can have it update the running tournaments data and update the template file or your can have it update the running tournaments data and save the changes as a new tournament in the template file. This is useful for when a venue changes the tournament in some way.
@@ -67,3 +76,7 @@ Tournament Life is a results tracker and analyzer for live/online poker tourname
 <br>allows you to add or remove a screenshot from the tournament. Great for saving the screenshot of that big victory or brutal bad beat. You can also view the currently attached screenshot (if any)
 - NOTES
 <br>add any notes you want to the tournament record. Save important/big hand historys or any other info you want about the tournament.
+
+ ![graph](graph.png)
+ 
+ ![bargraph](bargraph.png)
